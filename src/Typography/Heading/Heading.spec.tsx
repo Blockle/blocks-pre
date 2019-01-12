@@ -7,13 +7,11 @@ import Heading from './Heading';
 afterEach(cleanup);
 
 describe('Heading', () => {
-  it('should render children and default styles', () => {
+  it('should render children', () => {
     const { getByText } = render(<Heading level="1">Heading Text</Heading>);
     const heading = getByText('Heading Text');
 
     expect(heading).toBeTruthy();
-    expect(heading).toHaveClass('size-medium');
-    expect(heading).toHaveClass('align-center');
   });
 
   it('should render with different sizes', () => {

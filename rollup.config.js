@@ -39,6 +39,7 @@ const banner = `/**
         commonjs(),
         postcss({
           extract: './dist/blockle-ui.css',
+          sourceMap: true,
         }),
         reactsvg(),
       ]

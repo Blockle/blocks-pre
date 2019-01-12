@@ -1,8 +1,5 @@
 # blockle-router
 
-npm version prerelease --preid=alpha
-npm publish --tag next --access public
-
 ## Get started
 
 Install with yarn
@@ -24,19 +21,9 @@ import '@blockle/ui/dist/blockle-ui.css';
 ```
 
 ```tsx
-import { Router, Route, Link } from '@blockle/router';
-import { createHashHistory } from 'history';
+import { Button } from '@blockle/ui';
 
-render(
-  <Router history={createHashHistory}>
-    <Route path="/" exact>
-      Home
-      <Link to="/contact">Contact</Link>
-    </Route>
-    <Route path="/contact">
-      Contact
-      <Link to="/">Home</Link>
-    </Route>
-  </Router>
+const MyComponent = () => (
+  <Button>Hi</Button>
 );
 ```
