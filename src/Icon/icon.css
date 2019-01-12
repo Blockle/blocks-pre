@@ -3,7 +3,7 @@
   line-height: 0;
   color: #fff;
 
-  svg {
+  & svg {
     fill: currentColor;
   }
 

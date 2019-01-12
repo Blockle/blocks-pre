@@ -2,8 +2,8 @@ import React from 'react';
 import classNames from 'classnames';
 
 import './button.css';
-import { Ripple } from 'Ripple';
-import { Icon, IconNames } from 'Icon';
+import { Ripple } from '../Ripple';
+import { Icon, IconNames } from '../Icon';
 
 interface Props {
   children: React.ReactNode;

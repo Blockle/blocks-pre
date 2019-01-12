@@ -11,7 +11,7 @@ describe('Image', () => {
     // @ts-ignore
     Object.defineProperty(global.Image.prototype, 'src', {
       set(src) {
-        if (src === 'ERROR') {
+        if (src === 'IMAGE_SOURCE_ERROR') {
           setTimeout(() => this.onerror(new Error('Image not loaded')));
         } else {
           setTimeout(() => this.onload());
@@ -49,14 +49,13 @@ describe('Image', () => {
   });
 
   it('should error', (done) => {
-    const { container, getByTestId } = render(<Image src="ERROR" />);
-    const image = getByTestId('image');
-
-    expect(image).toBeTruthy();
+    const { container, getByTitle } = render(<Image src="IMAGE_SOURCE_ERROR" />);
 
     setTimeout(() => {
-      expect(container).toHaveTextContent('Failed to load');
+      console.log(container.outerHTML);
+
+      expect(getByTitle('Failed to load IMAGE_SOURCE_ERROR')).toBeTruthy();
       done();
-    });
+    }, 100);
   });
 });
