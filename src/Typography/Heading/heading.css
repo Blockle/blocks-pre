@@ -1,0 +1,38 @@
+.heading {
+  color: var(--text-primary-color);
+  font-weight: normal;
+
+  /* Using `em` for relative margin based on size */
+  margin: 0.5em 0;
+
+  /* Sizes */
+  &.size-small {
+    font-size: var(--text-heading-small);
+    text-transform: uppercase;
+  }
+
+  &.size-medium {
+    font-size: var(--text-heading-medium);
+  }
+
+  &.size-large {
+    font-size: var(--text-heading-large);
+  }
+
+  &.size-xlarge {
+    font-size: var(--text-heading-xlarge);
+  }
+
+  /* Align */
+  &.align-left {
+    text-align: left;
+  }
+
+  &.align-center {
+    text-align: center;
+  }
+
+  &.align-right {
+    text-align: right;
+  }
+}
