@@ -24,6 +24,7 @@ const Button: React.SFC<Props> = ({ children, disabled, flat, icon, inline, onCl
       'is-inline': inline,
       'is-secondary': secondary,
       'is-disabled': disabled,
+      'has-icon': !!icon,
     })}
   >
     {icon &&

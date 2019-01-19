@@ -20,8 +20,6 @@
 
   &.is-inline {
     width: auto;
-
-    /* display: inline-flex; */
   }
 
   &.is-disabled {
@@ -29,7 +27,11 @@
     color: var(--text-secondary-color);
   }
 
-  .Icon {
+  &.has-icon {
+    padding-left: var(--gutter-small);
+  }
+
+  & .Icon {
     margin-right: var(--gutter-small);
   }
 }
