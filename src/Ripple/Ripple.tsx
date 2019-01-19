@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import './ripple.css';
+import { animateCss } from 'utils';
 
 interface Props {
   children?: React.ReactNode;
@@ -19,8 +20,8 @@ export default class Ripple extends Component<Props> {
   ripples: HTMLDivElement[] = [];
 
   componentDidMount() {
-    document.addEventListener('mouseup', this.requestRemove);
-    document.addEventListener('touchend', this.requestRemove);
+    document.addEventListener('mouseup', this.removeCurrentRipple);
+    document.addEventListener('touchend', this.removeCurrentRipple);
   }
 
   componentWillUnmount() {
@@ -28,8 +29,8 @@ export default class Ripple extends Component<Props> {
       cancelAnimationFrame(this.raf);
     }
 
-    document.removeEventListener('mouseup', this.requestRemove);
-    document.removeEventListener('touchend', this.requestRemove);
+    document.removeEventListener('mouseup', this.removeCurrentRipple);
+    document.removeEventListener('touchend', this.removeCurrentRipple);
   }
 
   onMouseDown = (event: React.MouseEvent) => {
@@ -57,7 +58,7 @@ export default class Ripple extends Component<Props> {
       return;
     }
 
-    this.requestRemove();
+    this.removeCurrentRipple();
 
     const rect = current.getBoundingClientRect();
     const ripple = document.createElement('div');
@@ -73,27 +74,29 @@ export default class Ripple extends Component<Props> {
     this.current = ripple;
     this.ripples.push(ripple);
 
-    this.raf = requestAnimationFrame(() => {
-      this.raf = requestAnimationFrame(() => {
-        ripple.style.transform = `scale(${(rect.width / RIPPLE_WIDTH) * 3})`;
-        ripple.style.transitionDuration = `${Math.min(800, 340 + (150 * (rect.width / 300)))}ms`;
-      });
+    animateCss({
+      target: ripple,
+      transform: `scale(${(rect.width / RIPPLE_WIDTH) * 3})`,
+      duration: Math.min(800, 340 + (150 * (rect.width / 300))),
+      timingFunction: 'cubic-bezier(0.3, 0, 1, 0.4)',
     });
   }
 
-  requestRemove = () => {
+  removeCurrentRipple = () => {
     if (!this.current) {
       return;
     }
 
-    this.current.addEventListener('transitionend', this.removeRipple);
-    this.current.style.transition = '0.4s ease-out';
-    this.current.style.opacity = '0';
+    animateCss({
+      duration: 400,
+      onComplete: this.removeRipple,
+      opacity: 0,
+      target: this.current,
+      timingFunction: 'ease-out',
+    });
   }
 
-  removeRipple = (event: TransitionEvent) => {
-    const ripple = event.currentTarget as HTMLDivElement;
-
+  removeRipple = (ripple: HTMLElement) => {
     if (ripple.parentNode) {
       ripple.parentNode.removeChild(ripple);
     }

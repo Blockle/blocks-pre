@@ -9,11 +9,8 @@
 
 .Ripple-Circle {
   position: absolute;
-  border-radius: 1000px;
+  border-radius: 50%;
   pointer-events: none;
   background: currentColor;
   opacity: 0.4;
-  transition-property: opacity, transform;
-  transition-timing-function: cubic-bezier(0.3, 0, 1, 0.4);
-  transition-duration: 0.1s;
 }
