@@ -20,8 +20,8 @@ export default class Ripple extends Component<Props> {
   ripples: HTMLDivElement[] = [];
 
   componentDidMount() {
-    document.addEventListener('mouseup', this.removeCurrentRipple);
-    document.addEventListener('touchend', this.removeCurrentRipple);
+    document.addEventListener('mouseup', this.onMouseUp);
+    document.addEventListener('touchend', this.onTouchEnd);
   }
 
   componentWillUnmount() {
@@ -29,8 +29,8 @@ export default class Ripple extends Component<Props> {
       cancelAnimationFrame(this.raf);
     }
 
-    document.removeEventListener('mouseup', this.removeCurrentRipple);
-    document.removeEventListener('touchend', this.removeCurrentRipple);
+    document.removeEventListener('mouseup', this.onMouseUp);
+    document.removeEventListener('touchend', this.onTouchEnd);
   }
 
   onMouseDown = (event: React.MouseEvent) => {
@@ -51,14 +51,24 @@ export default class Ripple extends Component<Props> {
     this.createRipple(clientX, clientY);
   }
 
+  onMouseUp = () => {
+    if (this.isTouch) {
+      return;
+    }
+
+    this.removeCurrentRipple();
+  }
+
+  onTouchEnd = () => {
+    this.removeCurrentRipple();
+  }
+
   createRipple(clientX: number, clientY: number) {
     const { current } = this.ref;
 
     if (!current) {
       return;
     }
-
-    this.removeCurrentRipple();
 
     const rect = current.getBoundingClientRect();
     const ripple = document.createElement('div');
@@ -82,7 +92,7 @@ export default class Ripple extends Component<Props> {
     });
   }
 
-  removeCurrentRipple = () => {
+  removeCurrentRipple() {
     if (!this.current) {
       return;
     }
