@@ -25,7 +25,8 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  max-width: 94%;
+  max-width: 600px;
+  margin: var(--gutter-small);
   min-height: 40px;
   background-color: #ffff;
   overflow: hidden;
@@ -43,10 +44,12 @@
 
   &.is-full {
     max-height: 96%;
+    height: 100%;
+    width: 100%;
   }
 
   @media (max-height: 400px) {
-    max-height: 96%;
+    max-height: 100%;
   }
 }
 
