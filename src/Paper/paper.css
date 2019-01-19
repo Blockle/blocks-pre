@@ -33,13 +33,26 @@
 
   &.effect-slide {
     opacity: 0;
-    transform: translateY(100%);
+    transform: translateY(20%);
     transition-duration: 300ms;
     transition-timing-function: cubic-bezier(1, 0, 0.4, 1);
 
     &.is-enter {
       opacity: 1;
       transform: translateY(0);
+      transition-timing-function: cubic-bezier(0, 0, 0.4, 1);
+    }
+  }
+
+  &.effect-slideHorizontal {
+    opacity: 0;
+    transform: translateX(40%);
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(1, 0, 0.4, 1);
+
+    &.is-enter {
+      opacity: 1;
+      transform: translateX(0);
       transition-timing-function: cubic-bezier(0, 0, 0.4, 1);
     }
   }

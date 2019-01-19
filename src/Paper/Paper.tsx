@@ -3,16 +3,17 @@ import classNames from 'classnames';
 
 import './paper.css';
 
-export type PaperEffectNames = 'fade' | 'slide';
+export type PaperEffectNames = 'fade' | 'slide' | 'slideHorizontal';
 export type PaperThemes = 'none' | 'fill' | 'angle';
 
 interface Props {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
   effect: PaperEffectNames;
   fit: boolean;
   open: boolean;
   theme: PaperThemes;
+  onClick?(): void;
 }
 
 interface State {
@@ -117,7 +118,7 @@ export default class Paper extends Component<Props, State> {
   }
 
   render() {
-    const { children, className, fit, theme, effect } = this.props;
+    const { children, className, fit, theme, effect, onClick } = this.props;
     const { open } = this.state;
 
     if (!open) {
@@ -127,6 +128,7 @@ export default class Paper extends Component<Props, State> {
     return (
       <div
         ref={this.ref}
+        onClick={onClick}
         className={classNames('paper', className, `effect-${effect}`, `theme-${theme}`,  {
           'is-fit': fit,
         })}
