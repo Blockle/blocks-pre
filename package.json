@@ -21,7 +21,7 @@
     "@types/classnames": "^2.2.7",
     "@types/history": "^4.7.2",
     "@types/jest": "^23.3.12",
-    "@types/react": "^16.7.18",
+    "@types/react": "^16.7.20",
     "@types/react-dom": "^16.0.11",
     "history": "^4.7.2",
     "jest": "^23.6.0",
@@ -36,12 +36,12 @@
     "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-postcss": "^1.6.3",
     "rollup-plugin-react-svg": "^2.1.0",
-    "rollup-plugin-typescript2": "^0.18.1",
-    "stylelint": "^9.9.0",
+    "rollup-plugin-typescript2": "^0.19.2",
+    "stylelint": "^9.10.0",
     "stylelint-config-standard": "^18.2.0",
     "ts-jest": "^23.10.5",
     "tslint": "^5.12.0",
-    "typescript": "^3.2.2"
+    "typescript": "^3.2.4"
   },
   "peerDependencies": {
     "react": "^16.7.0",
