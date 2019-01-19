@@ -9,6 +9,8 @@ interface Props {
   [key: string]: any;
 }
 
+const RIPPLE_WIDTH = 20;
+
 export default class Ripple extends Component<Props> {
   current?: HTMLDivElement;
   isTouch = false;
@@ -31,8 +33,7 @@ export default class Ripple extends Component<Props> {
   }
 
   onMouseDown = (event: React.MouseEvent) => {
-    // onMouseDown also triggers on touch, so ignore mouseDown triggered
-    // after touchStart
+    // onMouseDown also triggers on touch, so ignore mouseDown triggered after touchStart
     if (this.isTouch) {
       return;
     }
@@ -62,8 +63,10 @@ export default class Ripple extends Component<Props> {
     const ripple = document.createElement('div');
 
     ripple.className = 'Ripple-Circle';
-    ripple.style.top = `${(clientY - rect.top) - (50 / 2)}px`;
-    ripple.style.left = `${(clientX - rect.left) - (50 / 2)}px`;
+    ripple.style.width = `${RIPPLE_WIDTH}px`;
+    ripple.style.height = `${RIPPLE_WIDTH}px`;
+    ripple.style.top = `${(clientY - rect.top) - (RIPPLE_WIDTH / 2)}px`;
+    ripple.style.left = `${(clientX - rect.left) - (RIPPLE_WIDTH / 2)}px`;
 
     current.appendChild(ripple);
 
@@ -72,9 +75,8 @@ export default class Ripple extends Component<Props> {
 
     this.raf = requestAnimationFrame(() => {
       this.raf = requestAnimationFrame(() => {
-        ripple.style.transform = `scale(${(rect.width / 50) * 3})`;
+        ripple.style.transform = `scale(${(rect.width / RIPPLE_WIDTH) * 3})`;
         ripple.style.transitionDuration = `${Math.min(800, 340 + (150 * (rect.width / 300)))}ms`;
-        ripple.classList.add('is-animating');
       });
     });
   }
