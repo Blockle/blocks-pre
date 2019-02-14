@@ -1,9 +1,10 @@
-.paper {
+.Paper {
   display: flex;
   flex-direction: column;
   padding: 0;
   opacity: 0;
   transition-property: opacity, transform;
+  background-color: var(--background-primary);
 
   &.is-fit {
     position: absolute;
@@ -13,47 +14,71 @@
     height: 100%;
   }
 
-  /* Theming */
-  &.theme-fill {
-    background: var(--background-primary);
-
-    /* box-shadow: 0 4px 24px 0 rgba(37, 38, 94, 0.1); */
+  &.is-transparent {
+    background: none;
   }
 
-  /* Paper effects */
-  &.effect-fade {
-    opacity: 0;
-    transition-duration: 220ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.4, 1);
+  &.is-shadow {
+    box-shadow: 0 4px 24px 0 rgba(37, 38, 94, 0.1);
+  }
 
-    &.is-enter {
-      opacity: 1;
+  &.effect-fade {
+    animation-name: Paper-FadeEnter;
+    animation-duration: 280ms;
+    animation-fill-mode: both;
+
+    &.is-leave {
+      animation-name: Paper-FadeLeave;
     }
   }
 
-  &.effect-slide {
+  &.effect-slideUp {
+    animation-name: Paper-SlideUpEnter;
+    animation-duration: 280ms;
+    animation-fill-mode: both;
+
+    &.is-leave {
+      animation-name: Paper-SlideUpLeave;
+    }
+  }
+}
+
+@keyframes Paper-FadeEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes Paper-FadeLeave {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes Paper-SlideUpEnter {
+  0% {
     opacity: 0;
     transform: translateY(20%);
-    transition-duration: 300ms;
-    transition-timing-function: cubic-bezier(1, 0, 0.4, 1);
-
-    &.is-enter {
-      opacity: 1;
-      transform: translateY(0);
-      transition-timing-function: cubic-bezier(0, 0, 0.4, 1);
-    }
   }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-  &.effect-slideHorizontal {
+@keyframes Paper-SlideUpLeave {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
     opacity: 0;
-    transform: translateX(40%);
-    transition-duration: 300ms;
-    transition-timing-function: cubic-bezier(1, 0, 0.4, 1);
-
-    &.is-enter {
-      opacity: 1;
-      transform: translateX(0);
-      transition-timing-function: cubic-bezier(0, 0, 0.4, 1);
-    }
+    transform: translateY(20%);
   }
 }

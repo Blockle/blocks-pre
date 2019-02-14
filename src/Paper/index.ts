@@ -1,1 +1,1 @@
-export { default as Paper, PaperEffectNames, PaperThemes } from './Paper';
+export { default as Paper, Effects as PaperEffects } from './Paper';
