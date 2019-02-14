@@ -2,6 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 import './icon.css';
+import ArrowBack from './icons/arrow-back.svg';
 import Assignment from './icons/assignment.svg';
 import Bookmark from './icons/bookmark.svg';
 import Check from './icons/check.svg';
@@ -15,6 +16,7 @@ import Warning from './icons/warning.svg';
 import Work from './icons/work.svg';
 
 const ICON_MAP = {
+  arrowBack: ArrowBack,
   assignment: Assignment,
   bookmark: Bookmark,
   check: Check,

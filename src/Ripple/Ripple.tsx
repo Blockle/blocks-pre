@@ -14,12 +14,14 @@ const RIPPLE_WIDTH = 20;
 
 export default class Ripple extends Component<Props> {
   current?: HTMLDivElement;
+  currentCreatedAt!: number;
   isTouch = false;
   raf?: number;
   ref = React.createRef<HTMLElement>();
   ripples: HTMLDivElement[] = [];
 
   componentDidMount() {
+    // document.addEventListener('mouseleave', this.onMouseUp);
     document.addEventListener('mouseup', this.onMouseUp);
     document.addEventListener('touchend', this.onTouchEnd);
   }
@@ -81,14 +83,19 @@ export default class Ripple extends Component<Props> {
 
     current.appendChild(ripple);
 
+    this.currentCreatedAt = Date.now();
     this.current = ripple;
     this.ripples.push(ripple);
 
+    const duration = Math.min(800, 100 + (50 * (rect.width / RIPPLE_WIDTH)));
+    const transform = `scale(${(rect.width / RIPPLE_WIDTH) * 2})`;
+
     animateCss({
       target: ripple,
-      transform: `scale(${(rect.width / RIPPLE_WIDTH) * 3})`,
-      duration: Math.min(800, 340 + (150 * (rect.width / 300))),
-      timingFunction: 'cubic-bezier(0.3, 0, 1, 0.4)',
+      transform,
+      duration,
+      opacity: 0.2,
+      timingFunction: 'cubic-bezier(.22,.29,.7,.95)',
     });
   }
 
@@ -98,7 +105,7 @@ export default class Ripple extends Component<Props> {
     }
 
     animateCss({
-      duration: 400,
+      duration: ((Date.now() - this.currentCreatedAt) < 50) ? 800 : 400,
       onComplete: this.removeRipple,
       opacity: 0,
       target: this.current,
@@ -123,6 +130,7 @@ export default class Ripple extends Component<Props> {
         className: `Ripple ${className}`,
         onMouseDown: this.onMouseDown,
         onTouchStart: this.onTouchStart,
+        onMouseLeave: this.onMouseUp,
       },
       children,
     );

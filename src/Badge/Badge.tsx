@@ -6,7 +6,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-const Badge: React.SFC<Props> = ({ children }) => (
+const Badge = ({ children }: Props) => (
   <div className="Badge">
     {children}
   </div>

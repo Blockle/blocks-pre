@@ -1,3 +1,6 @@
 {
-  "extends": ["@exmg/tslint-config"]
+  "extends": ["@exmg/tslint-config"],
+  "rules": {
+    "jsx-no-lambda": false
+  }
 }

@@ -17,6 +17,7 @@
   border-radius: 4px;
   user-select: none;
   text-shadow: 0 0 1px var(--shadow-color);
+  cursor: pointer;
 
   &.is-inline {
     width: auto;
@@ -51,6 +52,10 @@
 
 .FlatButton {
   color: var(--text-primary-color);
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
 
   &.is-secondary {
     color: var(--accent-primary);
