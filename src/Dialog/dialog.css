@@ -1,14 +1,14 @@
 .DialogContainer {
   contain: layout;
+  z-index: 200;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 10;
   overflow: hidden;
 }
 
@@ -20,6 +20,31 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 0;
+  animation-name: DialogBack-Enter;
+  animation-duration: 280ms;
+  animation-fill-mode: both;
+
+  &.is-leave {
+    animation-name: DialogBack-Leave;
+  }
+}
+
+@keyframes DialogBack-Enter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes DialogBack-Leave {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .Dialog {
@@ -39,6 +64,13 @@
 	transform: translateY(20%);
   padding-top: var(--gutter-small);
   max-height: 60%;
+  animation-name: Dialog-Enter;
+  animation-duration: 280ms;
+  animation-fill-mode: both;
+
+  &.is-leave {
+    animation-name: Dialog-Leave;
+  }
 
   &.has-title {
     padding: 0;
@@ -52,6 +84,28 @@
 
   @media (max-height: 400px) {
     max-height: 96%;
+  }
+}
+
+@keyframes Dialog-Enter {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes Dialog-Leave {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20%);
   }
 }
 
