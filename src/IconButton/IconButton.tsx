@@ -24,7 +24,7 @@ const Button = ({ disabled, label, name, onClick, secondary }: Props) => (
       disabled && 'is-disabled',
     )}
   >
-    <Icon name={name} label={label} size="medium" accent="secondary" />;
+    <Icon name={name} label={label} size="medium" accent="secondary" />
   </Ripple >
 );
 

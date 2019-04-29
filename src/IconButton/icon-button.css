@@ -1,5 +1,4 @@
 .IconButton {
-  /* display: inline-block; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,4 +7,5 @@
   border: 0;
   background-color: transparent;
   border-radius: 50%;
+  cursor: pointer;
 }

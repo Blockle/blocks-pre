@@ -1,0 +1,46 @@
+.Drawer {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 256px;
+  background-color: #fff;
+  opacity: 0;
+  transition-property: visibility, opacity, transform;
+  transition-duration: 300ms;
+
+  &.position-left {
+    left: 0;
+    transform: translateX(-100%);
+  }
+
+  &.position-right {
+    right: 0;
+    transform: translateX(100%);
+  }
+
+  &.is-open {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.Drawer-Back {
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition-property: visibility, opacity;
+  transition-duration: 300ms;
+
+  &.is-open {
+    visibility: visible;
+    opacity: 1;
+  }
+}
