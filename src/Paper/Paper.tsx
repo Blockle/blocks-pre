@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from 'classnames';
+import { classNames } from 'classNames';
 
 import './paper.css';
 import { useAnimationState } from 'hooks';

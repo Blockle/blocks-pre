@@ -8,7 +8,7 @@
   width: 100%;
   height: 40px;
   padding: 0 var(--gutter-medium);
-  margin: 4px 0;
+  margin: var(--gutter-small) 0;
   border: 0;
   background-color: transparent;
   text-transform: uppercase;
@@ -18,6 +18,10 @@
   user-select: none;
   text-shadow: 0 0 1px var(--shadow-color);
   cursor: pointer;
+
+  &:focus {
+    box-shadow: var(--outline);
+  }
 
   &.is-inline {
     width: auto;

@@ -1,31 +1,34 @@
 import React from 'react';
-import classNames from 'classnames';
+import { classNames } from 'classNames';
 
 import './button.css';
 import { Ripple } from '../Ripple';
 import { Icon, IconNames } from '../Icon';
 
-interface Props {
-  children: React.ReactNode;
-  disabled?: boolean;
-  flat?: boolean;
-  icon?: IconNames;
-  inline?: boolean;
-  onClick?(): void;
-  secondary?: boolean;
-}
+type Props = {
+  children: React.ReactNode,
+  disabled?: boolean,
+  flat?: boolean,
+  icon?: IconNames,
+  inline?: boolean,
+  onClick?(): void,
+  secondary?: boolean,
+  type: 'button' | 'submit',
+};
 
-const Button: React.SFC<Props> = ({ children, disabled, flat, icon, inline, onClick, secondary }) => (
+const Button = ({ children, disabled, flat, icon, inline, onClick, secondary, type = 'button' }: Props) => (
   <Ripple
     renderAs="button"
+    type={type}
     disabled={disabled}
     onClick={onClick}
-    className={classNames(!flat ? 'Button' : 'FlatButton', {
-      'is-inline': inline,
-      'is-secondary': secondary,
-      'is-disabled': disabled,
-      'has-icon': !!icon,
-    })}
+    className={classNames(
+      flat ? 'FlatButton' : 'Button',
+      inline && 'is-inline',
+      secondary && 'is-secondary',
+      disabled && 'is-disabled',
+      icon && 'has-icon',
+    )}
   >
     {icon &&
       <Icon name={icon} label="" size="small" />}
@@ -33,9 +36,5 @@ const Button: React.SFC<Props> = ({ children, disabled, flat, icon, inline, onCl
     {children}
   </Ripple>
 );
-
-Button.defaultProps = {
-
-};
 
 export default Button;

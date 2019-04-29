@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from 'classnames';
+import { classNames } from 'classNames';
 
 import './icon.css';
 import Add from './icons/add.svg';
@@ -10,7 +10,9 @@ import Check from './icons/check.svg';
 import Close from './icons/close.svg';
 import Envelope from './icons/envelope.svg';
 import Error from './icons/error.svg';
+import Menu from './icons/menu.svg';
 import More from './icons/more.svg';
+import Notification from './icons/notification.svg';
 import School from './icons/school.svg';
 import Settings from './icons/settings.svg';
 import Warning from './icons/warning.svg';
@@ -25,7 +27,9 @@ const ICON_MAP = {
   close: Close,
   envelope: Envelope,
   error: Error,
+  menu: Menu,
   more: More,
+  notification: Notification,
   school: School,
   settings: Settings,
   warning: Warning,

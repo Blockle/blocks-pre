@@ -1,6 +1,6 @@
 import React from 'react';
 import { createPortal } from 'react-dom';
-import classNames from 'classnames';
+import { classNames } from 'classNames';
 
 import './dialog.css';
 import { IconButton } from 'IconButton';
