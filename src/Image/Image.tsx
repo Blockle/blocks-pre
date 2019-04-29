@@ -57,7 +57,8 @@ export default class Image extends Component<Props, State> {
     image.src = src;
 
     if (image.decode) {
-      image.decode()
+      image
+        .decode()
         .then(this.onLoad)
         .catch(this.onError);
     } else {
@@ -69,28 +70,28 @@ export default class Image extends Component<Props, State> {
 
   onError = (error: any) => {
     this.setState({ error: true, src: this.props.src, newImage: false });
-  }
+  };
 
   onLoad = () => {
     this.setState({ loaded: true, src: this.props.src, newImage: false });
-  }
+  };
 
   render() {
     const { fit, width, height } = this.props;
     const { error, loaded, src } = this.state;
 
     if (error) {
-      return (<div className="image has-error" title={`Failed to load ${src}`}>X</div>);
+      return (
+        <div className="image has-error" title={`Failed to load ${src}`}>
+          X
+        </div>
+      );
     }
 
     return (
       <img
         data-testid="image"
-        className={classNames(
-          'image',
-          `fit-${fit}`,
-          loaded && 'is-loaded',
-        )}
+        className={classNames('image', `fit-${fit}`, loaded && 'is-loaded')}
         src={src}
         style={{
           width: width ? `${width}px` : undefined,

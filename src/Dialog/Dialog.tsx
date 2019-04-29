@@ -7,10 +7,10 @@ import { IconButton } from 'IconButton';
 import { useAnimationState, useLayer } from 'hooks';
 
 type Props = {
-  actions: React.ReactNode,
-  children: React.ReactNode,
-  onRequestClose: () => void,
-  title?: React.ReactNode,
+  actions: React.ReactNode;
+  children: React.ReactNode;
+  onRequestClose: () => void;
+  title?: React.ReactNode;
 } & Partial<typeof defaultProps>;
 
 const defaultProps = {
@@ -45,22 +45,16 @@ export const Dialog = ({ actions, children, open, full, title, onRequestClose }:
           (!!title || full) && 'has-title',
         )}
       >
-        {(title || full) &&
+        {(title || full) && (
           <div className="DialogTopBar">
-            <div className="DialogTitle">
-              {title}
-            </div>
+            <div className="DialogTitle">{title}</div>
             <IconButton name="close" label="Close" onClick={onRequestClose} />
-          </div>}
+          </div>
+        )}
 
-        <div className="DialogContent">
-          {children}
-        </div>
+        <div className="DialogContent">{children}</div>
 
-        {actions &&
-          <div className="DialogActions">
-            {actions}
-          </div>}
+        {actions && <div className="DialogActions">{actions}</div>}
       </div>
     </div>
   );

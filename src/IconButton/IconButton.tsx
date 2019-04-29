@@ -18,14 +18,10 @@ const Button = ({ disabled, label, name, onClick, secondary }: Props) => (
     renderAs="button"
     disabled={disabled}
     onClick={onClick}
-    className={classNames(
-      'IconButton',
-      secondary && 'is-secondary',
-      disabled && 'is-disabled',
-    )}
+    className={classNames('IconButton', secondary && 'is-secondary', disabled && 'is-disabled')}
   >
     <Icon name={name} label={label} size="medium" accent="secondary" />
-  </Ripple >
+  </Ripple>
 );
 
 export default Button;
