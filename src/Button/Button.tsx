@@ -13,7 +13,7 @@ type Props = {
   inline?: boolean,
   onClick?(): void,
   secondary?: boolean,
-  type: 'button' | 'submit',
+  type?: 'button' | 'submit',
 };
 
 const Button = ({ children, disabled, flat, icon, inline, onClick, secondary, type = 'button' }: Props) => (
