@@ -15,14 +15,22 @@ describe('Heading', () => {
   });
 
   it('should render with different sizes', () => {
-    const { getByText } = render(<Heading level="1" size="small">Heading Text</Heading>);
+    const { getByText } = render(
+      <Heading level="1" size="small">
+        Heading Text
+      </Heading>,
+    );
     const heading = getByText('Heading Text');
 
     expect(heading).toHaveClass('size-small');
   });
 
   it('should render with different alignment', () => {
-    const { getByText } = render(<Heading level="1" align="right">Heading Text</Heading>);
+    const { getByText } = render(
+      <Heading level="1" align="right">
+        Heading Text
+      </Heading>,
+    );
     const heading = getByText('Heading Text');
 
     expect(heading).toHaveClass('align-right');

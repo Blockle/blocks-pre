@@ -20,7 +20,7 @@ describe('Image', () => {
     });
   });
 
-  it('should render image src', (done) => {
+  it('should render image src', done => {
     const { getByTestId } = render(<Image src="SUCCESS" width={100} height={100} />);
     const image = getByTestId('image');
 
@@ -33,7 +33,7 @@ describe('Image', () => {
     });
   });
 
-  it('should handle changing src prop', (done) => {
+  it('should handle changing src prop', done => {
     const { getByTestId, rerender } = render(<Image src="SUCCESS" />);
 
     setTimeout(() => {
@@ -48,7 +48,7 @@ describe('Image', () => {
     });
   });
 
-  it('should error', (done) => {
+  it('should error', done => {
     const { container, getByTitle } = render(<Image src="IMAGE_SOURCE_ERROR" />);
 
     setTimeout(() => {

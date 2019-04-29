@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-type UseAnimationState = [{open: boolean, leave: boolean}, () => void];
+type UseAnimationState = [{ open: boolean; leave: boolean }, () => void];
 
 export const useAnimationState = (open: boolean): UseAnimationState => {
   const [state, setState] = useState({ open, leave: false });

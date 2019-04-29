@@ -46,15 +46,12 @@ export interface Props {
 }
 
 const Icon: React.SFC<Props> = ({ label, name, size, accent }) => (
-  <span
-    className={classNames(`Icon size-${size}`, accent && `accent-${accent}`)}
-    title={label}
-  >
+  <span className={classNames(`Icon size-${size}`, accent && `accent-${accent}`)} title={label}>
     {React.createElement(ICON_MAP[name], {
       className: 'icon-svg',
       'data-testid': 'icon-svg',
     })}
-  </span >
+  </span>
 );
 
 Icon.defaultProps = {

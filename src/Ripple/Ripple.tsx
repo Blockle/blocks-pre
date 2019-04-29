@@ -44,14 +44,14 @@ export default class Ripple extends Component<Props> {
     const { clientX, clientY } = event;
 
     this.createRipple(clientX, clientY);
-  }
+  };
 
   onTouchStart = (event: React.TouchEvent) => {
     const { clientX, clientY } = event.targetTouches[0];
 
     this.isTouch = true;
     this.createRipple(clientX, clientY);
-  }
+  };
 
   onMouseUp = () => {
     if (this.isTouch) {
@@ -59,11 +59,11 @@ export default class Ripple extends Component<Props> {
     }
 
     this.removeCurrentRipple();
-  }
+  };
 
   onTouchEnd = () => {
     this.removeCurrentRipple();
-  }
+  };
 
   createRipple(clientX: number, clientY: number) {
     const { current } = this.ref;
@@ -78,8 +78,8 @@ export default class Ripple extends Component<Props> {
     ripple.className = 'Ripple-Circle';
     ripple.style.width = `${RIPPLE_WIDTH}px`;
     ripple.style.height = `${RIPPLE_WIDTH}px`;
-    ripple.style.top = `${(clientY - rect.top) - (RIPPLE_WIDTH / 2)}px`;
-    ripple.style.left = `${(clientX - rect.left) - (RIPPLE_WIDTH / 2)}px`;
+    ripple.style.top = `${clientY - rect.top - RIPPLE_WIDTH / 2}px`;
+    ripple.style.left = `${clientX - rect.left - RIPPLE_WIDTH / 2}px`;
 
     current.appendChild(ripple);
 
@@ -87,7 +87,7 @@ export default class Ripple extends Component<Props> {
     this.current = ripple;
     this.ripples.push(ripple);
 
-    const duration = Math.min(800, 100 + (50 * (rect.width / RIPPLE_WIDTH)));
+    const duration = Math.min(800, 100 + 50 * (rect.width / RIPPLE_WIDTH));
     const transform = `scale(${(rect.width / RIPPLE_WIDTH) * 2})`;
 
     animateCss({
@@ -105,7 +105,7 @@ export default class Ripple extends Component<Props> {
     }
 
     animateCss({
-      duration: ((Date.now() - this.currentCreatedAt) < 50) ? 800 : 400,
+      duration: Date.now() - this.currentCreatedAt < 50 ? 800 : 400,
       onComplete: this.removeRipple,
       opacity: 0,
       target: this.current,
@@ -117,7 +117,7 @@ export default class Ripple extends Component<Props> {
     if (ripple.parentNode) {
       ripple.parentNode.removeChild(ripple);
     }
-  }
+  };
 
   render() {
     const { children, renderAs, className, ...props } = this.props;

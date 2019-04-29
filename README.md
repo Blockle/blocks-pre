@@ -23,7 +23,5 @@ import '@blockle/ui/dist/blockle-ui.css';
 ```tsx
 import { Button } from '@blockle/ui';
 
-const MyComponent = () => (
-  <Button>Hi</Button>
-);
+const MyComponent = () => <Button>Hi</Button>;
 ```

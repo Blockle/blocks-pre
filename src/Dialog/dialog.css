@@ -57,11 +57,11 @@
   min-width: 300px;
   background-color: #ffff;
   overflow: hidden;
-  background: #FFFFFF;
-  border: 1px solid #F0F3F4;
+  background: #ffffff;
+  border: 1px solid #f0f3f4;
   border-radius: 4px;
   opacity: 0;
-	transform: translateY(20%);
+  transform: translateY(20%);
   padding-top: var(--gutter-small);
   max-height: 60%;
   animation-name: Dialog-Enter;

@@ -21,7 +21,7 @@ const defaultProps = {
   transparent: false,
 };
 
-const Paper = ({ open, effect, className,  transparent, shadow, children, fit }: Props) => {
+const Paper = ({ open, effect, className, transparent, shadow, children, fit }: Props) => {
   const [state, close] = useAnimationState(open);
 
   if (!state.open) {
@@ -46,7 +46,7 @@ const Paper = ({ open, effect, className,  transparent, shadow, children, fit }:
       }}
     >
       {children}
-    </div >
+    </div>
   );
 };
 

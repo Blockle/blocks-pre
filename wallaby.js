@@ -12,9 +12,7 @@ module.exports = wallaby => {
       '!src/**/*.spec.ts?(x)',
       'jest.config.js',
     ],
-    tests: [
-      'src/**/*.spec.ts?(x)',
-    ],
+    tests: ['src/**/*.spec.ts?(x)'],
     env: {
       type: 'node',
       runner: 'node',
@@ -28,7 +26,13 @@ module.exports = wallaby => {
     testFramework: 'jest',
     setup: function(wallaby) {
       const config = require('./jest.config');
-      Object.keys(config.moduleNameMapper).forEach(k => (config.moduleNameMapper[k] = config.moduleNameMapper[k].replace('<rootDir>', wallaby.localProjectDir)))
+      Object.keys(config.moduleNameMapper).forEach(
+        k =>
+          (config.moduleNameMapper[k] = config.moduleNameMapper[k].replace(
+            '<rootDir>',
+            wallaby.localProjectDir,
+          )),
+      );
       wallaby.testFramework.configure(config);
     },
   };

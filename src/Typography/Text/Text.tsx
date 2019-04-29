@@ -13,11 +13,7 @@ type Props = {
 
 const Text = ({ align, dark, bold, children, size }: Props) => (
   <p
-    className={classNames(
-      `text align-${align} size-${size}`,
-      bold && 'is-bold',
-      dark && 'is-dark',
-    )}
+    className={classNames(`text align-${align} size-${size}`, bold && 'is-bold', dark && 'is-dark')}
   >
     {children}
   </p>
