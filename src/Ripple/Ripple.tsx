@@ -5,7 +5,7 @@ import { animateCss } from 'utils';
 
 interface Props {
   children?: React.ReactNode;
-  renderAs: keyof HTMLElementTagNameMap;
+  renderAs: keyof HTMLElementTagNameMap; // Rename to as
   className?: string;
   [key: string]: any;
 }
