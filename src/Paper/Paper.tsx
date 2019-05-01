@@ -24,11 +24,19 @@ const defaultProps = {
 const Paper = ({ open, effect, className, transparent, shadow, children, fit }: Props) => {
   const [state, close] = useAnimationState(open);
 
+  const onAnimationEnd = (event: React.AnimationEvent<HTMLDivElement>) => {
+    if (animationLeaveExpression.test(event.animationName)) {
+      close();
+    }
+  };
+
   if (!state.open) {
     return null;
   }
 
   return (
+    // Preact uses onanimationend instead of onAnimationEnd, how to fix this?
+    // @ts-ignore
     <div
       className={classNames(
         'Paper',
@@ -39,11 +47,8 @@ const Paper = ({ open, effect, className, transparent, shadow, children, fit }: 
         transparent && 'is-transparent',
         shadow && 'is-shadow',
       )}
-      onAnimationEnd={(event: React.AnimationEvent<HTMLDivElement>) => {
-        if (animationLeaveExpression.test(event.animationName)) {
-          close();
-        }
-      }}
+      onanimationend={onAnimationEnd}
+      onAnimationEnd={onAnimationEnd}
     >
       {children}
     </div>

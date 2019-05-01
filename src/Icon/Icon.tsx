@@ -10,6 +10,8 @@ import Check from './icons/check.svg';
 import Close from './icons/close.svg';
 import Envelope from './icons/envelope.svg';
 import Error from './icons/error.svg';
+import Event from './icons/event.svg';
+import Location from './icons/location.svg';
 import Menu from './icons/menu.svg';
 import More from './icons/more.svg';
 import Notification from './icons/notification.svg';
@@ -27,6 +29,8 @@ const ICON_MAP = {
   close: Close,
   envelope: Envelope,
   error: Error,
+  event: Event,
+  location: Location,
   menu: Menu,
   more: More,
   notification: Notification,

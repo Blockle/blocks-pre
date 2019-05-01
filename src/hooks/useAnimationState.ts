@@ -2,17 +2,23 @@ import { useState } from 'react';
 
 type UseAnimationState = [{ open: boolean; leave: boolean }, () => void];
 
-export const useAnimationState = (open: boolean): UseAnimationState => {
-  const [state, setState] = useState({ open, leave: false });
+export const useAnimationState = (nextOpenState: boolean): UseAnimationState => {
+  const [state, setState] = useState({ open: nextOpenState, leave: false });
   const close = () => setState({ open: false, leave: false });
 
-  if (open && !state.open) {
-    setState({ open: true, leave: false });
+  let { open, leave } = state;
+
+  if (nextOpenState && !open) {
+    open = true;
+    leave = false;
   }
 
-  if (!open && state.open && !state.leave) {
-    setState({ open: true, leave: true });
+  if (!nextOpenState && open && !leave) {
+    open = true;
+    leave = true;
   }
 
-  return [state, close];
+  setState({ open, leave });
+
+  return [{ open, leave }, close];
 };
