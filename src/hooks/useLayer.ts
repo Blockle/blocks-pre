@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 
 export const useLayer = () => {
-  const [layer] = useState(document.createElement('div')); // Funky gc shit..?
+  const layer = useMemo(() => document.createElement('div'), []);
 
   useEffect(() => {
     document.body.appendChild(layer);
@@ -11,5 +11,5 @@ export const useLayer = () => {
     };
   }, []);
 
-  return [layer];
+  return layer;
 };

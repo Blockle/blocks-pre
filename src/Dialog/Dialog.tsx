@@ -7,7 +7,7 @@ import { IconButton } from 'IconButton';
 import { useAnimationState, useLayer } from 'hooks';
 
 type Props = {
-  actions: React.ReactNode;
+  actions?: React.ReactNode;
   children: React.ReactNode;
   onRequestClose: () => void;
   title?: React.ReactNode;
@@ -20,22 +20,27 @@ const defaultProps = {
 
 export const Dialog = ({ actions, children, open, full, title, onRequestClose }: Props) => {
   const [state, close] = useAnimationState(!!open);
-  const [layer] = useLayer();
+  const layer = useLayer();
 
   if (!state.open) {
     return null;
   }
 
+  const onAnimationEnd = (event: React.AnimationEvent<HTMLDivElement>) => {
+    if (event.animationName === 'DialogBack-Leave') {
+      close();
+    }
+  };
+
   const dialog = (
     <div className="DialogContainer">
+      {/* https://github.com/preactjs/preact/issues/1662
+      // @ts-ignore */}
       <div
         className={classNames('DialogBack', state.leave && 'is-leave')}
         onClick={onRequestClose}
-        onAnimationEnd={(event: React.AnimationEvent<HTMLDivElement>) => {
-          if (event.animationName === 'DialogBack-Leave') {
-            close();
-          }
-        }}
+        onAnimationEnd={onAnimationEnd}
+        onanimationend={onAnimationEnd}
       />
       <div
         className={classNames(

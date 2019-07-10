@@ -35,7 +35,7 @@ const Paper = ({ open, effect, className, transparent, shadow, children, fit }: 
   }
 
   return (
-    // Preact uses onanimationend instead of onAnimationEnd, how to fix this?
+    // https://github.com/preactjs/preact/issues/1662
     // @ts-ignore
     <div
       className={classNames(
