@@ -11,14 +11,14 @@ export const useAnimationState = (nextOpenState: boolean): UseAnimationState => 
   if (nextOpenState && !open) {
     open = true;
     leave = false;
+    setState({ open, leave });
   }
 
   if (!nextOpenState && open && !leave) {
     open = true;
     leave = true;
+    setState({ open, leave });
   }
-
-  setState({ open, leave });
 
   return [{ open, leave }, close];
 };
