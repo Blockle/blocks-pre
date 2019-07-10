@@ -1,9 +1,7 @@
 .heading {
   color: var(--text-primary-color);
   font-weight: normal;
-
-  /* Using `em` for relative margin based on size */
-  margin: 0.5em 0;
+  margin: var(--gutter-small) 0;
 
   /* Sizes */
   &.size-small {
