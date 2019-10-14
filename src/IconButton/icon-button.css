@@ -2,10 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4px;
   margin: 0;
   border: 0;
   background-color: transparent;
   border-radius: 50%;
   cursor: pointer;
+  /*  */
+  width: 30px;
+  height: 30px;
 }
