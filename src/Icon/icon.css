@@ -1,5 +1,7 @@
 .Icon {
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   line-height: 0;
   color: #fff;
 
@@ -7,19 +9,22 @@
     fill: currentColor;
   }
 
+  &.size-small,
   &.size-small svg {
-    width: 20px;
-    height: 20px;
+    max-width: 20px;
+    max-height: 20px;
   }
 
+  &.size-medium,
   &.size-medium svg {
-    width: 26px;
-    height: 26px;
+    max-width: 26px;
+    max-height: 26px;
   }
 
+  &.size-large,
   &.size-large svg {
-    width: 42px;
-    height: 42px;
+    max-width: 42px;
+    max-height: 42px;
   }
 
   &.accent-primary svg {

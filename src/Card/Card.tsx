@@ -4,11 +4,11 @@ import './card.css';
 
 type Props = {
   children: React.ReactNode;
-  shadow?: '1' | '2' | '3';
+  shadow?: '0' | '1' | '2' | '3';
   onClick?: () => void;
 };
 
-const Card = ({ children, shadow = '2', onClick }: Props) => (
+const Card = ({ children, shadow = '0', onClick }: Props) => (
   <div className={`Card shadow-${shadow}`} onClick={onClick}>
     {children}
   </div>
