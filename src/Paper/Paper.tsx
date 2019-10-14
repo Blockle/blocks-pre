@@ -35,8 +35,6 @@ const Paper = ({ open, effect, className, transparent, shadow, children, fit }: 
   }
 
   return (
-    // https://github.com/preactjs/preact/issues/1662
-    // @ts-ignore
     <div
       className={classNames(
         'Paper',
@@ -47,7 +45,6 @@ const Paper = ({ open, effect, className, transparent, shadow, children, fit }: 
         transparent && 'is-transparent',
         shadow && 'is-shadow',
       )}
-      onanimationend={onAnimationEnd}
       onAnimationEnd={onAnimationEnd}
     >
       {children}

@@ -34,13 +34,10 @@ export const Dialog = ({ actions, children, open, full, title, onRequestClose }:
 
   const dialog = (
     <div className="DialogContainer">
-      {/* https://github.com/preactjs/preact/issues/1662
-      // @ts-ignore */}
       <div
         className={classNames('DialogBack', state.leave && 'is-leave')}
         onClick={onRequestClose}
         onAnimationEnd={onAnimationEnd}
-        onanimationend={onAnimationEnd}
       />
       <div
         className={classNames(
