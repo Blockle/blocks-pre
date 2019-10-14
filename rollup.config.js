@@ -39,7 +39,15 @@ export default [
         extract: './dist/blockle-ui.css',
         sourceMap: true,
       }),
-      reactsvg(),
+      reactsvg({
+        svgo: {
+          plugins: [
+            {
+              removeViewBox: false,
+            },
+          ],
+        },
+      }),
     ],
   },
 ];
