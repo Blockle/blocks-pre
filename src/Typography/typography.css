@@ -1,0 +1,46 @@
+.Typography {
+  color: var(--text-primary-color);
+  font-weight: normal;
+  margin: var(--gutter-small) 0;
+
+  /* Align */
+  &.align-left {
+    text-align: left;
+  }
+
+  &.align-center {
+    text-align: center;
+  }
+
+  &.align-right {
+    text-align: right;
+  }
+}
+
+/* h1.Typography {
+  color: red;
+}
+
+h2.Typography {
+  color: red;
+}
+
+h3.Typography {
+  color: red;
+}
+
+h4.Typography {
+  color: red;
+}
+
+p.Typography {
+  color: red;
+}
+
+strong.Typography {
+  color: red;
+}
+
+em.Typography {
+  color: red;
+} */
