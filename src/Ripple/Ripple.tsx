@@ -21,9 +21,9 @@ export default class Ripple extends Component<Props> {
   ripples: HTMLDivElement[] = [];
 
   componentDidMount() {
-    // document.addEventListener('mouseleave', this.onMouseUp);
     document.addEventListener('mouseup', this.onMouseUp);
     document.addEventListener('touchend', this.onTouchEnd);
+    document.addEventListener('touchcancel', this.onTouchEnd);
   }
 
   componentWillUnmount() {
@@ -94,7 +94,7 @@ export default class Ripple extends Component<Props> {
       target: ripple,
       transform,
       duration,
-      opacity: 0.2,
+      opacity: 0.4,
       timingFunction: 'cubic-bezier(.22,.29,.7,.95)',
     });
   }
