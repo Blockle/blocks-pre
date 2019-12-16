@@ -1,0 +1,78 @@
+.TextField {
+  position: relative;
+  padding: var(--gutter-small) 0 var(--gutter-medium) 0;
+  color: var(--accent-primary);
+
+  &.is-invalid {
+    color: var(--warn);
+  }
+}
+
+.TextField-Label {
+  display: block;
+  transition: transform 200ms cubic-bezier(0, 0, 0.4, 1), opacity 200ms cubic-bezier(0, 0, 0.4, 1),
+    color 200ms cubic-bezier(0, 0, 0.4, 1), visibility 200ms;
+  transform: translateY(30%);
+  opacity: 0;
+  font-size: var(--text-heading-small);
+  text-transform: uppercase;
+  color: var(--text-secondary-color);
+  margin-bottom: 2px;
+
+  &.is-floating {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  &.is-focused {
+    color: var(--accent-primary);
+  }
+
+  &.is-invalid {
+    color: var(--warn);
+  }
+}
+
+.TextField-Bar {
+  position: absolute;
+  display: block;
+  content: '';
+  bottom: var(--gutter-medium);
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: currentColor;
+  opacity: 0;
+  transition: transform 200ms cubic-bezier(0, 0, 0.4, 1), opacity 200ms cubic-bezier(0, 0, 0.4, 1);
+  transform: scaleX(0);
+}
+
+.TextField-Input {
+  position: relative;
+  width: 100%;
+  background-color: transparent;
+  border-width: 0;
+  border-bottom: 1px solid var(--divider-color);
+  outline: 0;
+  font-family: inherit;
+  font-size: var(--text-size);
+  margin: 0;
+
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px rgba(255, 255, 255, 1) inset;
+  }
+
+  &:focus + .TextField-Bar {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+.TextField-Bottom {
+  position: absolute;
+  bottom: calc(var(--gutter-small) * -1 / 2);
+  left: 0;
+  font-size: var(--text-size-small);
+  padding-top: 0;
+  padding-left: var(--gutter-small);
+}

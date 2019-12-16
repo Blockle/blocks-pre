@@ -1,5 +1,5 @@
 import React from 'react';
-import { cx } from 'classNames';
+import { cx } from 'cx';
 
 import './icon-button.css';
 import { Ripple } from '../Ripple';
