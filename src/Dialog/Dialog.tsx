@@ -1,6 +1,6 @@
 import React from 'react';
 import { createPortal } from 'react-dom';
-import { classNames } from 'classNames';
+import { cx } from 'classNames';
 
 import './dialog.css';
 import { IconButton } from 'IconButton';
@@ -35,12 +35,12 @@ export const Dialog = ({ actions, children, open, full, title, onRequestClose }:
   const dialog = (
     <div className="DialogContainer">
       <div
-        className={classNames('DialogBack', state.leave && 'is-leave')}
+        className={cx('DialogBack', state.leave && 'is-leave')}
         onClick={onRequestClose}
         onAnimationEnd={onAnimationEnd}
       />
       <div
-        className={classNames(
+        className={cx(
           'Dialog',
           state.leave && 'is-leave',
           full && 'is-full',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { classNames } from 'classNames';
+import { cx } from 'classNames';
 
 import './button.css';
 import { Ripple } from '../Ripple';
@@ -31,7 +31,7 @@ const Button = ({
     type={type}
     disabled={disabled}
     onClick={onClick}
-    className={classNames(
+    className={cx(
       flat ? 'FlatButton' : 'Button',
       inline && 'is-inline',
       secondary && 'is-secondary',

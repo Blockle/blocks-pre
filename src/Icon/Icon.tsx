@@ -1,5 +1,5 @@
 import React from 'react';
-import { classNames } from 'classNames';
+import { cx } from 'classNames';
 
 import './icon.css';
 import Add from './icons/add.svg';
@@ -49,8 +49,8 @@ export interface Props {
   accent?: 'primary' | 'secondary' | 'tertiary';
 }
 
-const Icon: React.SFC<Props> = ({ label, name, size, accent }) => (
-  <span className={classNames(`Icon size-${size}`, accent && `accent-${accent}`)} title={label}>
+const Icon = ({ label, name, size = 'medium', accent }: Props) => (
+  <span className={cx(`Icon size-${size}`, accent && `accent-${accent}`)} title={label}>
     {React.createElement(ICON_MAP[name], {
       className: 'icon-svg',
       'data-testid': 'icon-svg',

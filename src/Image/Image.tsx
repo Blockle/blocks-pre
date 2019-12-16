@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { classNames } from 'classNames';
+import { cx } from 'classNames';
 
 import './image.css';
 
@@ -91,7 +91,7 @@ export default class Image extends Component<Props, State> {
     return (
       <img
         data-testid="image"
-        className={classNames('image', `fit-${fit}`, loaded && 'is-loaded')}
+        className={cx('image', `fit-${fit}`, loaded && 'is-loaded')}
         src={src}
         style={{
           width: width ? `${width}px` : undefined,

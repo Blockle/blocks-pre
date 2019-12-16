@@ -1,5 +1,5 @@
 import React from 'react';
-import { classNames } from 'classNames';
+import { cx } from 'classNames';
 
 import './icon-button.css';
 import { Ripple } from '../Ripple';
@@ -18,7 +18,7 @@ const Button = ({ disabled, label, name, onClick, secondary }: Props) => (
     renderAs="button"
     disabled={disabled}
     onClick={onClick}
-    className={classNames('IconButton', secondary && 'is-secondary', disabled && 'is-disabled')}
+    className={cx('IconButton', secondary && 'is-secondary', disabled && 'is-disabled')}
   >
     <Icon name={name} label={label} size="medium" accent="secondary" />
   </Ripple>

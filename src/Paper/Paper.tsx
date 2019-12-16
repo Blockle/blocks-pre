@@ -1,5 +1,5 @@
 import React from 'react';
-import { classNames } from 'classNames';
+import { cx } from 'classNames';
 
 import './paper.css';
 import { useAnimationState } from 'hooks';
@@ -36,7 +36,7 @@ const Paper = ({ open, effect, className, transparent, shadow, children, fit }: 
 
   return (
     <div
-      className={classNames(
+      className={cx(
         'Paper',
         state.leave && 'is-leave',
         className,

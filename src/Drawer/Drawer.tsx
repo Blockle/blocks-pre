@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './drawer.css';
-import { classNames } from 'classNames';
+import { cx } from 'classNames';
 
 type Props = {
   children: React.ReactNode;
@@ -13,10 +13,8 @@ type Props = {
 const Drawer = ({ children, onRequestClose, open, position = 'left' }: Props) => {
   return (
     <>
-      <div className={classNames('Drawer-Back', open && 'is-open')} onClick={onRequestClose} />
-      <div className={classNames('Drawer', `position-${position}`, open && 'is-open')}>
-        {children}
-      </div>
+      <div className={cx('Drawer-Back', open && 'is-open')} onClick={onRequestClose} />
+      <div className={cx('Drawer', `position-${position}`, open && 'is-open')}>{children}</div>
     </>
   );
 };

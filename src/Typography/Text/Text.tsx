@@ -1,5 +1,5 @@
 import React from 'react';
-import { classNames } from 'classNames';
+import { cx } from 'classNames';
 
 import './text.css';
 
@@ -12,9 +12,7 @@ type Props = {
 };
 
 const Text = ({ align, dark, bold, children, size }: Props) => (
-  <p
-    className={classNames(`text align-${align} size-${size}`, bold && 'is-bold', dark && 'is-dark')}
-  >
+  <p className={cx(`text align-${align} size-${size}`, bold && 'is-bold', dark && 'is-dark')}>
     {children}
   </p>
 );
