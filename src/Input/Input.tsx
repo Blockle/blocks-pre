@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useField, FieldProps } from '@blockle/form';
 
-import './text-field.css';
+import './input.css';
 
 import { cx } from '../cx';
 
