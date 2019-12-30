@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { cx } from 'classNames';
+import { cx } from 'cx';
 
 import './image.css';
 

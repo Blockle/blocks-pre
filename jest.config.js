@@ -7,5 +7,5 @@ module.exports = {
     '\\.(css|less)$': '<rootDir>/__mocks__/file.ts',
   },
   modulePaths: ['src'],
-  setupFilesAfterEnv: ['<rootDir>/setupTests.ts'],
+  // setupFilesAfterEnv: ['<rootDir>/setupTests.ts'],
 };

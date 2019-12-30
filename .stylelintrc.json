@@ -1,0 +1,10 @@
+{
+  "plugins": ["stylelint-scss"],
+  "extends": "stylelint-config-standard",
+  "ignoreFiles": ["**/*.tsx"],
+  "rules": {
+    "declaration-colon-newline-after": null,
+    "selector-type-no-unknown": [true, { "ignore": ["custom-elements"] }],
+    "unit-no-unknown": [true, { "ignoreUnits": ["xpx"] }]
+  }
+}
