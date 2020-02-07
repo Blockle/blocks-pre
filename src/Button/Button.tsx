@@ -11,7 +11,7 @@ type Props = {
   flat?: boolean;
   icon?: IconNames;
   inline?: boolean;
-  onClick?(): void;
+  onClick?: (event: React.SyntheticEvent<HTMLButtonElement, MouseEvent>) => void;
   secondary?: boolean;
   type?: 'button' | 'submit';
 };

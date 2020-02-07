@@ -8,13 +8,13 @@ afterEach(cleanup);
 
 describe('Paper', () => {
   it('should render nothing by default', () => {
-    const { container } = render(<Paper>Button Text</Paper>);
+    const { container } = render(<Paper render={() => 'Button Text'} />);
 
     expect(container).not.toHaveTextContent('Button Text');
   });
 
   it('should render children when opened', () => {
-    const { container } = render(<Paper open>Button Text</Paper>);
+    const { container } = render(<Paper open render={() => 'Button Text'} />);
 
     expect(container).toHaveTextContent('Button Text');
   });

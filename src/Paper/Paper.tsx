@@ -7,21 +7,26 @@ import { useAnimationState } from 'hooks';
 export type Effects = 'fade' | 'slideUp';
 
 type Props = {
-  children: React.ReactNode;
   className?: string;
-} & typeof defaultProps;
+  effect?: Effects;
+  fit?: boolean;
+  open?: boolean;
+  render: () => JSX.Element | string;
+  shadow?: boolean;
+  transparent?: boolean;
+};
 
 const animationLeaveExpression = /^Paper-.*?Leave$/;
 
-const defaultProps = {
-  effect: 'fade' as Effects,
-  fit: false,
-  open: false,
-  shadow: false,
-  transparent: false,
-};
-
-const Paper = ({ open, effect, className, transparent, shadow, children, fit }: Props) => {
+const Paper = ({
+  open = false,
+  effect = 'fade',
+  className,
+  transparent,
+  shadow,
+  render,
+  fit,
+}: Props) => {
   const [state, close] = useAnimationState(open);
 
   const onAnimationEnd = (event: React.AnimationEvent<HTMLDivElement>) => {
@@ -47,11 +52,9 @@ const Paper = ({ open, effect, className, transparent, shadow, children, fit }: 
       )}
       onAnimationEnd={onAnimationEnd}
     >
-      {children}
+      {render()}
     </div>
   );
 };
-
-Paper.defaultProps = defaultProps;
 
 export default Paper;

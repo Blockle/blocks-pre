@@ -1,15 +1,23 @@
-import { useEffect, useMemo } from 'react';
+import { useEffect, useRef } from 'react';
 
 export const useLayer = () => {
-  const layer = useMemo(() => document.createElement('div'), []);
+  const layerRef = useRef<HTMLDivElement>();
 
-  useEffect(() => {
-    document.body.appendChild(layer);
+  useEffect(
+    () => () => {
+      if (layerRef.current) {
+        document.body.removeChild(layerRef.current);
+      }
+    },
+    [],
+  );
 
-    return () => {
-      document.body.removeChild(layer);
-    };
-  }, []);
+  return () => {
+    if (!layerRef.current) {
+      layerRef.current = document.createElement('div');
+      document.body.appendChild(layerRef.current);
+    }
 
-  return layer;
+    return layerRef.current;
+  };
 };

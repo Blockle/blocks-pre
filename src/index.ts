@@ -11,3 +11,4 @@ export * from './Paper';
 export * from './Ripple';
 export * from './Typography';
 export * from './hooks';
+export * from './cx';

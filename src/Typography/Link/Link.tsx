@@ -7,7 +7,7 @@ interface Props {
   to: string;
 }
 
-const Link: React.SFC<Props> = ({ children, to }) => (
+const Link = ({ children, to }: Props) => (
   <a href={`#${to}`} className="Link">
     {children}
   </a>

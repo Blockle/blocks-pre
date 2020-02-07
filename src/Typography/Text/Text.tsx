@@ -11,15 +11,10 @@ type Props = {
   size?: 'small' | 'medium';
 };
 
-const Text = ({ align, dark, bold, children, size }: Props) => (
+const Text = ({ align = 'left', dark, bold, children, size = 'medium' }: Props) => (
   <p className={cx(`text align-${align} size-${size}`, bold && 'is-bold', dark && 'is-dark')}>
     {children}
   </p>
 );
-
-Text.defaultProps = {
-  align: 'left',
-  size: 'medium',
-};
 
 export default Text;

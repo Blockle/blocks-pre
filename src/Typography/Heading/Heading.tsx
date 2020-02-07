@@ -9,7 +9,7 @@ interface Props {
   size?: 'small' | 'medium' | 'large' | 'xlarge';
 }
 
-const Heading: React.SFC<Props> = ({ children, level, size, align }) =>
+const Heading = ({ children, level = '1', size = 'medium', align = 'left' }: Props) =>
   React.createElement(
     `h${level}`,
     {
@@ -17,11 +17,5 @@ const Heading: React.SFC<Props> = ({ children, level, size, align }) =>
     },
     children,
   );
-
-Heading.defaultProps = {
-  align: 'left',
-  level: '1',
-  size: 'medium',
-};
 
 export default Heading;

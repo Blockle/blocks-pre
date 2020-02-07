@@ -5,7 +5,7 @@ import './card.css';
 type Props = {
   children: React.ReactNode;
   shadow?: '0' | '1' | '2' | '3';
-  onClick?: () => void;
+  onClick?: (event: React.SyntheticEvent<HTMLDivElement, MouseEvent>) => void;
 };
 
 const Card = ({ children, shadow = '0', onClick }: Props) => (

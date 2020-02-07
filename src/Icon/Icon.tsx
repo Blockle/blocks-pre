@@ -58,8 +58,4 @@ const Icon = ({ label, name, size = 'medium', accent }: Props) => (
   </span>
 );
 
-Icon.defaultProps = {
-  size: 'medium',
-};
-
 export default Icon;

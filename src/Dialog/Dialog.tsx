@@ -11,15 +11,19 @@ type Props = {
   children: React.ReactNode;
   onRequestClose: () => void;
   title?: React.ReactNode;
-} & Partial<typeof defaultProps>;
-
-const defaultProps = {
-  full: false,
-  open: false,
+  full?: boolean;
+  open?: boolean;
 };
 
-export const Dialog = ({ actions, children, open, full, title, onRequestClose }: Props) => {
-  const [state, close] = useAnimationState(!!open);
+export const Dialog = ({
+  actions,
+  children,
+  open = false,
+  full = false,
+  title = null,
+  onRequestClose,
+}: Props) => {
+  const [state, close] = useAnimationState(open);
   const layer = useLayer();
 
   if (!state.open) {
@@ -61,5 +65,5 @@ export const Dialog = ({ actions, children, open, full, title, onRequestClose }:
     </div>
   );
 
-  return createPortal(dialog, layer) as JSX.Element;
+  return createPortal(dialog, layer()) as JSX.Element;
 };
