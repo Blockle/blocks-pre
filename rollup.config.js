@@ -2,7 +2,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import typescript from 'rollup-plugin-typescript2';
 import commonjs from 'rollup-plugin-commonjs';
 import postcss from 'rollup-plugin-postcss';
-import reactsvg from 'rollup-plugin-react-svg';
+import svgr from '@svgr/rollup';
 
 import pkg from './package.json';
 
@@ -33,20 +33,14 @@ export default [
       resolve({
         extensions: ['.ts', '.tsx'],
       }),
-      typescript(),
+      svgr(),
+      typescript({
+        objectHashIgnoreUnknownHack: true,
+      }),
       commonjs(),
       postcss({
         extract: './dist/blockle-ui.css',
         sourceMap: true,
-      }),
-      reactsvg({
-        svgo: {
-          plugins: [
-            {
-              removeViewBox: false,
-            },
-          ],
-        },
       }),
     ],
   },
