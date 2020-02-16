@@ -33,6 +33,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -42,6 +43,7 @@
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
@@ -54,16 +56,15 @@
   max-width: 600px;
   margin: var(--gutter-small);
   min-height: 40px;
-  min-width: 300px;
+  min-width: 320px;
   background-color: #ffff;
   overflow: hidden;
-  background: #ffffff;
   border: 1px solid #f0f3f4;
   border-radius: 4px;
   opacity: 0;
   transform: translateY(20%);
   padding-top: var(--gutter-small);
-  max-height: 60%;
+  max-height: 94%;
   animation-name: Dialog-Enter;
   animation-duration: 280ms;
   animation-fill-mode: both;

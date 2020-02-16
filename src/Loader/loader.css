@@ -1,0 +1,17 @@
+.Loader .Icon {
+  animation: BlockleUi-Spin 1s ease-in-out 0s infinite both;
+}
+
+@keyframes BlockleUi-Spin {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  80% {
+    transform: rotateZ(359deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
