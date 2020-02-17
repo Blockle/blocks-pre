@@ -2,12 +2,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
   margin: 0;
   border: 0;
   background-color: transparent;
   border-radius: 50%;
   cursor: pointer;
-  /*  */
   width: 30px;
   height: 30px;
+
+  &:focus {
+    box-shadow: var(--outline);
+  }
 }

@@ -5,16 +5,33 @@
   border: 1px solid #dce0e6;
   padding: var(--gutter-small);
   margin: var(--gutter-small) 0;
+  outline: 0;
+
+  &.is-clickable {
+    cursor: pointer;
+  }
 
   &.shadow-1 {
     box-shadow: var(--shadow-1);
+
+    &:focus {
+      box-shadow: var(--shadow-1), var(--outline);
+    }
   }
 
   &.shadow-2 {
     box-shadow: var(--shadow-2);
+
+    &:focus {
+      box-shadow: var(--shadow-2), var(--outline);
+    }
   }
 
   &.shadow-3 {
     box-shadow: var(--shadow-3);
+
+    &:focus {
+      box-shadow: var(--shadow-3), var(--outline);
+    }
   }
 }
