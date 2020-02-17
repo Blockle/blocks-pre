@@ -8,8 +8,9 @@ interface Props {
   className?: string;
   onClick?: (event: React.MouseEvent<HTMLDivElement>) => void;
   onKeyPress?: (event: React.KeyboardEvent<HTMLDivElement>) => void;
-  renderAs: keyof HTMLElementTagNameMap; // Rename to as
-  tabIndex?: number;
+  renderAs: keyof HTMLElementTagNameMap;
+  // TODO Specify me
+  [key: string]: any;
 }
 
 const RIPPLE_WIDTH = 50;
