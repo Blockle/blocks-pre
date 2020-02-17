@@ -1,0 +1,90 @@
+.Panel-Container {
+  contain: layout;
+  z-index: 200;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.Panel-Back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation-name: Panel-Back-Enter;
+  animation-duration: 280ms;
+  animation-fill-mode: both;
+
+  &.is-leave {
+    animation-name: Panel-Back-Leave;
+  }
+}
+
+@keyframes Panel-Back-Enter {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes Panel-Back-Leave {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.Panel {
+  border-radius: 24px 24px 0 0;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to bottom, #fff 0%, #f3f8fd 100%);
+  box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.1);
+  padding: var(--gutter-large) var(--gutter-large) var(--gutter-small) var(--gutter-large);
+  animation-name: Dialog-Enter;
+  animation-duration: 280ms;
+  animation-fill-mode: both;
+
+  &.is-leave {
+    animation-name: Panel-Leave;
+  }
+}
+
+@keyframes Panel-Enter {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes Panel-Leave {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+}
