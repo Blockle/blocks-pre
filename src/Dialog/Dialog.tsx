@@ -8,20 +8,20 @@ import { useAnimationState, useLayer } from 'hooks';
 
 type Props = {
   actions?: React.ReactNode;
-  children: React.ReactNode;
-  onRequestClose: () => void;
-  title?: React.ReactNode;
   full?: boolean;
+  onRequestClose: () => void;
   open?: boolean;
+  render: () => JSX.Element | string;
+  title?: React.ReactNode;
 };
 
 export const Dialog = ({
   actions,
-  children,
-  open = false,
   full = false,
-  title = null,
   onRequestClose,
+  open = false,
+  render,
+  title = null,
 }: Props) => {
   const [state, close] = useAnimationState(open);
   const layer = useLayer();
@@ -58,7 +58,7 @@ export const Dialog = ({
           </div>
         )}
 
-        <div className="DialogContent">{children}</div>
+        <div className="DialogContent">{render()}</div>
 
         {actions && <div className="DialogActions">{actions}</div>}
       </div>
