@@ -11,6 +11,12 @@
     cursor: pointer;
   }
 
+  &.shadow-0 {
+    &:focus {
+      box-shadow: var(--outline);
+    }
+  }
+
   &.shadow-1 {
     box-shadow: var(--shadow-1);
 
