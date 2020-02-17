@@ -12,5 +12,6 @@
   border-radius: 50%;
   pointer-events: none;
   background: currentColor;
-  opacity: 0.1;
+  opacity: 0.05;
+  transform: scale(0.4);
 }
