@@ -1,7 +1,7 @@
 import React from 'react';
-import { useAnimationState, useLayer } from '../hooks';
-import { cx } from '../cx';
 import { createPortal } from 'react-dom';
+import { cx } from '../cx';
+import { useAnimationState, useLayer } from '../hooks';
 import './panel.css';
 
 interface Props {
@@ -28,7 +28,7 @@ const Panel = ({ className, onRequestClose, open = false, render }: Props) => {
   };
 
   const panel = (
-    <div className="Panel-Container">
+    <div ref={ref} className="Panel-Container">
       <div
         className={cx('Panel-Back', state.leave && 'is-leave')}
         onClick={onRequestClose}

@@ -1,7 +1,8 @@
 .text {
   font-size: var(--text-size);
   color: var(--text-secondary-color);
-  margin: var(--gutter-small) 0;
+  margin: 0;
+  padding: 0;
   line-height: 1.6em;
 
   &.is-dark {

@@ -1,6 +1,5 @@
 import React from 'react';
-import { cx } from 'cx';
-
+import { cx } from '../cx';
 import './icon.css';
 import Add from './icons/add.svg';
 import ArrowBack from './icons/arrow-back.svg';

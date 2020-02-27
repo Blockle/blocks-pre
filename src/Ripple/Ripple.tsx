@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-
+import { animateCss } from '../utils';
 import './ripple.css';
-import { animateCss } from 'utils';
 
 interface Props {
   children?: React.ReactNode;

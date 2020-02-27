@@ -1,8 +1,7 @@
 import React from 'react';
-
+import { cx } from '../cx';
+import { Ripple } from '../Ripple';
 import './card.css';
-import { cx } from 'cx';
-import { Ripple } from 'Ripple';
 
 type Props = {
   children: React.ReactNode;

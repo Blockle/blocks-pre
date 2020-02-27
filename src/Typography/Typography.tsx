@@ -1,7 +1,6 @@
 import React from 'react';
-
+import { cx } from '../cx';
 import './typography.css';
-import { cx } from 'cx';
 
 type Props = {
   align?: 'left' | 'center' | 'right';

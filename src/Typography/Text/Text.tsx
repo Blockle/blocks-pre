@@ -1,6 +1,5 @@
 import React from 'react';
-import { cx } from 'cx';
-
+import { cx } from '../../cx';
 import './text.css';
 
 type Props = {

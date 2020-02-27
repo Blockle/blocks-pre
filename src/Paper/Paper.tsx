@@ -1,8 +1,7 @@
 import React from 'react';
-import { cx } from 'cx';
-
+import { cx } from '../cx';
+import { useAnimationState } from '../hooks';
 import './paper.css';
-import { useAnimationState } from 'hooks';
 
 export type Effects = 'fade' | 'slideUp';
 
