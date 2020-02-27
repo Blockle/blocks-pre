@@ -3,9 +3,6 @@ import { Box } from '../Box';
 import { BBStyles } from '../useStyles/useStyles';
 import './stack.css';
 
-// type Space = 'gutter' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'none';
-// type Spacing = Space | [Space, Space] | [Space, Space, Space];
-
 interface Props extends BBStyles {
   children: ReactNode;
   component?: 'div' | 'ol' | 'ul';

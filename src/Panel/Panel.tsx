@@ -28,7 +28,7 @@ const Panel = ({ className, onRequestClose, open = false, render }: Props) => {
   };
 
   const panel = (
-    <div ref={ref} className="Panel-Container">
+    <div className="Panel-Container">
       <div
         className={cx('Panel-Back', state.leave && 'is-leave')}
         onClick={onRequestClose}
