@@ -30,6 +30,7 @@ const Box = ({
   paddingTop,
   paddingX,
   paddingY,
+  position,
   textAlign,
   width,
   ...restProps
@@ -52,6 +53,7 @@ const Box = ({
     paddingTop,
     paddingX,
     paddingY,
+    position,
     textAlign,
     width,
   });

@@ -3,13 +3,13 @@ import { Box } from '../Box';
 import { BBStyles } from '../useStyles/useStyles';
 import './stack.css';
 
-interface Props extends BBStyles {
+interface Props {
   children: ReactNode;
   component?: 'div' | 'ol' | 'ul';
   space?: BBStyles['padding'];
 }
 
-const Stack = ({ children, component = 'div', space, ...styleProps }: Props) => {
+const Stack = ({ children, component = 'div', space }: Props) => {
   const stackItems = Children.toArray(children);
   const length = stackItems.length;
 
@@ -22,7 +22,7 @@ const Stack = ({ children, component = 'div', space, ...styleProps }: Props) => 
   }
 
   return (
-    <Box component={component} className="Stack" {...styleProps}>
+    <Box component={component} className="Stack">
       {stackItems.map((child, index) => (
         <Box key={index} paddingBottom={space}>
           {child}

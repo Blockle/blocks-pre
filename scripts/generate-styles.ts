@@ -100,6 +100,10 @@ const baseStyles: Styles = {
     property: 'padding-top',
     values: space,
   },
+  position: {
+    property: 'position',
+    values: ['relative', 'fixed', 'absolute', 'sticky'],
+  },
   textAlign: {
     property: 'text-align',
     values: ['left', 'right', 'center', 'justify'],

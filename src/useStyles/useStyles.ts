@@ -25,6 +25,7 @@ export interface BBStyles {
   paddingTop?: ResponsiveStyle<Space>;
   paddingX?: ResponsiveStyle<Space>;
   paddingY?: ResponsiveStyle<Space>;
+  position?: ResponsiveStyle<'relative' | 'fixed' | 'absolute' | 'sticky'>;
   textAlign?: ResponsiveStyle<'left' | 'right' | 'center' | 'justify'>;
   width?: ResponsiveStyle<'full'>;
 }

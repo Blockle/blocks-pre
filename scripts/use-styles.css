@@ -1182,6 +1182,70 @@
   }
 }
 
+.bb-position-relative {
+  position: relative;
+}
+
+@media (min-width: 740px) {
+  .bb-position-relative-tablet {
+    position: relative;
+  }
+}
+
+@media (min-width: 992px) {
+  .bb-position-relative-desktop {
+    position: relative;
+  }
+}
+
+.bb-position-fixed {
+  position: fixed;
+}
+
+@media (min-width: 740px) {
+  .bb-position-fixed-tablet {
+    position: fixed;
+  }
+}
+
+@media (min-width: 992px) {
+  .bb-position-fixed-desktop {
+    position: fixed;
+  }
+}
+
+.bb-position-absolute {
+  position: absolute;
+}
+
+@media (min-width: 740px) {
+  .bb-position-absolute-tablet {
+    position: absolute;
+  }
+}
+
+@media (min-width: 992px) {
+  .bb-position-absolute-desktop {
+    position: absolute;
+  }
+}
+
+.bb-position-sticky {
+  position: sticky;
+}
+
+@media (min-width: 740px) {
+  .bb-position-sticky-tablet {
+    position: sticky;
+  }
+}
+
+@media (min-width: 992px) {
+  .bb-position-sticky-desktop {
+    position: sticky;
+  }
+}
+
 .bb-textAlign-left {
   text-align: left;
 }

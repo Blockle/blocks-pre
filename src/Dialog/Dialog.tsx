@@ -53,7 +53,7 @@ export const Dialog = ({
         {(title || full) && (
           <div className="DialogTopBar">
             <div className="DialogTitle">{title}</div>
-            <IconButton name="close" label="Close" onClick={onRequestClose} />
+            <IconButton name="cross" label="Close" onClick={onRequestClose} />
           </div>
         )}
 
