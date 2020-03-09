@@ -1,10 +1,9 @@
 import React from 'react';
 import { createPortal } from 'react-dom';
-import { cx } from 'cx';
-
+import { cx } from '../cx';
+import { useAnimationState, useLayer } from '../hooks';
+import { IconButton } from '../IconButton';
 import './dialog.css';
-import { IconButton } from 'IconButton';
-import { useAnimationState, useLayer } from 'hooks';
 
 type Props = {
   actions?: React.ReactNode;
@@ -54,7 +53,7 @@ export const Dialog = ({
         {(title || full) && (
           <div className="DialogTopBar">
             <div className="DialogTitle">{title}</div>
-            <IconButton name="close" label="Close" onClick={onRequestClose} />
+            <IconButton name="cross" label="Close" onClick={onRequestClose} />
           </div>
         )}
 

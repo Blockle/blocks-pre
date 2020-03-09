@@ -1,9 +1,8 @@
 import React from 'react';
-import { cx } from 'cx';
-
-import './icon-button.css';
-import { Ripple } from '../Ripple';
+import { cx } from '../cx';
 import { Icon, IconNames } from '../Icon';
+import { Ripple } from '../Ripple';
+import './icon-button.css';
 
 type Props = {
   disabled?: boolean;

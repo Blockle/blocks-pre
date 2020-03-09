@@ -1,9 +1,8 @@
 import React from 'react';
-import { cx } from 'cx';
-
-import './button.css';
-import { Ripple } from '../Ripple';
+import { cx } from '../cx';
 import { Icon, IconNames } from '../Icon';
+import { Ripple } from '../Ripple';
+import './button.css';
 
 type Props = {
   children: React.ReactNode;
@@ -14,10 +13,12 @@ type Props = {
   onClick?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
   secondary?: boolean;
   type?: 'button' | 'submit';
+  className?: string;
 };
 
 const Button = ({
   children,
+  className,
   disabled,
   flat,
   icon,
@@ -37,6 +38,7 @@ const Button = ({
       secondary && 'is-secondary',
       disabled && 'is-disabled',
       icon && 'has-icon',
+      className,
     )}
   >
     {icon && <Icon name={icon} label="" size="small" />}

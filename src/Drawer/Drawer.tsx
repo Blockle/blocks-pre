@@ -1,7 +1,6 @@
 import React from 'react';
-
+import { cx } from '../cx';
 import './drawer.css';
-import { cx } from 'cx';
 
 type Props = {
   children: React.ReactNode;

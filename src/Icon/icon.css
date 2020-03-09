@@ -5,7 +5,8 @@
   line-height: 0;
   color: #fff;
 
-  & svg {
+  & svg,
+  & svg path {
     fill: currentColor;
   }
 

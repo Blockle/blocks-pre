@@ -1,7 +1,7 @@
 import React from 'react';
-import { useAnimationState, useLayer } from '../hooks';
-import { cx } from '../cx';
 import { createPortal } from 'react-dom';
+import { cx } from '../cx';
+import { useAnimationState, useLayer } from '../hooks';
 import './panel.css';
 
 interface Props {

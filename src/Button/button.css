@@ -5,8 +5,8 @@
   align-items: center;
   width: 100%;
   height: 40px;
-  padding: 0 var(--gutter-medium);
-  margin: var(--gutter-small) 0;
+  padding: 0 var(--space-large);
+  margin: 0;
   border: 0;
   background-color: transparent;
   text-transform: uppercase;

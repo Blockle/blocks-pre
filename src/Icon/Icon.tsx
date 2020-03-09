@@ -1,47 +1,30 @@
 import React from 'react';
-import { cx } from 'cx';
-
+import { cx } from '../cx';
 import './icon.css';
-import Add from './icons/add.svg';
-import ArrowBack from './icons/arrow-back.svg';
-import ArrowLeft from './icons/arrow-left.svg';
-import ArrowRight from './icons/arrow-right.svg';
-import Assignment from './icons/assignment.svg';
-import Bookmark from './icons/bookmark.svg';
-import Check from './icons/check.svg';
-import Close from './icons/close.svg';
-import Envelope from './icons/envelope.svg';
-import Error from './icons/error.svg';
-import Event from './icons/event.svg';
-import Location from './icons/location.svg';
-import Menu from './icons/menu.svg';
-import More from './icons/more.svg';
-import Notification from './icons/notification.svg';
-import School from './icons/school.svg';
-import Settings from './icons/settings.svg';
-import Warning from './icons/warning.svg';
-import Work from './icons/work.svg';
+import ArrowLeft from './icons/sm-arrow-left.svg';
+import ArrowRight from './icons/sm-arrow-right.svg';
+import Briefcase from './icons/sm-briefcase.svg';
+import Calendar from './icons/sm-calendar.svg';
+import Check from './icons/sm-check.svg';
+import ArrowBack from './icons/sm-cheveron-left.svg';
+import Clipboard from './icons/sm-clipboard.svg';
+import Cog from './icons/sm-cog.svg';
+import Exclamation from './icons/sm-exclamation.svg';
+import Plus from './icons/sm-plus.svg';
+import Cross from './icons/sm-x.svg';
 
 const ICON_MAP = {
-  add: Add,
   arrowBack: ArrowBack,
   arrowLeft: ArrowLeft,
   arrowRight: ArrowRight,
-  assignment: Assignment,
-  bookmark: Bookmark,
+  briefcase: Briefcase,
+  calendar: Calendar,
   check: Check,
-  close: Close,
-  envelope: Envelope,
-  error: Error,
-  event: Event,
-  location: Location,
-  menu: Menu,
-  more: More,
-  notification: Notification,
-  school: School,
-  settings: Settings,
-  warning: Warning,
-  work: Work,
+  clipboard: Clipboard,
+  cog: Cog,
+  cross: Cross,
+  plus: Plus,
+  exclamation: Exclamation,
 };
 
 export type IconNames = keyof typeof ICON_MAP;
@@ -53,13 +36,20 @@ export interface Props {
   accent?: 'primary' | 'secondary' | 'tertiary';
 }
 
-const Icon = ({ label, name, size = 'medium', accent }: Props) => (
-  <span className={cx(`Icon size-${size}`, accent && `accent-${accent}`)} title={label}>
-    {React.createElement(ICON_MAP[name], {
-      className: 'icon-svg',
-      'data-testid': 'icon-svg',
-    })}
-  </span>
-);
+const Icon = ({ label, name, size = 'medium', accent }: Props) => {
+  if (!ICON_MAP[name]) {
+    console.warn(`<Icon name="${name}" />`);
+    return null;
+  }
+
+  return (
+    <span className={cx(`Icon size-${size}`, accent && `accent-${accent}`)} title={label}>
+      {React.createElement(ICON_MAP[name], {
+        className: 'icon-svg',
+        'data-testid': 'icon-svg',
+      })}
+    </span>
+  );
+};
 
 export default Icon;
