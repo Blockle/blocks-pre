@@ -10,7 +10,6 @@ export * from './Heading';
 export * from './hooks';
 export * from './Icon';
 export * from './IconButton';
-export * from './Image';
 export * from './Link';
 export * from './Loader';
 export * from './Panel';
