@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, ElementType } from 'react';
 import { animateCss } from '../utils';
 import './ripple.css';
 
@@ -7,7 +7,7 @@ interface Props {
   className?: string;
   onClick?: (event: React.MouseEvent<HTMLDivElement>) => void;
   onKeyPress?: (event: React.KeyboardEvent<HTMLDivElement>) => void;
-  renderAs: keyof HTMLElementTagNameMap;
+  component: ElementType;
   // TODO Specify me
   [key: string]: any;
 }
@@ -122,10 +122,10 @@ export default class Ripple extends Component<Props> {
   };
 
   render() {
-    const { children, renderAs, className, ...props } = this.props;
+    const { children, component, className, ...props } = this.props;
 
     return React.createElement(
-      renderAs,
+      component,
       {
         ref: this.ref,
         ...props,

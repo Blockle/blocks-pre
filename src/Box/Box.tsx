@@ -1,4 +1,4 @@
-import { createElement, ElementType, ReactNode } from 'react';
+import { createElement, ElementType, forwardRef, ReactNode } from 'react';
 import { cx } from '../cx';
 import { BBStyles, useStyles } from '../useStyles/useStyles';
 
@@ -9,63 +9,69 @@ interface Props extends BBStyles {
   component?: ElementType;
 }
 
-const Box = ({
-  children,
-  className,
-  component = 'div',
-  alignItems,
-  background,
-  display,
-  flexDirection,
-  flexGrow,
-  flexShrink,
-  flexWrap,
-  height,
-  justifyContent,
-  overflow,
-  padding,
-  paddingBottom,
-  paddingLeft,
-  paddingRight,
-  paddingTop,
-  paddingX,
-  paddingY,
-  position,
-  textAlign,
-  width,
-  ...restProps
-}: Props) => {
-  const boxStyles = useStyles({
-    alignItems,
-    background,
-    display,
-    flexDirection,
-    flexGrow,
-    flexShrink,
-    flexWrap,
-    height,
-    justifyContent,
-    overflow,
-    padding,
-    paddingBottom,
-    paddingLeft,
-    paddingRight,
-    paddingTop,
-    paddingX,
-    paddingY,
-    position,
-    textAlign,
-    width,
-  });
-
-  return createElement(
-    component,
+const Box = forwardRef(
+  (
     {
-      className: cx('Box', boxStyles, className),
-      ...restProps,
-    },
-    children,
-  );
-};
+      children,
+      className,
+      component = 'div',
+      alignItems,
+      background,
+      display,
+      flexDirection,
+      flexGrow,
+      flexShrink,
+      flexWrap,
+      height,
+      justifyContent,
+      overflow,
+      padding,
+      paddingBottom,
+      paddingLeft,
+      paddingRight,
+      paddingTop,
+      paddingX,
+      paddingY,
+      position,
+      textAlign,
+      width,
+      ...restProps
+    }: Props,
+    ref,
+  ) => {
+    const boxStyles = useStyles({
+      alignItems,
+      background,
+      display,
+      flexDirection,
+      flexGrow,
+      flexShrink,
+      flexWrap,
+      height,
+      justifyContent,
+      overflow,
+      padding,
+      paddingBottom,
+      paddingLeft,
+      paddingRight,
+      paddingTop,
+      paddingX,
+      paddingY,
+      position,
+      textAlign,
+      width,
+    });
+
+    return createElement(
+      component,
+      {
+        ref,
+        className: cx(boxStyles, className),
+        ...restProps,
+      },
+      children,
+    );
+  },
+);
 
 export default Box;

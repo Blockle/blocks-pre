@@ -1,4 +1,5 @@
 import React from 'react';
+import { Box } from '../Box';
 import { cx } from '../cx';
 import { Ripple } from '../Ripple';
 import './card.css';
@@ -18,8 +19,9 @@ const Card = ({ children, shadow = '0', onClick }: Props) => {
   if (onClick) {
     return (
       <Ripple
-        renderAs="div"
-        tabIndex={onClick ? 0 : undefined}
+        component={Box}
+        tabIndex={0}
+        role="button"
         onClick={onClick}
         onKeyPress={event => {
           if (onClick && (event.key === 'Enter' || event.key === ' ')) {

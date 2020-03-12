@@ -14,7 +14,7 @@ type Props = {
 
 const Button = ({ disabled, label, name, onClick, secondary }: Props) => (
   <Ripple
-    renderAs="button"
+    component="button"
     disabled={disabled}
     onClick={onClick}
     className={cx('IconButton', secondary && 'is-secondary', disabled && 'is-disabled')}

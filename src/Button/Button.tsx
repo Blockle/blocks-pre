@@ -28,7 +28,7 @@ const Button = ({
   type = 'button',
 }: Props) => (
   <Ripple
-    renderAs="button"
+    component="button"
     type={type}
     disabled={disabled}
     onClick={onClick}
