@@ -26,7 +26,7 @@ describe('Heading', () => {
 
   it('should render with different alignment', () => {
     const { getByText } = render(
-      <Heading level={1} align="right">
+      <Heading level={1} textAlign="right">
         Heading Text
       </Heading>,
     );

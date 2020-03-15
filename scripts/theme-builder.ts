@@ -9,6 +9,14 @@ interface BlockleSpacing {
   xlarge: string | number;
 }
 
+interface Typography {
+  xsmall: string | number;
+  small: string | number;
+  medium: string | number;
+  large: string | number;
+  xlarge: string | number;
+}
+
 interface BlockleStyle {
   [value: string]: Record<string | number, string | number>;
 }
@@ -22,16 +30,18 @@ type Breakpoints = number[];
 interface BlockleTokens {
   breakpoints: Breakpoints;
   spacing: BlockleSpacing;
+  typography: Typography;
 }
 
 interface BlockleTheme extends BlockleTokens {
   styles: BlockleStyles;
 }
 
-const createTheme = ({ breakpoints, spacing }: BlockleTokens): BlockleTheme => {
+const createTheme = ({ breakpoints, spacing, typography }: BlockleTokens): BlockleTheme => {
   return {
     breakpoints,
     spacing,
+    typography,
     styles: {
       alignItems: {
         stretch: {
@@ -337,6 +347,23 @@ const createTheme = ({ breakpoints, spacing }: BlockleTokens): BlockleTheme => {
           width: '100%',
         },
       },
+      fontSize: {
+        xsmall: {
+          'font-size': typography.xsmall,
+        },
+        small: {
+          'font-size': typography.small,
+        },
+        medium: {
+          'font-size': typography.medium,
+        },
+        large: {
+          'font-size': typography.large,
+        },
+        xlarge: {
+          'font-size': typography.xlarge,
+        },
+      },
     },
   };
 };
@@ -423,6 +450,13 @@ const theme = createTheme({
     medium: 'var(--space-medium)',
     large: 'var(--space-large)',
     xlarge: 'var(--space-xlarge)',
+  },
+  typography: {
+    xsmall: 'var(--font-xsmall)',
+    small: 'var(--font-small)',
+    medium: 'var(--font-medium)',
+    large: 'var(--font-large)',
+    xlarge: 'var(--font-xlarge)',
   },
 });
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useStyles } from 'useStyles';
 import { cx } from '../cx';
 import { Icon, IconNames } from '../Icon';
 import { Ripple } from '../Ripple';
@@ -26,25 +27,32 @@ const Button = ({
   onClick,
   secondary,
   type = 'button',
-}: Props) => (
-  <Ripple
-    component="button"
-    type={type}
-    disabled={disabled}
-    onClick={onClick}
-    className={cx(
-      flat ? 'FlatButton' : 'Button',
-      inline && 'is-inline',
-      secondary && 'is-secondary',
-      disabled && 'is-disabled',
-      icon && 'has-icon',
-      className,
-    )}
-  >
-    {icon && <Icon name={icon} label="" size="small" />}
+}: Props) => {
+  const buttonStyles = useStyles({
+    paddingX: 'xlarge',
+  });
 
-    {children}
-  </Ripple>
-);
+  return (
+    <Ripple
+      component="button"
+      type={type}
+      disabled={disabled}
+      onClick={onClick}
+      className={cx(
+        flat ? 'FlatButton' : 'Button',
+        inline && 'is-inline',
+        secondary && 'is-secondary',
+        disabled && 'is-disabled',
+        icon && 'has-icon',
+        buttonStyles,
+        className,
+      )}
+    >
+      {icon && <Icon name={icon} label="" size="small" />}
+
+      {children}
+    </Ripple>
+  );
+};
 
 export default Button;
