@@ -11,7 +11,8 @@
     "lint": "eslint",
     "format": "prettier --write \"**/*\"",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "blocks": "ts-node ./scripts/theme-builder.ts"
   },
   "husky": {
     "hooks": {

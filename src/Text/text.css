@@ -1,32 +1,5 @@
-.text {
-  font-size: var(--text-size);
-  color: var(--text-secondary-color);
+.Text {
   margin: 0;
   padding: 0;
   line-height: 1.6em;
-
-  &.is-dark {
-    color: var(--text-primary-color);
-  }
-
-  &.is-bold {
-    font-weight: var(--text-semi-bold);
-  }
-
-  &.size-small {
-    font-size: var(--text-size-small);
-  }
-
-  /* Align */
-  &.align-left {
-    text-align: left;
-  }
-
-  &.align-center {
-    text-align: center;
-  }
-
-  &.align-right {
-    text-align: right;
-  }
 }

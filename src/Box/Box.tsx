@@ -1,9 +1,9 @@
 import { createElement, ElementType, forwardRef, ReactNode } from 'react';
 import { cx } from '../cx';
-import { BBStyles, useStyles } from '../useStyles/useStyles';
+import { BlockleBlocks, useStyles } from '../useStyles';
 
 // AllHTMLAttributes<HTMLElement>?
-interface Props extends BBStyles {
+interface Props extends BlockleBlocks {
   className?: string;
   children?: ReactNode;
   component?: ElementType;
@@ -12,16 +12,20 @@ interface Props extends BBStyles {
 const Box = forwardRef(
   (
     {
-      children,
-      className,
-      component = 'div',
       alignItems,
       background,
+      backgroundColor,
+      children,
+      className,
+      color,
+      component = 'div',
       display,
       flexDirection,
       flexGrow,
       flexShrink,
       flexWrap,
+      fontSize,
+      fontWeight,
       height,
       justifyContent,
       overflow,
@@ -42,11 +46,15 @@ const Box = forwardRef(
     const boxStyles = useStyles({
       alignItems,
       background,
+      backgroundColor,
+      color,
       display,
       flexDirection,
       flexGrow,
       flexShrink,
       flexWrap,
+      fontSize,
+      fontWeight,
       height,
       justifyContent,
       overflow,

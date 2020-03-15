@@ -80,10 +80,6 @@
   flex-shrink: 0;
 }
 
-.bb-flexShrink-1 {
-  flex-shrink: 1;
-}
-
 /* flexWrap */
 .bb-flexWrap-nowrap {
   flex-wrap: nowrap;
@@ -366,6 +362,114 @@
   width: 100%;
 }
 
+/* fontSize */
+.bb-fontSize-xsmall {
+  font-size: var(--font-xsmall);
+}
+
+.bb-fontSize-small {
+  font-size: var(--font-small);
+}
+
+.bb-fontSize-medium {
+  font-size: var(--font-medium);
+}
+
+.bb-fontSize-large {
+  font-size: var(--font-large);
+}
+
+.bb-fontSize-xlarge {
+  font-size: var(--font-xlarge);
+}
+
+/* fontWeight */
+.bb-fontWeight-normal {
+  font-weight: normal;
+}
+
+.bb-fontWeight-semi-bold {
+  font-weight: 500;
+}
+
+.bb-fontWeight-bold {
+  font-weight: 900;
+}
+
+/* color */
+.bb-color-white {
+  color: #fff;
+}
+
+.bb-color-black {
+  color: #fff;
+}
+
+.bb-color-danger {
+  color: var(--color-danger);
+}
+
+.bb-color-dark {
+  color: var(--color-dark);
+}
+
+.bb-color-info {
+  color: var(--color-info);
+}
+
+.bb-color-light {
+  color: var(--color-light);
+}
+
+.bb-color-primary {
+  color: var(--color-primary);
+}
+
+.bb-color-secondary {
+  color: var(--color-secondary);
+}
+
+.bb-color-success {
+  color: var(--color-success);
+}
+
+.bb-color-warning {
+  color: var(--color-warning);
+}
+
+/* backgroundColor */
+.bb-backgroundColor-danger {
+  background-color: var(--color-danger);
+}
+
+.bb-backgroundColor-dark {
+  background-color: var(--color-dark);
+}
+
+.bb-backgroundColor-info {
+  background-color: var(--color-info);
+}
+
+.bb-backgroundColor-light {
+  background-color: var(--color-light);
+}
+
+.bb-backgroundColor-primary {
+  background-color: var(--color-primary);
+}
+
+.bb-backgroundColor-secondary {
+  background-color: var(--color-secondary);
+}
+
+.bb-backgroundColor-success {
+  background-color: var(--color-success);
+}
+
+.bb-backgroundColor-warning {
+  background-color: var(--color-warning);
+}
+
 @media (min-width: 500px) {
   .bb-alignItems-stretch-tablet {
     align-items: stretch;
@@ -441,10 +545,6 @@
 
   .bb-flexShrink-0-tablet {
     flex-shrink: 0;
-  }
-
-  .bb-flexShrink-1-tablet {
-    flex-shrink: 1;
   }
 
   .bb-flexWrap-nowrap-tablet {
@@ -714,6 +814,110 @@
   .bb-width-full-tablet {
     width: 100%;
   }
+
+  .bb-fontSize-xsmall-tablet {
+    font-size: var(--font-xsmall);
+  }
+
+  .bb-fontSize-small-tablet {
+    font-size: var(--font-small);
+  }
+
+  .bb-fontSize-medium-tablet {
+    font-size: var(--font-medium);
+  }
+
+  .bb-fontSize-large-tablet {
+    font-size: var(--font-large);
+  }
+
+  .bb-fontSize-xlarge-tablet {
+    font-size: var(--font-xlarge);
+  }
+
+  .bb-fontWeight-normal-tablet {
+    font-weight: normal;
+  }
+
+  .bb-fontWeight-semi-bold-tablet {
+    font-weight: 500;
+  }
+
+  .bb-fontWeight-bold-tablet {
+    font-weight: 900;
+  }
+
+  .bb-color-white-tablet {
+    color: #fff;
+  }
+
+  .bb-color-black-tablet {
+    color: #fff;
+  }
+
+  .bb-color-danger-tablet {
+    color: var(--color-danger);
+  }
+
+  .bb-color-dark-tablet {
+    color: var(--color-dark);
+  }
+
+  .bb-color-info-tablet {
+    color: var(--color-info);
+  }
+
+  .bb-color-light-tablet {
+    color: var(--color-light);
+  }
+
+  .bb-color-primary-tablet {
+    color: var(--color-primary);
+  }
+
+  .bb-color-secondary-tablet {
+    color: var(--color-secondary);
+  }
+
+  .bb-color-success-tablet {
+    color: var(--color-success);
+  }
+
+  .bb-color-warning-tablet {
+    color: var(--color-warning);
+  }
+
+  .bb-backgroundColor-danger-tablet {
+    background-color: var(--color-danger);
+  }
+
+  .bb-backgroundColor-dark-tablet {
+    background-color: var(--color-dark);
+  }
+
+  .bb-backgroundColor-info-tablet {
+    background-color: var(--color-info);
+  }
+
+  .bb-backgroundColor-light-tablet {
+    background-color: var(--color-light);
+  }
+
+  .bb-backgroundColor-primary-tablet {
+    background-color: var(--color-primary);
+  }
+
+  .bb-backgroundColor-secondary-tablet {
+    background-color: var(--color-secondary);
+  }
+
+  .bb-backgroundColor-success-tablet {
+    background-color: var(--color-success);
+  }
+
+  .bb-backgroundColor-warning-tablet {
+    background-color: var(--color-warning);
+  }
 }
 
 @media (min-width: 800px) {
@@ -791,10 +995,6 @@
 
   .bb-flexShrink-0-desktop {
     flex-shrink: 0;
-  }
-
-  .bb-flexShrink-1-desktop {
-    flex-shrink: 1;
   }
 
   .bb-flexWrap-nowrap-desktop {
@@ -1063,5 +1263,109 @@
 
   .bb-width-full-desktop {
     width: 100%;
+  }
+
+  .bb-fontSize-xsmall-desktop {
+    font-size: var(--font-xsmall);
+  }
+
+  .bb-fontSize-small-desktop {
+    font-size: var(--font-small);
+  }
+
+  .bb-fontSize-medium-desktop {
+    font-size: var(--font-medium);
+  }
+
+  .bb-fontSize-large-desktop {
+    font-size: var(--font-large);
+  }
+
+  .bb-fontSize-xlarge-desktop {
+    font-size: var(--font-xlarge);
+  }
+
+  .bb-fontWeight-normal-desktop {
+    font-weight: normal;
+  }
+
+  .bb-fontWeight-semi-bold-desktop {
+    font-weight: 500;
+  }
+
+  .bb-fontWeight-bold-desktop {
+    font-weight: 900;
+  }
+
+  .bb-color-white-desktop {
+    color: #fff;
+  }
+
+  .bb-color-black-desktop {
+    color: #fff;
+  }
+
+  .bb-color-danger-desktop {
+    color: var(--color-danger);
+  }
+
+  .bb-color-dark-desktop {
+    color: var(--color-dark);
+  }
+
+  .bb-color-info-desktop {
+    color: var(--color-info);
+  }
+
+  .bb-color-light-desktop {
+    color: var(--color-light);
+  }
+
+  .bb-color-primary-desktop {
+    color: var(--color-primary);
+  }
+
+  .bb-color-secondary-desktop {
+    color: var(--color-secondary);
+  }
+
+  .bb-color-success-desktop {
+    color: var(--color-success);
+  }
+
+  .bb-color-warning-desktop {
+    color: var(--color-warning);
+  }
+
+  .bb-backgroundColor-danger-desktop {
+    background-color: var(--color-danger);
+  }
+
+  .bb-backgroundColor-dark-desktop {
+    background-color: var(--color-dark);
+  }
+
+  .bb-backgroundColor-info-desktop {
+    background-color: var(--color-info);
+  }
+
+  .bb-backgroundColor-light-desktop {
+    background-color: var(--color-light);
+  }
+
+  .bb-backgroundColor-primary-desktop {
+    background-color: var(--color-primary);
+  }
+
+  .bb-backgroundColor-secondary-desktop {
+    background-color: var(--color-secondary);
+  }
+
+  .bb-backgroundColor-success-desktop {
+    background-color: var(--color-success);
+  }
+
+  .bb-backgroundColor-warning-desktop {
+    background-color: var(--color-warning);
   }
 }

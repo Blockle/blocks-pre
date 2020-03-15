@@ -16,7 +16,7 @@ xdescribe('Text', () => {
   });
 
   it('should render with different sizes', () => {
-    const { getByText } = render(<Text size="small">Lorum ipsum</Text>);
+    const { getByText } = render(<Text fontSize="small">Lorum ipsum</Text>);
     const textNode = getByText('Lorum ipsum');
 
     expect(textNode).toHaveClass('size-small');

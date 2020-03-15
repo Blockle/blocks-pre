@@ -7,10 +7,7 @@
   height: 40px;
   margin: 0;
   border: 0;
-  background-color: transparent;
   text-transform: uppercase;
-  font-size: var(--text-size-small);
-  font-weight: var(--text-semi-bold);
   border-radius: 4px;
   user-select: none;
   text-shadow: 0 0 1px var(--shadow-color);
@@ -30,36 +27,7 @@
     color: var(--text-secondary-color);
   }
 
-  &.has-icon {
-    padding-left: var(--gutter-small);
-  }
-
   & .Icon {
     margin-right: var(--gutter-small);
-  }
-}
-
-.Button {
-  background-color: var(--accent-primary);
-  color: #fff;
-
-  &.is-secondary {
-    background-color: var(--accent-secondary);
-  }
-
-  &.is-disabled {
-    background-color: var(--disabled);
-  }
-}
-
-.FlatButton {
-  color: var(--text-primary-color);
-
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.04);
-  }
-
-  &.is-secondary {
-    color: var(--accent-primary);
   }
 }

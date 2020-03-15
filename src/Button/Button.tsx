@@ -29,7 +29,11 @@ const Button = ({
   type = 'button',
 }: Props) => {
   const buttonStyles = useStyles({
-    paddingX: 'xlarge',
+    paddingLeft: icon ? 'medium' : 'xlarge',
+    paddingRight: 'xlarge',
+    backgroundColor: 'primary',
+    fontSize: 'medium',
+    color: 'white',
   });
 
   return (
@@ -48,7 +52,7 @@ const Button = ({
         className,
       )}
     >
-      {icon && <Icon name={icon} label="" size="small" />}
+      {icon && <Icon name={icon} label="" size="small" color="white" />}
 
       {children}
     </Ripple>

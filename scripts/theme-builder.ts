@@ -17,6 +17,17 @@ interface Typography {
   xlarge: string | number;
 }
 
+interface Colors {
+  danger: string;
+  dark: string;
+  info: string;
+  light: string;
+  primary: string;
+  secondary: string;
+  success: string;
+  warning: string;
+}
+
 interface BlockleStyle {
   [value: string]: Record<string | number, string | number>;
 }
@@ -29,6 +40,7 @@ type Breakpoints = number[];
 
 interface BlockleTokens {
   breakpoints: Breakpoints;
+  colors: Colors;
   spacing: BlockleSpacing;
   typography: Typography;
 }
@@ -37,9 +49,10 @@ interface BlockleTheme extends BlockleTokens {
   styles: BlockleStyles;
 }
 
-const createTheme = ({ breakpoints, spacing, typography }: BlockleTokens): BlockleTheme => {
+const createTheme = ({ breakpoints, spacing, typography, colors }: BlockleTokens): BlockleTheme => {
   return {
     breakpoints,
+    colors,
     spacing,
     typography,
     styles: {
@@ -110,9 +123,6 @@ const createTheme = ({ breakpoints, spacing, typography }: BlockleTokens): Block
       flexShrink: {
         0: {
           'flex-shrink': 0,
-        },
-        1: {
-          'flex-shrink': 1,
         },
       },
       flexWrap: {
@@ -364,6 +374,75 @@ const createTheme = ({ breakpoints, spacing, typography }: BlockleTokens): Block
           'font-size': typography.xlarge,
         },
       },
+      fontWeight: {
+        normal: {
+          'font-weight': 'normal',
+        },
+        'semi-bold': {
+          'font-weight': '500',
+        },
+        bold: {
+          'font-weight': '900',
+        },
+      },
+      color: {
+        white: {
+          color: '#fff',
+        },
+        black: {
+          color: '#fff',
+        },
+        danger: {
+          color: colors.danger,
+        },
+        dark: {
+          color: colors.dark,
+        },
+        info: {
+          color: colors.info,
+        },
+        light: {
+          color: colors.light,
+        },
+        primary: {
+          color: colors.primary,
+        },
+        secondary: {
+          color: colors.secondary,
+        },
+        success: {
+          color: colors.success,
+        },
+        warning: {
+          color: colors.warning,
+        },
+      },
+      backgroundColor: {
+        danger: {
+          'background-color': colors.danger,
+        },
+        dark: {
+          'background-color': colors.dark,
+        },
+        info: {
+          'background-color': colors.info,
+        },
+        light: {
+          'background-color': colors.light,
+        },
+        primary: {
+          'background-color': colors.primary,
+        },
+        secondary: {
+          'background-color': colors.secondary,
+        },
+        success: {
+          'background-color': colors.success,
+        },
+        warning: {
+          'background-color': colors.warning,
+        },
+      },
     },
   };
 };
@@ -388,8 +467,6 @@ function writeCSS(filename: string, theme: BlockleTheme) {
   const breakpointsBuffer: { [key: string]: string[] } = {};
   const breakpoints = [...theme.breakpoints];
   const styles = Object.keys(theme.styles);
-
-  console.log('breakpointsBuffer', breakpoints);
 
   styles.forEach(name => {
     const style = theme.styles[name];
@@ -441,6 +518,28 @@ function writeCSS(filename: string, theme: BlockleTheme) {
   writeFileSync(filename, buffer.join('\n'));
 }
 
+const writeTS = (filename: string, theme: BlockleTheme) => {
+  const buffer: string[] = [];
+  const styles = Object.keys(theme.styles);
+
+  console.log('writeTS');
+
+  buffer.push('type ResponsiveStyle<T extends string | number> = T | T[];');
+  buffer.push('');
+  buffer.push('export interface BlockleBlocks {');
+
+  styles.forEach(name => {
+    const style = theme.styles[name];
+    const values = Object.keys(style).map(value => (isNaN(value as any) ? `'${value}'` : value));
+
+    buffer.push(`  ${name}?: ResponsiveStyle<${values.join(' | ')}>;`);
+  });
+
+  buffer.push('}');
+
+  writeFileSync(filename, buffer.join('\n'));
+};
+
 const theme = createTheme({
   breakpoints: [0, 500, 800],
   spacing: {
@@ -458,6 +557,17 @@ const theme = createTheme({
     large: 'var(--font-large)',
     xlarge: 'var(--font-xlarge)',
   },
+  colors: {
+    danger: 'var(--color-danger)',
+    dark: 'var(--color-dark)',
+    info: 'var(--color-info)',
+    light: 'var(--color-light)',
+    primary: 'var(--color-primary)',
+    secondary: 'var(--color-secondary)',
+    success: 'var(--color-success)',
+    warning: 'var(--color-warning)',
+  },
 });
 
-writeCSS('./default-theme.css', theme);
+writeCSS('./src/useStyles/blockle-blocks.css', theme);
+writeTS('./src/useStyles/blocks.ts', theme);

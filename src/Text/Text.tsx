@@ -1,30 +1,34 @@
 import { Box } from 'Box';
 import React from 'react';
+import { BlockleBlocks } from '../useStyles';
 import './text.css';
 
-type Props = {
+interface Props extends Pick<BlockleBlocks, 'textAlign' | 'fontSize' | 'fontWeight' | 'color'> {
   component?: 'span' | 'p' | 'strong';
-  textAlign?: 'left' | 'center' | 'right';
-  // dark?: boolean;
-  // bold?: boolean;
   children: React.ReactNode;
-  size?: 'small' | 'medium';
-  weight?: 'regular' | 'medium' | 'strong';
-  // tone / color / ???
-};
+}
 
-const Text = ({ component = 'span', children, textAlign }: Props) => {
+const Text = ({
+  component = 'span',
+  children,
+  textAlign,
+  fontSize = 'medium',
+  fontWeight,
+  color = 'light',
+}: Props) => {
   return (
-    <Box component={component} textAlign={textAlign} display="block">
+    <Box
+      component={component}
+      textAlign={textAlign}
+      fontSize={fontSize}
+      fontWeight={fontWeight}
+      display="block"
+      className="Text"
+      color={color}
+    >
       {children}
     </Box>
   );
 };
-
-// (
-//   <p className={cx(`text align-${align} size-${size}`, bold && 'is-bold', dark && 'is-dark')}>
-//     {children}
-//   </p>
-// );
 
 export default Text;
