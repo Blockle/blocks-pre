@@ -20,6 +20,7 @@ const Card = ({ children, shadow = '0', onClick }: Props) => {
     return (
       <Ripple
         component={Box}
+        padding="large"
         tabIndex={0}
         role="button"
         onClick={onClick}

@@ -1,2 +1,2 @@
-export { BlockleBlocks } from './blocks';
+export { BlockleBlocks, PickBlocks } from './blocks';
 export { useStyles, useStylesTimed } from './useStyles';

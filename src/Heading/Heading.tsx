@@ -1,9 +1,9 @@
 import { cx } from 'cx';
 import React from 'react';
-import { BlockleBlocks, useStyles } from 'useStyles';
+import { PickBlocks, useStyles } from '../useStyles';
 import './heading.css';
 
-interface Props extends Pick<BlockleBlocks, 'fontSize' | 'textAlign'> {
+interface Props extends PickBlocks<'fontSize' | 'textAlign'> {
   children: React.ReactNode;
   level: 1 | 2 | 3 | 4 | 5 | 6;
 }
@@ -12,7 +12,7 @@ const Heading = ({ children, level = 1, fontSize = 'medium', textAlign = 'left' 
   const headingStyles = useStyles({
     textAlign,
     fontSize,
-    fontWeight: 'semi-bold',
+    fontWeight: 'bold',
   });
 
   return React.createElement(

@@ -136,6 +136,40 @@
   overflow: visible;
 }
 
+/* overflowX */
+.bb-overflowX-auto {
+  overflow-x: auto;
+}
+
+.bb-overflowX-scroll {
+  overflow-x: scroll;
+}
+
+.bb-overflowX-hidden {
+  overflow-x: hidden;
+}
+
+.bb-overflowX-visible {
+  overflow-x: visible;
+}
+
+/* overflowY */
+.bb-overflowY-auto {
+  overflow-y: auto;
+}
+
+.bb-overflowY-scroll {
+  overflow-y: scroll;
+}
+
+.bb-overflowY-hidden {
+  overflow-y: hidden;
+}
+
+.bb-overflowY-visible {
+  overflow-y: visible;
+}
+
 /* padding */
 .bb-padding-gutter {
   padding: var(--space-gutter);
@@ -384,16 +418,12 @@
 }
 
 /* fontWeight */
-.bb-fontWeight-normal {
-  font-weight: normal;
-}
-
-.bb-fontWeight-semi-bold {
-  font-weight: 500;
+.bb-fontWeight-regular {
+  font-weight: 400;
 }
 
 .bb-fontWeight-bold {
-  font-weight: 900;
+  font-weight: 700;
 }
 
 /* color */
@@ -597,6 +627,38 @@
 
   .bb-overflow-visible-tablet {
     overflow: visible;
+  }
+
+  .bb-overflowX-auto-tablet {
+    overflow-x: auto;
+  }
+
+  .bb-overflowX-scroll-tablet {
+    overflow-x: scroll;
+  }
+
+  .bb-overflowX-hidden-tablet {
+    overflow-x: hidden;
+  }
+
+  .bb-overflowX-visible-tablet {
+    overflow-x: visible;
+  }
+
+  .bb-overflowY-auto-tablet {
+    overflow-y: auto;
+  }
+
+  .bb-overflowY-scroll-tablet {
+    overflow-y: scroll;
+  }
+
+  .bb-overflowY-hidden-tablet {
+    overflow-y: hidden;
+  }
+
+  .bb-overflowY-visible-tablet {
+    overflow-y: visible;
   }
 
   .bb-padding-gutter-tablet {
@@ -835,16 +897,12 @@
     font-size: var(--font-xlarge);
   }
 
-  .bb-fontWeight-normal-tablet {
-    font-weight: normal;
-  }
-
-  .bb-fontWeight-semi-bold-tablet {
-    font-weight: 500;
+  .bb-fontWeight-regular-tablet {
+    font-weight: 400;
   }
 
   .bb-fontWeight-bold-tablet {
-    font-weight: 900;
+    font-weight: 700;
   }
 
   .bb-color-white-tablet {
@@ -1047,6 +1105,38 @@
 
   .bb-overflow-visible-desktop {
     overflow: visible;
+  }
+
+  .bb-overflowX-auto-desktop {
+    overflow-x: auto;
+  }
+
+  .bb-overflowX-scroll-desktop {
+    overflow-x: scroll;
+  }
+
+  .bb-overflowX-hidden-desktop {
+    overflow-x: hidden;
+  }
+
+  .bb-overflowX-visible-desktop {
+    overflow-x: visible;
+  }
+
+  .bb-overflowY-auto-desktop {
+    overflow-y: auto;
+  }
+
+  .bb-overflowY-scroll-desktop {
+    overflow-y: scroll;
+  }
+
+  .bb-overflowY-hidden-desktop {
+    overflow-y: hidden;
+  }
+
+  .bb-overflowY-visible-desktop {
+    overflow-y: visible;
   }
 
   .bb-padding-gutter-desktop {
@@ -1285,16 +1375,12 @@
     font-size: var(--font-xlarge);
   }
 
-  .bb-fontWeight-normal-desktop {
-    font-weight: normal;
-  }
-
-  .bb-fontWeight-semi-bold-desktop {
-    font-weight: 500;
+  .bb-fontWeight-regular-desktop {
+    font-weight: 400;
   }
 
   .bb-fontWeight-bold-desktop {
-    font-weight: 900;
+    font-weight: 700;
   }
 
   .bb-color-white-desktop {

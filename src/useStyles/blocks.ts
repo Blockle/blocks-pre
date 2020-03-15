@@ -13,6 +13,8 @@ export interface BlockleBlocks {
     'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around'
   >;
   overflow?: ResponsiveStyle<'auto' | 'scroll' | 'hidden' | 'visible'>;
+  overflowX?: ResponsiveStyle<'auto' | 'scroll' | 'hidden' | 'visible'>;
+  overflowY?: ResponsiveStyle<'auto' | 'scroll' | 'hidden' | 'visible'>;
   padding?: ResponsiveStyle<'gutter' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge'>;
   paddingBottom?: ResponsiveStyle<'gutter' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge'>;
   paddingLeft?: ResponsiveStyle<'gutter' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge'>;
@@ -24,7 +26,7 @@ export interface BlockleBlocks {
   textAlign?: ResponsiveStyle<'left' | 'right' | 'center' | 'justify'>;
   width?: ResponsiveStyle<'full'>;
   fontSize?: ResponsiveStyle<'xsmall' | 'small' | 'medium' | 'large' | 'xlarge'>;
-  fontWeight?: ResponsiveStyle<'normal' | 'semi-bold' | 'bold'>;
+  fontWeight?: ResponsiveStyle<'regular' | 'bold'>;
   color?: ResponsiveStyle<
     | 'white'
     | 'black'
@@ -41,3 +43,5 @@ export interface BlockleBlocks {
     'danger' | 'dark' | 'info' | 'light' | 'primary' | 'secondary' | 'success' | 'warning'
   >;
 }
+
+export type PickBlocks<T extends keyof BlockleBlocks> = Partial<Pick<BlockleBlocks, T>>;

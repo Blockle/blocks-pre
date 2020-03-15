@@ -172,6 +172,34 @@ const createTheme = ({ breakpoints, spacing, typography, colors }: BlockleTokens
           overflow: 'visible',
         },
       },
+      overflowX: {
+        auto: {
+          'overflow-x': 'auto',
+        },
+        scroll: {
+          'overflow-x': 'scroll',
+        },
+        hidden: {
+          'overflow-x': 'hidden',
+        },
+        visible: {
+          'overflow-x': 'visible',
+        },
+      },
+      overflowY: {
+        auto: {
+          'overflow-y': 'auto',
+        },
+        scroll: {
+          'overflow-y': 'scroll',
+        },
+        hidden: {
+          'overflow-y': 'hidden',
+        },
+        visible: {
+          'overflow-y': 'visible',
+        },
+      },
       padding: {
         gutter: {
           padding: spacing.gutter,
@@ -375,14 +403,11 @@ const createTheme = ({ breakpoints, spacing, typography, colors }: BlockleTokens
         },
       },
       fontWeight: {
-        normal: {
-          'font-weight': 'normal',
-        },
-        'semi-bold': {
-          'font-weight': '500',
+        regular: {
+          'font-weight': '400',
         },
         bold: {
-          'font-weight': '900',
+          'font-weight': '700',
         },
       },
       color: {
@@ -536,6 +561,10 @@ const writeTS = (filename: string, theme: BlockleTheme) => {
   });
 
   buffer.push('}');
+  buffer.push('');
+  buffer.push(
+    'export type PickBlocks<T extends keyof BlockleBlocks> = Partial<Pick<BlockleBlocks, T>>;',
+  );
 
   writeFileSync(filename, buffer.join('\n'));
 };
