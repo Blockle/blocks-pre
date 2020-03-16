@@ -1,5 +1,6 @@
 import React from 'react';
 import { cx } from '../cx';
+import { PickBlocks, useStyles } from '../useStyles';
 import './icon.css';
 import ArrowLeft from './icons/sm-arrow-left.svg';
 import ArrowRight from './icons/sm-arrow-right.svg';
@@ -29,21 +30,24 @@ const ICON_MAP = {
 
 export type IconNames = keyof typeof ICON_MAP;
 
-export interface Props {
+export interface Props extends PickBlocks<'color'> {
   label: string;
   name: IconNames;
   size?: 'small' | 'medium' | 'large';
-  accent?: 'primary' | 'secondary' | 'tertiary';
 }
 
-const Icon = ({ label, name, size = 'medium', accent }: Props) => {
+const Icon = ({ label, name, size = 'medium', color = 'white' }: Props) => {
+  const iconStyles = useStyles({
+    color,
+  });
+
   if (!ICON_MAP[name]) {
     console.warn(`<Icon name="${name}" />`);
     return null;
   }
 
   return (
-    <span className={cx(`Icon size-${size}`, accent && `accent-${accent}`)} title={label}>
+    <span className={cx('Icon', `size-${size}`, iconStyles)} title={label}>
       {React.createElement(ICON_MAP[name], {
         className: 'icon-svg',
         'data-testid': 'icon-svg',

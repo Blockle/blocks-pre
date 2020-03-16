@@ -3,7 +3,6 @@
   justify-content: center;
   align-items: center;
   line-height: 0;
-  color: #fff;
 
   & svg,
   & svg path {
@@ -26,13 +25,5 @@
   &.size-large svg {
     max-width: 42px;
     max-height: 42px;
-  }
-
-  &.accent-primary svg {
-    color: var(--accent-primary);
-  }
-
-  &.accent-secondary {
-    color: var(--text-secondary-color);
   }
 }

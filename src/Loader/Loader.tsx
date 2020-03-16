@@ -5,7 +5,7 @@ import './loader.css';
 const Loader = () => {
   return (
     <div className="Loader">
-      <Icon name="briefcase" label="Loading" accent="secondary" />
+      <Icon name="briefcase" label="Loading" color="secondary" />
     </div>
   );
 };

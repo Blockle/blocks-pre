@@ -1,15 +1,16 @@
 import React, { Children, ReactNode } from 'react';
 import { Box } from '../Box';
-import { BBStyles } from '../useStyles/useStyles';
+import { BlockleBlocks } from '../useStyles';
 import './stack.css';
 
 interface Props {
   children: ReactNode;
   component?: 'div' | 'ol' | 'ul';
-  space?: BBStyles['padding'];
+  space?: BlockleBlocks['padding'];
+  textAlign?: BlockleBlocks['textAlign'];
 }
 
-const Stack = ({ children, component = 'div', space }: Props) => {
+const Stack = ({ children, component = 'div', space, textAlign }: Props) => {
   const stackItems = Children.toArray(children);
   const length = stackItems.length;
 
@@ -22,7 +23,7 @@ const Stack = ({ children, component = 'div', space }: Props) => {
   }
 
   return (
-    <Box component={component} className="Stack">
+    <Box component={component} className="Stack" textAlign={textAlign}>
       {stackItems.map((child, index) => (
         <Box key={index} paddingBottom={space}>
           {child}

@@ -12,15 +12,15 @@ type Props = {
   secondary?: boolean;
 };
 
-const Button = ({ disabled, label, name, onClick, secondary }: Props) => (
+const IconButton = ({ disabled, label, name, onClick, secondary }: Props) => (
   <Ripple
-    renderAs="button"
+    component="button"
     disabled={disabled}
     onClick={onClick}
     className={cx('IconButton', secondary && 'is-secondary', disabled && 'is-disabled')}
   >
-    <Icon name={name} label={label} size="medium" accent="secondary" />
+    <Icon name={name} label={label} size="medium" color="light" />
   </Ripple>
 );
 
-export default Button;
+export default IconButton;

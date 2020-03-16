@@ -1,19 +1,34 @@
+import { Box } from 'Box';
 import React from 'react';
-import { cx } from '../cx';
+import { PickBlocks } from '../useStyles';
 import './text.css';
 
-type Props = {
-  align?: 'left' | 'center' | 'right';
-  dark?: boolean;
-  bold?: boolean;
+interface Props extends PickBlocks<'textAlign' | 'fontSize' | 'fontWeight' | 'color'> {
+  component?: 'span' | 'p' | 'strong';
   children: React.ReactNode;
-  size?: 'small' | 'medium';
-};
+}
 
-const Text = ({ align = 'left', dark, bold, children, size = 'medium' }: Props) => (
-  <p className={cx(`text align-${align} size-${size}`, bold && 'is-bold', dark && 'is-dark')}>
-    {children}
-  </p>
-);
+const Text = ({
+  component = 'span',
+  children,
+  textAlign,
+  fontSize = 'medium',
+  fontWeight,
+  color = 'light',
+}: Props) => {
+  return (
+    <Box
+      component={component}
+      textAlign={textAlign}
+      fontSize={fontSize}
+      fontWeight={fontWeight}
+      display="block"
+      className="Text"
+      color={color}
+    >
+      {children}
+    </Box>
+  );
+};
 
 export default Text;

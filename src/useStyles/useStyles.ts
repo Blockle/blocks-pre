@@ -1,34 +1,5 @@
-import './use-styles.css';
-
-export type ResponsiveStyle<T extends string | number> = T | [T, T] | [T, T, T];
-
-export type Space = 'gutter' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'none';
-export type ResponsiveSpace = ResponsiveStyle<Space>;
-
-export interface BBStyles {
-  alignItems?: ResponsiveStyle<'stretch' | 'center' | 'flex-start' | 'flex-end' | 'baseline'>;
-  background?: ResponsiveStyle<'card'>;
-  display?: ResponsiveStyle<'none' | 'block' | 'inline' | 'inline-block' | 'flex' | 'inline-flex'>;
-  flexDirection?: ResponsiveStyle<'row' | 'row-reverse' | 'column' | 'column-reverse'>;
-  flexGrow?: ResponsiveStyle<0 | 1>;
-  flexShrink?: ResponsiveStyle<0>;
-  flexWrap?: ResponsiveStyle<'nowrap' | 'wrap' | 'wrap-reverse'>;
-  height?: ResponsiveStyle<'full'>;
-  justifyContent?: ResponsiveStyle<
-    'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around'
-  >;
-  overflow?: ResponsiveStyle<'auto' | 'scroll' | 'hidden' | 'visible'>;
-  padding?: ResponsiveStyle<Space>;
-  paddingBottom?: ResponsiveStyle<Space>;
-  paddingLeft?: ResponsiveStyle<Space>;
-  paddingRight?: ResponsiveStyle<Space>;
-  paddingTop?: ResponsiveStyle<Space>;
-  paddingX?: ResponsiveStyle<Space>;
-  paddingY?: ResponsiveStyle<Space>;
-  position?: ResponsiveStyle<'relative' | 'fixed' | 'absolute' | 'sticky'>;
-  textAlign?: ResponsiveStyle<'left' | 'right' | 'center' | 'justify'>;
-  width?: ResponsiveStyle<'full'>;
-}
+import './blockle-blocks.css';
+import { BlockleBlocks } from './blocks';
 
 // bb -> blockle blocks
 // useStyles({ padding: 'small', background: 'card' }); -> 'bb-padding-small bb-background-card'
@@ -46,8 +17,8 @@ function getResponsiveName(index: number) {
   }
 }
 
-export const useStyles = (styles: BBStyles) => {
-  const keys = Object.keys(styles) as Array<keyof BBStyles>;
+export const useStyles = (styles: BlockleBlocks) => {
+  const keys = Object.keys(styles) as Array<keyof BlockleBlocks>;
   const classList: string[] = [];
 
   keys.forEach(key => {
@@ -76,7 +47,7 @@ export const useStyles = (styles: BBStyles) => {
 };
 
 // TODO Remove me
-export const useStylesTimed = (styles: BBStyles) => {
+export const useStylesTimed = (styles: BlockleBlocks) => {
   console.time('useStyle');
   const classList = useStyles(styles);
   console.timeEnd('useStyle');

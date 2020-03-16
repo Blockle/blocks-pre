@@ -1,9 +1,8 @@
+import { FieldProps, useField } from '@blockle/form';
 import React, { useState } from 'react';
-import { useField, FieldProps } from '@blockle/form';
-
-import './input.css';
-
+import { Box } from '../Box';
 import { cx } from '../cx';
+import './text-field.css';
 
 type Props = FieldProps<string> & {
   label: string;
@@ -43,25 +42,18 @@ const TextField = ({
     value,
     validate: validate({ required, pattern }),
   });
-  // const { value, setValue, invalid } = useForm<string>({
-  //   name,
-  //   value: pValue,
-  //   validate: validate({ required, pattern }),
-  // });
 
   return (
-    <div className={cx('TextField', field.invalid && 'is-invalid')}>
-      <label
+    <Box position="relative" color={focus ? 'primary' : 'light'}>
+      <Box
+        component="label"
+        display="block"
         htmlFor={`Input-${name}`}
-        className={cx(
-          'TextField-Label',
-          field.value && 'is-floating',
-          focus && 'is-focused',
-          field.invalid && 'is-invalid',
-        )}
+        color={focus ? 'primary' : 'light'}
+        className={cx('TextField-Label', field.value && 'is-floating')}
       >
         {label}
-      </label>
+      </Box>
       <input
         autoComplete="off"
         className="TextField-Input"
@@ -76,8 +68,12 @@ const TextField = ({
       />
       <div className="TextField-Bar" />
 
-      {field.invalid && <div className="TextField-Bottom">* {field.validationMessage}</div>}
-    </div>
+      {field.invalid && (
+        <Box color="warning" className="TextField-Bottom">
+          * {field.validationMessage}
+        </Box>
+      )}
+    </Box>
   );
 };
 

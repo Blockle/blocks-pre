@@ -2,25 +2,32 @@ import React from 'react';
 import { cx } from '../cx';
 import { Ripple } from '../Ripple';
 import { PickBlocks, useStyles } from '../useStyles';
-import './button.css';
+import './flat-button.css';
 
 interface Props extends PickBlocks<'width'> {
   children: React.ReactNode;
+  className?: string;
   disabled?: boolean;
   onClick?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
-  type?: 'button' | 'submit';
-  className?: string;
   secondary?: boolean;
+  type?: 'button' | 'submit';
 }
 
-const Button = ({ children, className, disabled, onClick, type = 'button', width }: Props) => {
+const FlatButton = ({
+  children,
+  className,
+  disabled,
+  onClick,
+  secondary,
+  type = 'button',
+  width,
+}: Props) => {
   const buttonStyles = useStyles({
     width,
     paddingX: 'xlarge',
     paddingY: 'large',
-    backgroundColor: disabled ? 'dark' : 'primary',
     fontSize: 'small',
-    color: disabled ? 'light' : 'white',
+    color: disabled ? 'light' : secondary ? 'primary' : 'dark',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -32,11 +39,11 @@ const Button = ({ children, className, disabled, onClick, type = 'button', width
       type={type}
       disabled={disabled}
       onClick={onClick}
-      className={cx('Button', disabled && 'is-disabled', buttonStyles, className)}
+      className={cx('FlatButton', disabled && 'is-disabled', buttonStyles, className)}
     >
       {children}
     </Ripple>
   );
 };
 
-export default Button;
+export default FlatButton;
