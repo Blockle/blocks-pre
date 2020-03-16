@@ -7,6 +7,7 @@ interface Props extends BlockleBlocks {
   className?: string;
   children?: ReactNode;
   component?: ElementType;
+  htmlFor?: string;
 }
 
 const Box = forwardRef(

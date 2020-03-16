@@ -19,4 +19,5 @@ export * from './Paper';
 export * from './Ripple';
 export * from './Stack';
 export * from './Text';
+export * from './TextField';
 export * from './useStyles';
