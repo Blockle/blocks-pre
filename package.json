@@ -1,7 +1,7 @@
 {
-  "name": "@blockle/ui",
+  "name": "@blockle/blocks",
   "version": "0.0.1-alpha.18",
-  "description": "Blockle ui",
+  "description": "Blockle Blocks",
   "scripts": {
     "start": "npm run build:ts -- -w | npm run build:types -- -w",
     "build": "rm -rf ./dist/ && npm run build:ts && npm run build:types",
@@ -19,14 +19,14 @@
       "pre-commit": "pretty-quick --staged"
     }
   },
-  "main": "dist/blockle-ui.js",
-  "module": "dist/blockle-ui.esm.js",
+  "main": "dist/blockle-blocks.js",
+  "module": "dist/blockle-blocks.esm.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist",
     "README.md"
   ],
-  "repository": "git@github.com:Blockle/blockle-ui.git",
+  "repository": "git@github.com:Blockle/blockle-blocks.git",
   "author": "Niek Saarberg",
   "license": "MIT",
   "devDependencies": {
