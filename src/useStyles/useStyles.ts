@@ -4,19 +4,6 @@ import { BlockleBlocks } from './blocks';
 // bb -> blockle blocks
 // useStyles({ padding: 'small', background: 'card' }); -> 'bb-padding-small bb-background-card'
 
-function getResponsiveName(index: number) {
-  switch (index) {
-    case 0:
-      return 'mobile';
-    case 1:
-      return 'tablet';
-    case 2:
-      return 'desktop';
-    default:
-      throw new Error(`useStyles() - Uknown index "${index}"`);
-  }
-}
-
 export const useStyles = (styles: BlockleBlocks) => {
   const keys = Object.keys(styles) as Array<keyof BlockleBlocks>;
   const classList: string[] = [];
@@ -35,7 +22,7 @@ export const useStyles = (styles: BlockleBlocks) => {
         if (i === 0) {
           classList.push(`bb-${key}-${val}`);
         } else {
-          classList.push(`bb-${key}-${val}-${getResponsiveName(i)}`);
+          classList.push(`bb-${key}-${val}-bp${i}`);
         }
       }
     } else {

@@ -472,22 +472,9 @@ const createTheme = ({ breakpoints, spacing, typography, colors }: BlockleTokens
   };
 };
 
-// TODO Change to `bp1`?
-function breakpointName(index: number) {
-  switch (index) {
-    case 0:
-      return 'mobile';
-    case 1:
-      return 'tablet';
-    case 2:
-      return 'desktop';
-    default:
-      throw new Error(`useStyles() - Uknown index "${index}"`);
-  }
-}
-
-// Also write ts?
 function writeCSS(filename: string, theme: BlockleTheme) {
+  console.log(`writeCSS ${filename}`);
+
   const buffer: string[] = [];
   const breakpointsBuffer: { [key: string]: string[] } = {};
   const breakpoints = [...theme.breakpoints];
@@ -521,7 +508,7 @@ function writeCSS(filename: string, theme: BlockleTheme) {
           breakpointsBuffer[index] = [];
         }
 
-        breakpointsBuffer[index].push(`  .bb-${name}-${key}-${breakpointName(i)} {`);
+        breakpointsBuffer[index].push(`  .bb-${name}-${key}-bp${i} {`);
 
         Object.keys(styling).forEach(key => {
           breakpointsBuffer[index].push(`    ${key}: ${styling[key]};`);
@@ -543,11 +530,11 @@ function writeCSS(filename: string, theme: BlockleTheme) {
   writeFileSync(filename, buffer.join('\n'));
 }
 
-const writeTS = (filename: string, theme: BlockleTheme) => {
+function writeTS(filename: string, theme: BlockleTheme) {
+  console.log(`writeTS ${filename}`);
+
   const buffer: string[] = [];
   const styles = Object.keys(theme.styles);
-
-  console.log('writeTS');
 
   buffer.push('type ResponsiveStyle<T extends string | number> = T | T[];');
   buffer.push('');
@@ -567,7 +554,7 @@ const writeTS = (filename: string, theme: BlockleTheme) => {
   );
 
   writeFileSync(filename, buffer.join('\n'));
-};
+}
 
 const theme = createTheme({
   breakpoints: [0, 500, 800],
