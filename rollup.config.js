@@ -1,14 +1,13 @@
-import resolve from 'rollup-plugin-node-resolve';
-import typescript from 'rollup-plugin-typescript2';
-import commonjs from 'rollup-plugin-commonjs';
-import postcss from 'rollup-plugin-postcss';
 import svgr from '@svgr/rollup';
-
+import commonjs from 'rollup-plugin-commonjs';
+import resolve from 'rollup-plugin-node-resolve';
+import postcss from 'rollup-plugin-postcss';
+import typescript from 'rollup-plugin-typescript2';
 import pkg from './package.json';
 
 const banner = `/**
   * ${pkg.name} v${pkg.version}
-  * (C) 2018-${new Date().getFullYear()} ${pkg.author}
+  * (C) 2020-${new Date().getFullYear()} ${pkg.author}
   * Released under the ${pkg.license} License.
   */`;
 
@@ -39,7 +38,7 @@ export default [
       }),
       commonjs(),
       postcss({
-        extract: './dist/blockle-ui.css',
+        extract: './dist/blocks.css',
         sourceMap: true,
       }),
     ],
