@@ -1,27 +1,27 @@
-# @blockle/ui
+# @blockle/blocks
 
 ## Get started
 
 Install with yarn
 
 ```bash
-yarn add @blockle/ui
+yarn add @blockle/blocks
 ```
 
 Install with npm
 
 ```bash
-npm install --save @blockle/ui
+npm install --save @blockle/blocks
 ```
 
 ### Basic example
 
 ```tsx
-import '@blockle/ui/dist/blockle-ui.css';
+import '@blockle/blocks/dist/blocks.css';
 ```
 
 ```tsx
-import { Button } from '@blockle/ui';
+import { Button } from '@blockle/blocks';
 
 const MyComponent = () => <Button>Hi</Button>;
 ```
