@@ -1,0 +1,11 @@
+{
+  "name": "blocks-builder",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "tsc -w",
+    "build": "tsc"
+  }
+}

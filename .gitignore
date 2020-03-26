@@ -1,4 +1,4 @@
-/dist
+dist/
 .rpt2_cache
 node_modules
 .vscode
