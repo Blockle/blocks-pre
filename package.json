@@ -25,6 +25,9 @@
   "types": "dist/index.d.ts",
   "files": [
     "dist",
+    "builder/package.json",
+    "builder/README.md",
+    "builder/dist",
     "README.md"
   ],
   "repository": "git@github.com:Blockle/blockle-blocks.git",
