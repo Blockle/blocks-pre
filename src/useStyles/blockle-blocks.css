@@ -501,957 +501,957 @@
 }
 
 @media (min-width: 500px) {
-  .bb-alignItems-stretch-tablet {
+  .bb-alignItems-stretch-bp1 {
     align-items: stretch;
   }
 
-  .bb-alignItems-center-tablet {
+  .bb-alignItems-center-bp1 {
     align-items: center;
   }
 
-  .bb-alignItems-flex-start-tablet {
+  .bb-alignItems-flex-start-bp1 {
     align-items: flex-start;
   }
 
-  .bb-alignItems-flex-end-tablet {
+  .bb-alignItems-flex-end-bp1 {
     align-items: flex-end;
   }
 
-  .bb-alignItems-baseline-tablet {
+  .bb-alignItems-baseline-bp1 {
     align-items: baseline;
   }
 
-  .bb-background-card-tablet {
+  .bb-background-card-bp1 {
     background-color: var(--background-card, #fff);
   }
 
-  .bb-display-block-tablet {
+  .bb-display-block-bp1 {
     display: block;
   }
 
-  .bb-display-inline-tablet {
+  .bb-display-inline-bp1 {
     display: inline;
   }
 
-  .bb-display-inline-block-tablet {
+  .bb-display-inline-block-bp1 {
     display: inline-block;
   }
 
-  .bb-display-flex-tablet {
+  .bb-display-flex-bp1 {
     display: flex;
   }
 
-  .bb-display-inline-flex-tablet {
+  .bb-display-inline-flex-bp1 {
     display: inline-flex;
   }
 
-  .bb-display-none-tablet {
+  .bb-display-none-bp1 {
     display: none;
   }
 
-  .bb-flexDirection-row-tablet {
+  .bb-flexDirection-row-bp1 {
     flex-direction: row;
   }
 
-  .bb-flexDirection-row-reverse-tablet {
+  .bb-flexDirection-row-reverse-bp1 {
     flex-direction: row-reverse;
   }
 
-  .bb-flexDirection-column-tablet {
+  .bb-flexDirection-column-bp1 {
     flex-direction: column;
   }
 
-  .bb-flexDirection-column-reverse-tablet {
+  .bb-flexDirection-column-reverse-bp1 {
     flex-direction: column-reverse;
   }
 
-  .bb-flexGrow-0-tablet {
+  .bb-flexGrow-0-bp1 {
     flex-grow: 0;
   }
 
-  .bb-flexGrow-1-tablet {
+  .bb-flexGrow-1-bp1 {
     flex-grow: 1;
   }
 
-  .bb-flexShrink-0-tablet {
+  .bb-flexShrink-0-bp1 {
     flex-shrink: 0;
   }
 
-  .bb-flexWrap-nowrap-tablet {
+  .bb-flexWrap-nowrap-bp1 {
     flex-wrap: nowrap;
   }
 
-  .bb-flexWrap-wrap-tablet {
+  .bb-flexWrap-wrap-bp1 {
     flex-wrap: wrap;
   }
 
-  .bb-flexWrap-wrap-reverse-tablet {
+  .bb-flexWrap-wrap-reverse-bp1 {
     flex-wrap: wrap-reverse;
   }
 
-  .bb-height-full-tablet {
+  .bb-height-full-bp1 {
     height: 100%;
   }
 
-  .bb-justifyContent-flex-start-tablet {
+  .bb-justifyContent-flex-start-bp1 {
     justify-content: flex-start;
   }
 
-  .bb-justifyContent-flex-end-tablet {
+  .bb-justifyContent-flex-end-bp1 {
     justify-content: flex-end;
   }
 
-  .bb-justifyContent-center-tablet {
+  .bb-justifyContent-center-bp1 {
     justify-content: center;
   }
 
-  .bb-justifyContent-space-between-tablet {
+  .bb-justifyContent-space-between-bp1 {
     justify-content: space-between;
   }
 
-  .bb-justifyContent-space-around-tablet {
+  .bb-justifyContent-space-around-bp1 {
     justify-content: space-around;
   }
 
-  .bb-overflow-auto-tablet {
+  .bb-overflow-auto-bp1 {
     overflow: auto;
   }
 
-  .bb-overflow-scroll-tablet {
+  .bb-overflow-scroll-bp1 {
     overflow: scroll;
   }
 
-  .bb-overflow-hidden-tablet {
+  .bb-overflow-hidden-bp1 {
     overflow: hidden;
   }
 
-  .bb-overflow-visible-tablet {
+  .bb-overflow-visible-bp1 {
     overflow: visible;
   }
 
-  .bb-overflowX-auto-tablet {
+  .bb-overflowX-auto-bp1 {
     overflow-x: auto;
   }
 
-  .bb-overflowX-scroll-tablet {
+  .bb-overflowX-scroll-bp1 {
     overflow-x: scroll;
   }
 
-  .bb-overflowX-hidden-tablet {
+  .bb-overflowX-hidden-bp1 {
     overflow-x: hidden;
   }
 
-  .bb-overflowX-visible-tablet {
+  .bb-overflowX-visible-bp1 {
     overflow-x: visible;
   }
 
-  .bb-overflowY-auto-tablet {
+  .bb-overflowY-auto-bp1 {
     overflow-y: auto;
   }
 
-  .bb-overflowY-scroll-tablet {
+  .bb-overflowY-scroll-bp1 {
     overflow-y: scroll;
   }
 
-  .bb-overflowY-hidden-tablet {
+  .bb-overflowY-hidden-bp1 {
     overflow-y: hidden;
   }
 
-  .bb-overflowY-visible-tablet {
+  .bb-overflowY-visible-bp1 {
     overflow-y: visible;
   }
 
-  .bb-padding-gutter-tablet {
+  .bb-padding-gutter-bp1 {
     padding: var(--space-gutter);
   }
 
-  .bb-padding-xsmall-tablet {
+  .bb-padding-xsmall-bp1 {
     padding: var(--space-xsmall);
   }
 
-  .bb-padding-small-tablet {
+  .bb-padding-small-bp1 {
     padding: var(--space-small);
   }
 
-  .bb-padding-medium-tablet {
+  .bb-padding-medium-bp1 {
     padding: var(--space-medium);
   }
 
-  .bb-padding-large-tablet {
+  .bb-padding-large-bp1 {
     padding: var(--space-large);
   }
 
-  .bb-padding-xlarge-tablet {
+  .bb-padding-xlarge-bp1 {
     padding: var(--space-xlarge);
   }
 
-  .bb-paddingBottom-gutter-tablet {
+  .bb-paddingBottom-gutter-bp1 {
     padding-bottom: var(--space-gutter);
   }
 
-  .bb-paddingBottom-xsmall-tablet {
+  .bb-paddingBottom-xsmall-bp1 {
     padding-bottom: var(--space-xsmall);
   }
 
-  .bb-paddingBottom-small-tablet {
+  .bb-paddingBottom-small-bp1 {
     padding-bottom: var(--space-small);
   }
 
-  .bb-paddingBottom-medium-tablet {
+  .bb-paddingBottom-medium-bp1 {
     padding-bottom: var(--space-medium);
   }
 
-  .bb-paddingBottom-large-tablet {
+  .bb-paddingBottom-large-bp1 {
     padding-bottom: var(--space-large);
   }
 
-  .bb-paddingBottom-xlarge-tablet {
+  .bb-paddingBottom-xlarge-bp1 {
     padding-bottom: var(--space-xlarge);
   }
 
-  .bb-paddingLeft-gutter-tablet {
+  .bb-paddingLeft-gutter-bp1 {
     padding-left: var(--space-gutter);
   }
 
-  .bb-paddingLeft-xsmall-tablet {
+  .bb-paddingLeft-xsmall-bp1 {
     padding-left: var(--space-xsmall);
   }
 
-  .bb-paddingLeft-small-tablet {
+  .bb-paddingLeft-small-bp1 {
     padding-left: var(--space-small);
   }
 
-  .bb-paddingLeft-medium-tablet {
+  .bb-paddingLeft-medium-bp1 {
     padding-left: var(--space-medium);
   }
 
-  .bb-paddingLeft-large-tablet {
+  .bb-paddingLeft-large-bp1 {
     padding-left: var(--space-large);
   }
 
-  .bb-paddingLeft-xlarge-tablet {
+  .bb-paddingLeft-xlarge-bp1 {
     padding-left: var(--space-xlarge);
   }
 
-  .bb-paddingRight-gutter-tablet {
+  .bb-paddingRight-gutter-bp1 {
     padding-right: var(--space-gutter);
   }
 
-  .bb-paddingRight-xsmall-tablet {
+  .bb-paddingRight-xsmall-bp1 {
     padding-right: var(--space-xsmall);
   }
 
-  .bb-paddingRight-small-tablet {
+  .bb-paddingRight-small-bp1 {
     padding-right: var(--space-small);
   }
 
-  .bb-paddingRight-medium-tablet {
+  .bb-paddingRight-medium-bp1 {
     padding-right: var(--space-medium);
   }
 
-  .bb-paddingRight-large-tablet {
+  .bb-paddingRight-large-bp1 {
     padding-right: var(--space-large);
   }
 
-  .bb-paddingRight-xlarge-tablet {
+  .bb-paddingRight-xlarge-bp1 {
     padding-right: var(--space-xlarge);
   }
 
-  .bb-paddingTop-gutter-tablet {
+  .bb-paddingTop-gutter-bp1 {
     padding-top: var(--space-gutter);
   }
 
-  .bb-paddingTop-xsmall-tablet {
+  .bb-paddingTop-xsmall-bp1 {
     padding-top: var(--space-xsmall);
   }
 
-  .bb-paddingTop-small-tablet {
+  .bb-paddingTop-small-bp1 {
     padding-top: var(--space-small);
   }
 
-  .bb-paddingTop-medium-tablet {
+  .bb-paddingTop-medium-bp1 {
     padding-top: var(--space-medium);
   }
 
-  .bb-paddingTop-large-tablet {
+  .bb-paddingTop-large-bp1 {
     padding-top: var(--space-large);
   }
 
-  .bb-paddingTop-xlarge-tablet {
+  .bb-paddingTop-xlarge-bp1 {
     padding-top: var(--space-xlarge);
   }
 
-  .bb-paddingX-gutter-tablet {
+  .bb-paddingX-gutter-bp1 {
     padding-left: var(--space-gutter);
     padding-right: var(--space-gutter);
   }
 
-  .bb-paddingX-xsmall-tablet {
+  .bb-paddingX-xsmall-bp1 {
     padding-left: var(--space-xsmall);
     padding-right: var(--space-xsmall);
   }
 
-  .bb-paddingX-small-tablet {
+  .bb-paddingX-small-bp1 {
     padding-left: var(--space-small);
     padding-right: var(--space-small);
   }
 
-  .bb-paddingX-medium-tablet {
+  .bb-paddingX-medium-bp1 {
     padding-left: var(--space-medium);
     padding-right: var(--space-medium);
   }
 
-  .bb-paddingX-large-tablet {
+  .bb-paddingX-large-bp1 {
     padding-left: var(--space-large);
     padding-right: var(--space-large);
   }
 
-  .bb-paddingX-xlarge-tablet {
+  .bb-paddingX-xlarge-bp1 {
     padding-left: var(--space-xlarge);
     padding-right: var(--space-xlarge);
   }
 
-  .bb-paddingY-gutter-tablet {
+  .bb-paddingY-gutter-bp1 {
     padding-top: var(--space-gutter);
     padding-bottom: var(--space-gutter);
   }
 
-  .bb-paddingY-xsmall-tablet {
+  .bb-paddingY-xsmall-bp1 {
     padding-top: var(--space-xsmall);
     padding-bottom: var(--space-xsmall);
   }
 
-  .bb-paddingY-small-tablet {
+  .bb-paddingY-small-bp1 {
     padding-top: var(--space-small);
     padding-bottom: var(--space-small);
   }
 
-  .bb-paddingY-medium-tablet {
+  .bb-paddingY-medium-bp1 {
     padding-top: var(--space-medium);
     padding-bottom: var(--space-medium);
   }
 
-  .bb-paddingY-large-tablet {
+  .bb-paddingY-large-bp1 {
     padding-top: var(--space-large);
     padding-bottom: var(--space-large);
   }
 
-  .bb-paddingY-xlarge-tablet {
+  .bb-paddingY-xlarge-bp1 {
     padding-top: var(--space-xlarge);
     padding-bottom: var(--space-xlarge);
   }
 
-  .bb-position-relative-tablet {
+  .bb-position-relative-bp1 {
     position: relative;
   }
 
-  .bb-position-fixed-tablet {
+  .bb-position-fixed-bp1 {
     position: fixed;
   }
 
-  .bb-position-absolute-tablet {
+  .bb-position-absolute-bp1 {
     position: absolute;
   }
 
-  .bb-position-sticky-tablet {
+  .bb-position-sticky-bp1 {
     position: sticky;
   }
 
-  .bb-textAlign-left-tablet {
+  .bb-textAlign-left-bp1 {
     text-align: left;
   }
 
-  .bb-textAlign-right-tablet {
+  .bb-textAlign-right-bp1 {
     text-align: right;
   }
 
-  .bb-textAlign-center-tablet {
+  .bb-textAlign-center-bp1 {
     text-align: center;
   }
 
-  .bb-textAlign-justify-tablet {
+  .bb-textAlign-justify-bp1 {
     text-align: justify;
   }
 
-  .bb-width-full-tablet {
+  .bb-width-full-bp1 {
     width: 100%;
   }
 
-  .bb-fontSize-xsmall-tablet {
+  .bb-fontSize-xsmall-bp1 {
     font-size: var(--font-xsmall);
   }
 
-  .bb-fontSize-small-tablet {
+  .bb-fontSize-small-bp1 {
     font-size: var(--font-small);
   }
 
-  .bb-fontSize-medium-tablet {
+  .bb-fontSize-medium-bp1 {
     font-size: var(--font-medium);
   }
 
-  .bb-fontSize-large-tablet {
+  .bb-fontSize-large-bp1 {
     font-size: var(--font-large);
   }
 
-  .bb-fontSize-xlarge-tablet {
+  .bb-fontSize-xlarge-bp1 {
     font-size: var(--font-xlarge);
   }
 
-  .bb-fontWeight-regular-tablet {
+  .bb-fontWeight-regular-bp1 {
     font-weight: 400;
   }
 
-  .bb-fontWeight-bold-tablet {
+  .bb-fontWeight-bold-bp1 {
     font-weight: 700;
   }
 
-  .bb-color-white-tablet {
+  .bb-color-white-bp1 {
     color: #fff;
   }
 
-  .bb-color-black-tablet {
+  .bb-color-black-bp1 {
     color: #fff;
   }
 
-  .bb-color-danger-tablet {
+  .bb-color-danger-bp1 {
     color: var(--color-danger);
   }
 
-  .bb-color-dark-tablet {
+  .bb-color-dark-bp1 {
     color: var(--color-dark);
   }
 
-  .bb-color-info-tablet {
+  .bb-color-info-bp1 {
     color: var(--color-info);
   }
 
-  .bb-color-light-tablet {
+  .bb-color-light-bp1 {
     color: var(--color-light);
   }
 
-  .bb-color-primary-tablet {
+  .bb-color-primary-bp1 {
     color: var(--color-primary);
   }
 
-  .bb-color-secondary-tablet {
+  .bb-color-secondary-bp1 {
     color: var(--color-secondary);
   }
 
-  .bb-color-success-tablet {
+  .bb-color-success-bp1 {
     color: var(--color-success);
   }
 
-  .bb-color-warning-tablet {
+  .bb-color-warning-bp1 {
     color: var(--color-warning);
   }
 
-  .bb-backgroundColor-danger-tablet {
+  .bb-backgroundColor-danger-bp1 {
     background-color: var(--color-danger);
   }
 
-  .bb-backgroundColor-dark-tablet {
+  .bb-backgroundColor-dark-bp1 {
     background-color: var(--color-dark);
   }
 
-  .bb-backgroundColor-info-tablet {
+  .bb-backgroundColor-info-bp1 {
     background-color: var(--color-info);
   }
 
-  .bb-backgroundColor-light-tablet {
+  .bb-backgroundColor-light-bp1 {
     background-color: var(--color-light);
   }
 
-  .bb-backgroundColor-primary-tablet {
+  .bb-backgroundColor-primary-bp1 {
     background-color: var(--color-primary);
   }
 
-  .bb-backgroundColor-secondary-tablet {
+  .bb-backgroundColor-secondary-bp1 {
     background-color: var(--color-secondary);
   }
 
-  .bb-backgroundColor-success-tablet {
+  .bb-backgroundColor-success-bp1 {
     background-color: var(--color-success);
   }
 
-  .bb-backgroundColor-warning-tablet {
+  .bb-backgroundColor-warning-bp1 {
     background-color: var(--color-warning);
   }
 }
 
 @media (min-width: 800px) {
-  .bb-alignItems-stretch-desktop {
+  .bb-alignItems-stretch-bp2 {
     align-items: stretch;
   }
 
-  .bb-alignItems-center-desktop {
+  .bb-alignItems-center-bp2 {
     align-items: center;
   }
 
-  .bb-alignItems-flex-start-desktop {
+  .bb-alignItems-flex-start-bp2 {
     align-items: flex-start;
   }
 
-  .bb-alignItems-flex-end-desktop {
+  .bb-alignItems-flex-end-bp2 {
     align-items: flex-end;
   }
 
-  .bb-alignItems-baseline-desktop {
+  .bb-alignItems-baseline-bp2 {
     align-items: baseline;
   }
 
-  .bb-background-card-desktop {
+  .bb-background-card-bp2 {
     background-color: var(--background-card, #fff);
   }
 
-  .bb-display-block-desktop {
+  .bb-display-block-bp2 {
     display: block;
   }
 
-  .bb-display-inline-desktop {
+  .bb-display-inline-bp2 {
     display: inline;
   }
 
-  .bb-display-inline-block-desktop {
+  .bb-display-inline-block-bp2 {
     display: inline-block;
   }
 
-  .bb-display-flex-desktop {
+  .bb-display-flex-bp2 {
     display: flex;
   }
 
-  .bb-display-inline-flex-desktop {
+  .bb-display-inline-flex-bp2 {
     display: inline-flex;
   }
 
-  .bb-display-none-desktop {
+  .bb-display-none-bp2 {
     display: none;
   }
 
-  .bb-flexDirection-row-desktop {
+  .bb-flexDirection-row-bp2 {
     flex-direction: row;
   }
 
-  .bb-flexDirection-row-reverse-desktop {
+  .bb-flexDirection-row-reverse-bp2 {
     flex-direction: row-reverse;
   }
 
-  .bb-flexDirection-column-desktop {
+  .bb-flexDirection-column-bp2 {
     flex-direction: column;
   }
 
-  .bb-flexDirection-column-reverse-desktop {
+  .bb-flexDirection-column-reverse-bp2 {
     flex-direction: column-reverse;
   }
 
-  .bb-flexGrow-0-desktop {
+  .bb-flexGrow-0-bp2 {
     flex-grow: 0;
   }
 
-  .bb-flexGrow-1-desktop {
+  .bb-flexGrow-1-bp2 {
     flex-grow: 1;
   }
 
-  .bb-flexShrink-0-desktop {
+  .bb-flexShrink-0-bp2 {
     flex-shrink: 0;
   }
 
-  .bb-flexWrap-nowrap-desktop {
+  .bb-flexWrap-nowrap-bp2 {
     flex-wrap: nowrap;
   }
 
-  .bb-flexWrap-wrap-desktop {
+  .bb-flexWrap-wrap-bp2 {
     flex-wrap: wrap;
   }
 
-  .bb-flexWrap-wrap-reverse-desktop {
+  .bb-flexWrap-wrap-reverse-bp2 {
     flex-wrap: wrap-reverse;
   }
 
-  .bb-height-full-desktop {
+  .bb-height-full-bp2 {
     height: 100%;
   }
 
-  .bb-justifyContent-flex-start-desktop {
+  .bb-justifyContent-flex-start-bp2 {
     justify-content: flex-start;
   }
 
-  .bb-justifyContent-flex-end-desktop {
+  .bb-justifyContent-flex-end-bp2 {
     justify-content: flex-end;
   }
 
-  .bb-justifyContent-center-desktop {
+  .bb-justifyContent-center-bp2 {
     justify-content: center;
   }
 
-  .bb-justifyContent-space-between-desktop {
+  .bb-justifyContent-space-between-bp2 {
     justify-content: space-between;
   }
 
-  .bb-justifyContent-space-around-desktop {
+  .bb-justifyContent-space-around-bp2 {
     justify-content: space-around;
   }
 
-  .bb-overflow-auto-desktop {
+  .bb-overflow-auto-bp2 {
     overflow: auto;
   }
 
-  .bb-overflow-scroll-desktop {
+  .bb-overflow-scroll-bp2 {
     overflow: scroll;
   }
 
-  .bb-overflow-hidden-desktop {
+  .bb-overflow-hidden-bp2 {
     overflow: hidden;
   }
 
-  .bb-overflow-visible-desktop {
+  .bb-overflow-visible-bp2 {
     overflow: visible;
   }
 
-  .bb-overflowX-auto-desktop {
+  .bb-overflowX-auto-bp2 {
     overflow-x: auto;
   }
 
-  .bb-overflowX-scroll-desktop {
+  .bb-overflowX-scroll-bp2 {
     overflow-x: scroll;
   }
 
-  .bb-overflowX-hidden-desktop {
+  .bb-overflowX-hidden-bp2 {
     overflow-x: hidden;
   }
 
-  .bb-overflowX-visible-desktop {
+  .bb-overflowX-visible-bp2 {
     overflow-x: visible;
   }
 
-  .bb-overflowY-auto-desktop {
+  .bb-overflowY-auto-bp2 {
     overflow-y: auto;
   }
 
-  .bb-overflowY-scroll-desktop {
+  .bb-overflowY-scroll-bp2 {
     overflow-y: scroll;
   }
 
-  .bb-overflowY-hidden-desktop {
+  .bb-overflowY-hidden-bp2 {
     overflow-y: hidden;
   }
 
-  .bb-overflowY-visible-desktop {
+  .bb-overflowY-visible-bp2 {
     overflow-y: visible;
   }
 
-  .bb-padding-gutter-desktop {
+  .bb-padding-gutter-bp2 {
     padding: var(--space-gutter);
   }
 
-  .bb-padding-xsmall-desktop {
+  .bb-padding-xsmall-bp2 {
     padding: var(--space-xsmall);
   }
 
-  .bb-padding-small-desktop {
+  .bb-padding-small-bp2 {
     padding: var(--space-small);
   }
 
-  .bb-padding-medium-desktop {
+  .bb-padding-medium-bp2 {
     padding: var(--space-medium);
   }
 
-  .bb-padding-large-desktop {
+  .bb-padding-large-bp2 {
     padding: var(--space-large);
   }
 
-  .bb-padding-xlarge-desktop {
+  .bb-padding-xlarge-bp2 {
     padding: var(--space-xlarge);
   }
 
-  .bb-paddingBottom-gutter-desktop {
+  .bb-paddingBottom-gutter-bp2 {
     padding-bottom: var(--space-gutter);
   }
 
-  .bb-paddingBottom-xsmall-desktop {
+  .bb-paddingBottom-xsmall-bp2 {
     padding-bottom: var(--space-xsmall);
   }
 
-  .bb-paddingBottom-small-desktop {
+  .bb-paddingBottom-small-bp2 {
     padding-bottom: var(--space-small);
   }
 
-  .bb-paddingBottom-medium-desktop {
+  .bb-paddingBottom-medium-bp2 {
     padding-bottom: var(--space-medium);
   }
 
-  .bb-paddingBottom-large-desktop {
+  .bb-paddingBottom-large-bp2 {
     padding-bottom: var(--space-large);
   }
 
-  .bb-paddingBottom-xlarge-desktop {
+  .bb-paddingBottom-xlarge-bp2 {
     padding-bottom: var(--space-xlarge);
   }
 
-  .bb-paddingLeft-gutter-desktop {
+  .bb-paddingLeft-gutter-bp2 {
     padding-left: var(--space-gutter);
   }
 
-  .bb-paddingLeft-xsmall-desktop {
+  .bb-paddingLeft-xsmall-bp2 {
     padding-left: var(--space-xsmall);
   }
 
-  .bb-paddingLeft-small-desktop {
+  .bb-paddingLeft-small-bp2 {
     padding-left: var(--space-small);
   }
 
-  .bb-paddingLeft-medium-desktop {
+  .bb-paddingLeft-medium-bp2 {
     padding-left: var(--space-medium);
   }
 
-  .bb-paddingLeft-large-desktop {
+  .bb-paddingLeft-large-bp2 {
     padding-left: var(--space-large);
   }
 
-  .bb-paddingLeft-xlarge-desktop {
+  .bb-paddingLeft-xlarge-bp2 {
     padding-left: var(--space-xlarge);
   }
 
-  .bb-paddingRight-gutter-desktop {
+  .bb-paddingRight-gutter-bp2 {
     padding-right: var(--space-gutter);
   }
 
-  .bb-paddingRight-xsmall-desktop {
+  .bb-paddingRight-xsmall-bp2 {
     padding-right: var(--space-xsmall);
   }
 
-  .bb-paddingRight-small-desktop {
+  .bb-paddingRight-small-bp2 {
     padding-right: var(--space-small);
   }
 
-  .bb-paddingRight-medium-desktop {
+  .bb-paddingRight-medium-bp2 {
     padding-right: var(--space-medium);
   }
 
-  .bb-paddingRight-large-desktop {
+  .bb-paddingRight-large-bp2 {
     padding-right: var(--space-large);
   }
 
-  .bb-paddingRight-xlarge-desktop {
+  .bb-paddingRight-xlarge-bp2 {
     padding-right: var(--space-xlarge);
   }
 
-  .bb-paddingTop-gutter-desktop {
+  .bb-paddingTop-gutter-bp2 {
     padding-top: var(--space-gutter);
   }
 
-  .bb-paddingTop-xsmall-desktop {
+  .bb-paddingTop-xsmall-bp2 {
     padding-top: var(--space-xsmall);
   }
 
-  .bb-paddingTop-small-desktop {
+  .bb-paddingTop-small-bp2 {
     padding-top: var(--space-small);
   }
 
-  .bb-paddingTop-medium-desktop {
+  .bb-paddingTop-medium-bp2 {
     padding-top: var(--space-medium);
   }
 
-  .bb-paddingTop-large-desktop {
+  .bb-paddingTop-large-bp2 {
     padding-top: var(--space-large);
   }
 
-  .bb-paddingTop-xlarge-desktop {
+  .bb-paddingTop-xlarge-bp2 {
     padding-top: var(--space-xlarge);
   }
 
-  .bb-paddingX-gutter-desktop {
+  .bb-paddingX-gutter-bp2 {
     padding-left: var(--space-gutter);
     padding-right: var(--space-gutter);
   }
 
-  .bb-paddingX-xsmall-desktop {
+  .bb-paddingX-xsmall-bp2 {
     padding-left: var(--space-xsmall);
     padding-right: var(--space-xsmall);
   }
 
-  .bb-paddingX-small-desktop {
+  .bb-paddingX-small-bp2 {
     padding-left: var(--space-small);
     padding-right: var(--space-small);
   }
 
-  .bb-paddingX-medium-desktop {
+  .bb-paddingX-medium-bp2 {
     padding-left: var(--space-medium);
     padding-right: var(--space-medium);
   }
 
-  .bb-paddingX-large-desktop {
+  .bb-paddingX-large-bp2 {
     padding-left: var(--space-large);
     padding-right: var(--space-large);
   }
 
-  .bb-paddingX-xlarge-desktop {
+  .bb-paddingX-xlarge-bp2 {
     padding-left: var(--space-xlarge);
     padding-right: var(--space-xlarge);
   }
 
-  .bb-paddingY-gutter-desktop {
+  .bb-paddingY-gutter-bp2 {
     padding-top: var(--space-gutter);
     padding-bottom: var(--space-gutter);
   }
 
-  .bb-paddingY-xsmall-desktop {
+  .bb-paddingY-xsmall-bp2 {
     padding-top: var(--space-xsmall);
     padding-bottom: var(--space-xsmall);
   }
 
-  .bb-paddingY-small-desktop {
+  .bb-paddingY-small-bp2 {
     padding-top: var(--space-small);
     padding-bottom: var(--space-small);
   }
 
-  .bb-paddingY-medium-desktop {
+  .bb-paddingY-medium-bp2 {
     padding-top: var(--space-medium);
     padding-bottom: var(--space-medium);
   }
 
-  .bb-paddingY-large-desktop {
+  .bb-paddingY-large-bp2 {
     padding-top: var(--space-large);
     padding-bottom: var(--space-large);
   }
 
-  .bb-paddingY-xlarge-desktop {
+  .bb-paddingY-xlarge-bp2 {
     padding-top: var(--space-xlarge);
     padding-bottom: var(--space-xlarge);
   }
 
-  .bb-position-relative-desktop {
+  .bb-position-relative-bp2 {
     position: relative;
   }
 
-  .bb-position-fixed-desktop {
+  .bb-position-fixed-bp2 {
     position: fixed;
   }
 
-  .bb-position-absolute-desktop {
+  .bb-position-absolute-bp2 {
     position: absolute;
   }
 
-  .bb-position-sticky-desktop {
+  .bb-position-sticky-bp2 {
     position: sticky;
   }
 
-  .bb-textAlign-left-desktop {
+  .bb-textAlign-left-bp2 {
     text-align: left;
   }
 
-  .bb-textAlign-right-desktop {
+  .bb-textAlign-right-bp2 {
     text-align: right;
   }
 
-  .bb-textAlign-center-desktop {
+  .bb-textAlign-center-bp2 {
     text-align: center;
   }
 
-  .bb-textAlign-justify-desktop {
+  .bb-textAlign-justify-bp2 {
     text-align: justify;
   }
 
-  .bb-width-full-desktop {
+  .bb-width-full-bp2 {
     width: 100%;
   }
 
-  .bb-fontSize-xsmall-desktop {
+  .bb-fontSize-xsmall-bp2 {
     font-size: var(--font-xsmall);
   }
 
-  .bb-fontSize-small-desktop {
+  .bb-fontSize-small-bp2 {
     font-size: var(--font-small);
   }
 
-  .bb-fontSize-medium-desktop {
+  .bb-fontSize-medium-bp2 {
     font-size: var(--font-medium);
   }
 
-  .bb-fontSize-large-desktop {
+  .bb-fontSize-large-bp2 {
     font-size: var(--font-large);
   }
 
-  .bb-fontSize-xlarge-desktop {
+  .bb-fontSize-xlarge-bp2 {
     font-size: var(--font-xlarge);
   }
 
-  .bb-fontWeight-regular-desktop {
+  .bb-fontWeight-regular-bp2 {
     font-weight: 400;
   }
 
-  .bb-fontWeight-bold-desktop {
+  .bb-fontWeight-bold-bp2 {
     font-weight: 700;
   }
 
-  .bb-color-white-desktop {
+  .bb-color-white-bp2 {
     color: #fff;
   }
 
-  .bb-color-black-desktop {
+  .bb-color-black-bp2 {
     color: #fff;
   }
 
-  .bb-color-danger-desktop {
+  .bb-color-danger-bp2 {
     color: var(--color-danger);
   }
 
-  .bb-color-dark-desktop {
+  .bb-color-dark-bp2 {
     color: var(--color-dark);
   }
 
-  .bb-color-info-desktop {
+  .bb-color-info-bp2 {
     color: var(--color-info);
   }
 
-  .bb-color-light-desktop {
+  .bb-color-light-bp2 {
     color: var(--color-light);
   }
 
-  .bb-color-primary-desktop {
+  .bb-color-primary-bp2 {
     color: var(--color-primary);
   }
 
-  .bb-color-secondary-desktop {
+  .bb-color-secondary-bp2 {
     color: var(--color-secondary);
   }
 
-  .bb-color-success-desktop {
+  .bb-color-success-bp2 {
     color: var(--color-success);
   }
 
-  .bb-color-warning-desktop {
+  .bb-color-warning-bp2 {
     color: var(--color-warning);
   }
 
-  .bb-backgroundColor-danger-desktop {
+  .bb-backgroundColor-danger-bp2 {
     background-color: var(--color-danger);
   }
 
-  .bb-backgroundColor-dark-desktop {
+  .bb-backgroundColor-dark-bp2 {
     background-color: var(--color-dark);
   }
 
-  .bb-backgroundColor-info-desktop {
+  .bb-backgroundColor-info-bp2 {
     background-color: var(--color-info);
   }
 
-  .bb-backgroundColor-light-desktop {
+  .bb-backgroundColor-light-bp2 {
     background-color: var(--color-light);
   }
 
-  .bb-backgroundColor-primary-desktop {
+  .bb-backgroundColor-primary-bp2 {
     background-color: var(--color-primary);
   }
 
-  .bb-backgroundColor-secondary-desktop {
+  .bb-backgroundColor-secondary-bp2 {
     background-color: var(--color-secondary);
   }
 
-  .bb-backgroundColor-success-desktop {
+  .bb-backgroundColor-success-bp2 {
     background-color: var(--color-success);
   }
 
-  .bb-backgroundColor-warning-desktop {
+  .bb-backgroundColor-warning-bp2 {
     background-color: var(--color-warning);
   }
 }
