@@ -4,7 +4,7 @@
   "description": "Blockle Blocks",
   "scripts": {
     "start": "npm run build:ts -- -w | npm run build:types -- -w",
-    "build": "npm run blocks && rm -rf ./dist/ && npm run build:ts && npm run build:types",
+    "build": "npm run build-builder && npm run blocks && rm -rf ./dist/ && npm run build:ts && npm run build:types",
     "build:ts": "rollup -c",
     "build:types": "tsc -d --emitDeclarationOnly",
     "test": "jest",
@@ -12,7 +12,8 @@
     "format": "prettier --write \"**/*\"",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "blocks": "ts-node ./scripts/build-styles.ts"
+    "blocks": "ts-node ./scripts/build-styles.ts",
+    "build-builder": "cd ./builder; npm run build; cd .."
   },
   "husky": {
     "hooks": {
