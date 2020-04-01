@@ -33,9 +33,7 @@ export default [
         extensions: ['.ts', '.tsx'],
       }),
       svgr(),
-      typescript({
-        objectHashIgnoreUnknownHack: true,
-      }),
+      typescript(),
       commonjs(),
       postcss({
         extract: './dist/blocks.css',
