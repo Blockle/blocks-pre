@@ -1,7 +1,6 @@
 import '@testing-library/jest-dom/extend-expect';
+import { cleanup, render } from '@testing-library/react';
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
-
 import Card from './Card';
 
 afterEach(cleanup);

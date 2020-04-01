@@ -1,9 +1,9 @@
 import { cx } from 'cx';
 import React from 'react';
-import { PickBlocks, useStyles } from '../useStyles';
+import { PickStyleProps, useStyles } from '../useStyles';
 import './link.css';
 
-interface Props extends PickBlocks<'fontSize'> {
+interface Props extends PickStyleProps<'fontSize'> {
   children: React.ReactNode;
   to: string;
 }

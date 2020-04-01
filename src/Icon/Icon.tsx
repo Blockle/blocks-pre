@@ -1,6 +1,6 @@
 import React from 'react';
 import { cx } from '../cx';
-import { PickBlocks, useStyles } from '../useStyles';
+import { PickStyleProps, useStyles } from '../useStyles';
 import './icon.css';
 import ArrowLeft from './icons/sm-arrow-left.svg';
 import ArrowRight from './icons/sm-arrow-right.svg';
@@ -30,7 +30,7 @@ const ICON_MAP = {
 
 export type IconNames = keyof typeof ICON_MAP;
 
-export interface Props extends PickBlocks<'color'> {
+export interface Props extends PickStyleProps<'color'> {
   label: string;
   name: IconNames;
   size?: 'small' | 'medium' | 'large';

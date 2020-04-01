@@ -1,18 +1,18 @@
 import React, { Children, ReactNode } from 'react';
 import { Box } from '../Box';
-import { BlockleBlocks } from '../useStyles';
+import { PickStyleProps, StyleProps } from '../useStyles';
 import './stack.css';
 
-interface Props {
+interface Props extends PickStyleProps<'textAlign'> {
   children: ReactNode;
   component?: 'div' | 'ol' | 'ul';
-  space?: BlockleBlocks['padding'];
-  textAlign?: BlockleBlocks['textAlign'];
+  space?: StyleProps['padding'];
 }
 
 const Stack = ({ children, component = 'div', space, textAlign }: Props) => {
   const stackItems = Children.toArray(children);
   const length = stackItems.length;
+  const childComponent = component === 'div' ? 'div' : 'li';
 
   if (!length) {
     return null;
@@ -25,7 +25,7 @@ const Stack = ({ children, component = 'div', space, textAlign }: Props) => {
   return (
     <Box component={component} className="Stack" textAlign={textAlign}>
       {stackItems.map((child, index) => (
-        <Box key={index} paddingBottom={space}>
+        <Box component={childComponent} key={index} paddingBottom={space}>
           {child}
         </Box>
       ))}

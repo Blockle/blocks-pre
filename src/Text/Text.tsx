@@ -1,9 +1,9 @@
 import { Box } from 'Box';
 import React from 'react';
-import { PickBlocks } from '../useStyles';
+import { PickStyleProps } from '../useStyles';
 import './text.css';
 
-interface Props extends PickBlocks<'textAlign' | 'fontSize' | 'fontWeight' | 'color'> {
+interface Props extends PickStyleProps<'textAlign' | 'fontSize' | 'fontWeight' | 'color'> {
   component?: 'span' | 'p' | 'strong';
   children: React.ReactNode;
 }

@@ -1,6 +1,6 @@
 type ResponsiveStyle<T extends string | number> = T | T[];
 
-export interface BlockleBlocks {
+export interface StyleProps {
   alignItems?: ResponsiveStyle<'stretch' | 'center' | 'flex-start' | 'flex-end' | 'baseline'>;
   background?: ResponsiveStyle<'card'>;
   display?: ResponsiveStyle<'block' | 'inline' | 'inline-block' | 'flex' | 'inline-flex' | 'none'>;
@@ -44,4 +44,4 @@ export interface BlockleBlocks {
   >;
 }
 
-export type PickBlocks<T extends keyof BlockleBlocks> = Partial<Pick<BlockleBlocks, T>>;
+export type PickStyleProps<T extends keyof StyleProps> = Partial<Pick<StyleProps, T>>;

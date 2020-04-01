@@ -1,14 +1,14 @@
 import './blockle-blocks.css';
-import { BlockleBlocks } from './blocks';
+import { StyleProps } from './blocks';
 
 // bb -> blockle blocks
 // useStyles({ padding: 'small', background: 'card' }); -> 'bb-padding-small bb-background-card'
 
-export const useStyles = (styles: BlockleBlocks) => {
-  const keys = Object.keys(styles) as Array<keyof BlockleBlocks>;
+export const useStyles = (styles: StyleProps) => {
+  const keys = Object.keys(styles) as Array<keyof StyleProps>;
   const classList: string[] = [];
 
-  keys.forEach(key => {
+  keys.forEach((key) => {
     const value = styles[key];
 
     if (value === undefined) {
@@ -31,13 +31,4 @@ export const useStyles = (styles: BlockleBlocks) => {
   });
 
   return classList.join(' ');
-};
-
-// TODO Remove me
-export const useStylesTimed = (styles: BlockleBlocks) => {
-  console.time('useStyle');
-  const classList = useStyles(styles);
-  console.timeEnd('useStyle');
-
-  return classList;
 };

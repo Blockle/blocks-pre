@@ -1,9 +1,9 @@
 import { cx } from 'cx';
 import React from 'react';
-import { PickBlocks, useStyles } from '../useStyles';
+import { PickStyleProps, useStyles } from '../useStyles';
 import './heading.css';
 
-interface Props extends PickBlocks<'fontSize' | 'textAlign'> {
+interface Props extends PickStyleProps<'fontSize' | 'textAlign'> {
   children: React.ReactNode;
   level: 1 | 2 | 3 | 4 | 5 | 6;
 }

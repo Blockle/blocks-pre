@@ -1,10 +1,10 @@
 import React from 'react';
 import { cx } from '../cx';
 import { Ripple } from '../Ripple';
-import { PickBlocks, useStyles } from '../useStyles';
+import { PickStyleProps, useStyles } from '../useStyles';
 import './flat-button.css';
 
-interface Props extends PickBlocks<'width'> {
+interface Props extends PickStyleProps<'width'> {
   children: React.ReactNode;
   className?: string;
   disabled?: boolean;

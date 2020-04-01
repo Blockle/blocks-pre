@@ -1,9 +1,9 @@
 import { AllHTMLAttributes, createElement, ElementType, forwardRef, ReactNode } from 'react';
 import { cx } from '../cx';
-import { BlockleBlocks, useStyles } from '../useStyles';
+import { StyleProps, useStyles } from '../useStyles';
 
 interface Props
-  extends BlockleBlocks,
+  extends StyleProps,
     Omit<AllHTMLAttributes<HTMLElement>, 'color' | 'width' | 'height'> {
   className?: string;
   children?: ReactNode;
