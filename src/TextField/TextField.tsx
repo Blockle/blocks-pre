@@ -44,7 +44,7 @@ const TextField = ({
   });
 
   return (
-    <Box position="relative" color={focus ? 'primary' : 'light'}>
+    <Box className="TextField" position="relative" color={focus ? 'primary' : 'light'}>
       <Box
         component="label"
         display="block"
@@ -60,15 +60,18 @@ const TextField = ({
         id={`Input-${name}`}
         name={name}
         onBlur={() => setFocus(false)}
-        onChange={event => field.setValue(event.target.value)}
-        onFocus={() => setFocus(true)}
+        onChange={(event) => field.setValue(event.target.value)}
+        onFocus={() => {
+          setFocus(true);
+          field.setTouched();
+        }}
         placeholder={placeholder || label}
         type={type}
         value={field.value}
       />
       <div className="TextField-Bar" />
 
-      {field.invalid && (
+      {field.invalid && field.touched && (
         <Box color="warning" className="TextField-Bottom">
           * {field.validationMessage}
         </Box>

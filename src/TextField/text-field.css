@@ -1,3 +1,7 @@
+.TextField {
+  padding-bottom: 20px;
+}
+
 .TextField-Label {
   transition: transform 200ms cubic-bezier(0, 0, 0.4, 1), opacity 200ms cubic-bezier(0, 0, 0.4, 1),
     color 200ms cubic-bezier(0, 0, 0.4, 1), visibility 200ms;
@@ -15,7 +19,7 @@
   position: absolute;
   display: block;
   content: '';
-  bottom: 0;
+  bottom: 20px;
   left: 0;
   height: 2px;
   width: 100%;
@@ -50,7 +54,7 @@
 
 .TextField-Bottom {
   position: absolute;
-  bottom: calc(var(--gutter-small) * -1 / 2);
+  bottom: 0;
   left: 0;
   font-size: var(--text-size-small);
   padding-top: 0;
