@@ -28,19 +28,10 @@ export interface StyleProps {
   fontSize?: ResponsiveStyle<'xsmall' | 'small' | 'medium' | 'large' | 'xlarge'>;
   fontWeight?: ResponsiveStyle<'regular' | 'bold'>;
   color?: ResponsiveStyle<
-    | 'white'
-    | 'black'
-    | 'danger'
-    | 'dark'
-    | 'info'
-    | 'light'
-    | 'primary'
-    | 'secondary'
-    | 'success'
-    | 'warning'
+    'primary' | 'secondary' | 'success' | 'warning' | 'black' | 'white' | 'gray'
   >;
   backgroundColor?: ResponsiveStyle<
-    'danger' | 'dark' | 'info' | 'light' | 'primary' | 'secondary' | 'success' | 'warning'
+    'primary' | 'secondary' | 'success' | 'warning' | 'black' | 'white' | 'gray'
   >;
 }
 

@@ -16,11 +16,11 @@ interface Props extends PickStyleProps<'width'> {
 const Button = ({ children, className, disabled, onClick, type = 'button', width }: Props) => {
   const buttonStyles = useStyles({
     width,
-    paddingX: 'xlarge',
-    paddingY: 'large',
-    backgroundColor: disabled ? 'dark' : 'primary',
+    paddingX: 'large',
+    paddingY: 'small',
+    backgroundColor: disabled ? 'gray' : 'primary',
     fontSize: 'small',
-    color: disabled ? 'light' : 'white',
+    color: 'white',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',

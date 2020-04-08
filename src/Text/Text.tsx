@@ -14,7 +14,7 @@ const Text = ({
   textAlign,
   fontSize = 'medium',
   fontWeight,
-  color = 'light',
+  color = 'gray',
 }: Props) => {
   return (
     <Box

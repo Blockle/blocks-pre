@@ -22,10 +22,10 @@ const OutlineButton = ({
 }: Props) => {
   const buttonStyles = useStyles({
     width,
-    paddingX: 'xlarge',
-    paddingY: 'large',
+    paddingX: 'large',
+    paddingY: 'small',
     fontSize: 'small',
-    color: disabled ? 'light' : 'primary',
+    color: disabled ? 'gray' : 'primary',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',

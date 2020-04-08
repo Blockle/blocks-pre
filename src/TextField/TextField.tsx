@@ -44,12 +44,12 @@ const TextField = ({
   });
 
   return (
-    <Box className="TextField" position="relative" color={focus ? 'primary' : 'light'}>
+    <Box className="TextField" position="relative" color={focus ? 'primary' : 'white'}>
       <Box
         component="label"
         display="block"
         htmlFor={`Input-${name}`}
-        color={focus ? 'primary' : 'light'}
+        color={focus ? 'primary' : 'gray'}
         className={cx('TextField-Label', field.value && 'is-floating')}
       >
         {label}

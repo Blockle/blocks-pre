@@ -20,11 +20,11 @@ const Card = ({ children, shadow = '0', onClick }: Props) => {
     return (
       <Ripple
         component={Box}
-        padding="large"
+        padding={['small', 'medium']}
         tabIndex={0}
         role="button"
         onClick={onClick}
-        onKeyPress={event => {
+        onKeyPress={(event) => {
           if (onClick && (event.key === 'Enter' || event.key === ' ')) {
             onClick(event);
           }

@@ -360,31 +360,13 @@ export const createTheme = ({
       },
       fontWeight: {
         regular: {
-          'font-weight': '400',
+          'font-weight': 'var(--weight-normal, 400)',
         },
         bold: {
-          'font-weight': '700',
+          'font-weight': 'var(--weight-bold, 700)',
         },
       },
       color: {
-        white: {
-          color: '#fff',
-        },
-        black: {
-          color: '#fff',
-        },
-        danger: {
-          color: colors.danger,
-        },
-        dark: {
-          color: colors.dark,
-        },
-        info: {
-          color: colors.info,
-        },
-        light: {
-          color: colors.light,
-        },
         primary: {
           color: colors.primary,
         },
@@ -397,20 +379,17 @@ export const createTheme = ({
         warning: {
           color: colors.warning,
         },
+        black: {
+          color: colors.black,
+        },
+        white: {
+          color: colors.white,
+        },
+        gray: {
+          color: colors.gray,
+        },
       },
       backgroundColor: {
-        danger: {
-          'background-color': colors.danger,
-        },
-        dark: {
-          'background-color': colors.dark,
-        },
-        info: {
-          'background-color': colors.info,
-        },
-        light: {
-          'background-color': colors.light,
-        },
         primary: {
           'background-color': colors.primary,
         },
@@ -422,6 +401,15 @@ export const createTheme = ({
         },
         warning: {
           'background-color': colors.warning,
+        },
+        black: {
+          'background-color': colors.black,
+        },
+        white: {
+          'background-color': colors.white,
+        },
+        gray: {
+          'background-color': colors.gray,
         },
       },
     },

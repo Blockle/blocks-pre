@@ -24,10 +24,10 @@ const FlatButton = ({
 }: Props) => {
   const buttonStyles = useStyles({
     width,
-    paddingX: 'xlarge',
-    paddingY: 'large',
+    paddingX: 'large',
+    paddingY: 'small',
     fontSize: 'small',
-    color: disabled ? 'light' : secondary ? 'primary' : 'dark',
+    color: disabled ? 'gray' : secondary ? 'primary' : 'secondary',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',

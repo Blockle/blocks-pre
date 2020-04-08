@@ -19,7 +19,7 @@ const IconButton = ({ disabled, label, name, onClick, secondary }: Props) => (
     onClick={onClick}
     className={cx('IconButton', secondary && 'is-secondary', disabled && 'is-disabled')}
   >
-    <Icon name={name} label={label} size="medium" color="light" />
+    <Icon name={name} label={label} size="medium" color="black" />
   </Ripple>
 );
 

@@ -16,14 +16,13 @@ export interface Typography {
 }
 
 export interface Colors {
-  danger: string;
-  dark: string;
-  info: string;
-  light: string;
   primary: string;
   secondary: string;
   success: string;
   warning: string;
+  black: string;
+  white: string;
+  gray: string;
 }
 
 export interface BlockleStyle {

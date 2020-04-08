@@ -18,14 +18,13 @@ const theme = createTheme({
     xlarge: 'var(--font-xlarge)',
   },
   colors: {
-    danger: 'var(--color-danger)',
-    dark: 'var(--color-dark)',
-    info: 'var(--color-info)',
-    light: 'var(--color-light)',
     primary: 'var(--color-primary)',
     secondary: 'var(--color-secondary)',
     success: 'var(--color-success)',
     warning: 'var(--color-warning)',
+    black: 'var(--color-black)',
+    white: 'var(--color-white)',
+    gray: 'var(--color-gray)',
   },
 });
 
