@@ -1,19 +1,20 @@
 import React from 'react';
 import { cx } from '../cx';
-import { Ripple } from '../Ripple';
+import { useRippleEffect } from '../useRippleEffect';
 import { PickStyleProps, useStyles } from '../useStyles';
 import './button.css';
 
 interface Props extends PickStyleProps<'width'> {
   children: React.ReactNode;
   disabled?: boolean;
-  onClick?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   type?: 'button' | 'submit';
   className?: string;
   secondary?: boolean;
 }
 
 const Button = ({ children, className, disabled, onClick, type = 'button', width }: Props) => {
+  const rippleRef = useRippleEffect();
   const buttonStyles = useStyles({
     width,
     paddingX: 'large',
@@ -27,15 +28,15 @@ const Button = ({ children, className, disabled, onClick, type = 'button', width
   });
 
   return (
-    <Ripple
-      component="button"
+    <button
+      ref={rippleRef}
       type={type}
       disabled={disabled}
       onClick={onClick}
       className={cx('Button', disabled && 'is-disabled', buttonStyles, className)}
     >
       {children}
-    </Ripple>
+    </button>
   );
 };
 

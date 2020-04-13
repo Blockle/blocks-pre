@@ -20,4 +20,5 @@ export * from './Ripple';
 export * from './Stack';
 export * from './Text';
 export * from './TextField';
+export * from './useRippleEffect';
 export * from './useStyles';
