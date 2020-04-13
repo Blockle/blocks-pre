@@ -24,6 +24,34 @@
   background-color: var(--background-card, #fff);
 }
 
+.bb-background-primary {
+  background-color: var(--color-primary);
+}
+
+.bb-background-secondary {
+  background-color: var(--color-secondary);
+}
+
+.bb-background-success {
+  background-color: var(--color-success);
+}
+
+.bb-background-warning {
+  background-color: var(--color-warning);
+}
+
+.bb-background-black {
+  background-color: var(--color-black);
+}
+
+.bb-background-white {
+  background-color: var(--color-white);
+}
+
+.bb-background-gray {
+  background-color: var(--color-gray);
+}
+
 /* display */
 .bb-display-block {
   display: block;
@@ -509,6 +537,34 @@
     background-color: var(--background-card, #fff);
   }
 
+  .bb-background-primary-bp1 {
+    background-color: var(--color-primary);
+  }
+
+  .bb-background-secondary-bp1 {
+    background-color: var(--color-secondary);
+  }
+
+  .bb-background-success-bp1 {
+    background-color: var(--color-success);
+  }
+
+  .bb-background-warning-bp1 {
+    background-color: var(--color-warning);
+  }
+
+  .bb-background-black-bp1 {
+    background-color: var(--color-black);
+  }
+
+  .bb-background-white-bp1 {
+    background-color: var(--color-white);
+  }
+
+  .bb-background-gray-bp1 {
+    background-color: var(--color-gray);
+  }
+
   .bb-display-block-bp1 {
     display: block;
   }
@@ -969,6 +1025,34 @@
 
   .bb-background-card-bp2 {
     background-color: var(--background-card, #fff);
+  }
+
+  .bb-background-primary-bp2 {
+    background-color: var(--color-primary);
+  }
+
+  .bb-background-secondary-bp2 {
+    background-color: var(--color-secondary);
+  }
+
+  .bb-background-success-bp2 {
+    background-color: var(--color-success);
+  }
+
+  .bb-background-warning-bp2 {
+    background-color: var(--color-warning);
+  }
+
+  .bb-background-black-bp2 {
+    background-color: var(--color-black);
+  }
+
+  .bb-background-white-bp2 {
+    background-color: var(--color-white);
+  }
+
+  .bb-background-gray-bp2 {
+    background-color: var(--color-gray);
   }
 
   .bb-display-block-bp2 {

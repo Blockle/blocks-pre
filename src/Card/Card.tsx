@@ -2,18 +2,26 @@ import React from 'react';
 import { Box } from '../Box';
 import { cx } from '../cx';
 import { Ripple } from '../Ripple';
+import { PickStyleProps } from '../useStyles';
 import './card.css';
 
-type Props = {
+interface Props extends PickStyleProps<'background' | 'color'> {
   children: React.ReactNode;
-  shadow?: '0' | '1' | '2' | '3';
-  // TODO Rename onClick to ..?
+  className?: string;
   onClick?: (event: React.MouseEvent<HTMLDivElement> | React.KeyboardEvent<HTMLDivElement>) => void;
-};
+  shadow?: '0' | '1' | '2' | '3';
+}
 
-const Card = ({ children, shadow = '0', onClick }: Props) => {
+const Card = ({
+  children,
+  className,
+  onClick,
+  shadow = '0',
+  background = 'card',
+  color,
+}: Props) => {
   const props = {
-    className: cx('Card', `shadow-${shadow}`, onClick && 'is-clickable'),
+    className: cx('Card', `shadow-${shadow}`, onClick && 'is-clickable', className),
   };
 
   if (onClick) {
@@ -21,6 +29,8 @@ const Card = ({ children, shadow = '0', onClick }: Props) => {
       <Ripple
         component={Box}
         padding={['small', 'medium']}
+        background={background}
+        color={color}
         tabIndex={0}
         role="button"
         onClick={onClick}

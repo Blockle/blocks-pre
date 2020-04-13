@@ -31,16 +31,18 @@ const validate = ({ required, pattern }: ValidationOptions) => (value: string) =
 const TextField = ({
   label,
   name,
-  placeholder,
-  value = '',
-  required,
+  onChange,
   pattern,
+  placeholder,
+  required,
   type = 'text',
+  value = '',
 }: Props) => {
   const [focus, setFocus] = useState(false);
   const field = useField(name, {
     value,
     validate: validate({ required, pattern }),
+    onChange,
   });
 
   return (

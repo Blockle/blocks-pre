@@ -33,6 +33,27 @@ export const createTheme = ({
         card: {
           'background-color': 'var(--background-card, #fff)',
         },
+        primary: {
+          'background-color': colors.primary,
+        },
+        secondary: {
+          'background-color': colors.secondary,
+        },
+        success: {
+          'background-color': colors.success,
+        },
+        warning: {
+          'background-color': colors.warning,
+        },
+        black: {
+          'background-color': colors.black,
+        },
+        white: {
+          'background-color': colors.white,
+        },
+        gray: {
+          'background-color': colors.gray,
+        },
       },
       display: {
         block: {
