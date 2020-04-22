@@ -1,6 +1,6 @@
 import React from 'react';
 import { cx } from '../cx';
-import { Ripple } from '../Ripple';
+import { useRippleEffect } from '../useRippleEffect';
 import { PickStyleProps, useStyles } from '../useStyles';
 import './flat-button.css';
 
@@ -8,7 +8,7 @@ interface Props extends PickStyleProps<'width'> {
   children: React.ReactNode;
   className?: string;
   disabled?: boolean;
-  onClick?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   secondary?: boolean;
   type?: 'button' | 'submit';
 }
@@ -22,6 +22,7 @@ const FlatButton = ({
   type = 'button',
   width,
 }: Props) => {
+  const ref = useRippleEffect<HTMLButtonElement>();
   const buttonStyles = useStyles({
     width,
     paddingX: 'large',
@@ -34,15 +35,15 @@ const FlatButton = ({
   });
 
   return (
-    <Ripple
-      component="button"
+    <button
+      ref={ref}
       type={type}
       disabled={disabled}
       onClick={onClick}
       className={cx('FlatButton', disabled && 'is-disabled', buttonStyles, className)}
     >
       {children}
-    </Ripple>
+    </button>
   );
 };
 

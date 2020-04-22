@@ -1,52 +1,65 @@
 import React from 'react';
+import { useRippleEffect } from 'useRippleEffect';
 import { Box } from '../Box';
 import { cx } from '../cx';
-import { Ripple } from '../Ripple';
 import { PickStyleProps } from '../useStyles';
 import './card.css';
 
-interface Props extends PickStyleProps<'background' | 'color'> {
+interface Props
+  extends PickStyleProps<
+    | 'background'
+    | 'color'
+    | 'padding'
+    | 'display'
+    | 'flexDirection'
+    | 'alignItems'
+    | 'justifyContent'
+  > {
   children: React.ReactNode;
   className?: string;
-  onClick?: (event: React.MouseEvent<HTMLDivElement> | React.KeyboardEvent<HTMLDivElement>) => void;
-  shadow?: '0' | '1' | '2' | '3';
+  onClick?: () => void;
+  shadow?: 1 | 2 | 3;
 }
 
 const Card = ({
+  background = 'card',
   children,
   className,
   onClick,
-  shadow = '0',
-  background = 'card',
-  color,
+  shadow,
+  ...boxProps
 }: Props) => {
   const props = {
-    className: cx('Card', `shadow-${shadow}`, onClick && 'is-clickable', className),
+    ...boxProps,
+    className: cx('Card', shadow && `shadow-${shadow}`, onClick && 'is-clickable', className),
   };
+  const ref = useRippleEffect<HTMLDivElement>();
 
   if (onClick) {
     return (
-      <Ripple
-        component={Box}
-        padding={['small', 'medium']}
+      <Box
+        ref={onClick ? ref : undefined}
         background={background}
-        color={color}
         tabIndex={0}
         role="button"
         onClick={onClick}
         onKeyPress={(event) => {
           if (onClick && (event.key === 'Enter' || event.key === ' ')) {
-            onClick(event);
+            onClick();
           }
         }}
         {...props}
       >
         {children}
-      </Ripple>
+      </Box>
     );
   }
 
-  return <div {...props}>{children}</div>;
+  return (
+    <Box background={background} {...props}>
+      {children}
+    </Box>
+  );
 };
 
 export default Card;

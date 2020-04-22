@@ -6,10 +6,10 @@ import './stack.css';
 interface Props extends PickStyleProps<'textAlign'> {
   children: ReactNode;
   component?: 'div' | 'ol' | 'ul';
-  space?: StyleProps['padding'];
+  gap?: StyleProps['padding'];
 }
 
-const Stack = ({ children, component = 'div', space, textAlign }: Props) => {
+const Stack = ({ children, component = 'div', gap, textAlign }: Props) => {
   const stackItems = Children.toArray(children);
   const length = stackItems.length;
   const childComponent = component === 'div' ? 'div' : 'li';
@@ -25,7 +25,7 @@ const Stack = ({ children, component = 'div', space, textAlign }: Props) => {
   return (
     <Box component={component} className="Stack" textAlign={textAlign}>
       {stackItems.map((child, index) => (
-        <Box component={childComponent} key={index} paddingBottom={space}>
+        <Box component={childComponent} key={index} paddingBottom={gap}>
           {child}
         </Box>
       ))}

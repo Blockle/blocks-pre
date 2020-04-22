@@ -41,7 +41,8 @@
   font-family: inherit;
   font-size: var(--font-medium);
   margin: 0;
-  -webkit-text-fill-color: inherit;
+  -webkit-text-fill-color: var(--color-black);
+  color: var(--color-black);
 
   &:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 30px rgba(255, 255, 255, 1) inset;

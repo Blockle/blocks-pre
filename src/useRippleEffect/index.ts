@@ -1,0 +1,1 @@
+export { useRippleEffect } from './useRippleEffect';

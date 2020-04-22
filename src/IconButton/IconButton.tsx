@@ -1,7 +1,7 @@
 import React from 'react';
 import { cx } from '../cx';
 import { Icon, IconNames } from '../Icon';
-import { Ripple } from '../Ripple';
+import { useRippleEffect } from '../useRippleEffect';
 import './icon-button.css';
 
 type Props = {
@@ -12,15 +12,19 @@ type Props = {
   secondary?: boolean;
 };
 
-const IconButton = ({ disabled, label, name, onClick, secondary }: Props) => (
-  <Ripple
-    component="button"
-    disabled={disabled}
-    onClick={onClick}
-    className={cx('IconButton', secondary && 'is-secondary', disabled && 'is-disabled')}
-  >
-    <Icon name={name} label={label} size="medium" color="black" />
-  </Ripple>
-);
+const IconButton = ({ disabled, label, name, onClick, secondary }: Props) => {
+  const ref = useRippleEffect<HTMLButtonElement>();
+
+  return (
+    <button
+      ref={ref}
+      disabled={disabled}
+      onClick={onClick}
+      className={cx('IconButton', secondary && 'is-secondary', disabled && 'is-disabled')}
+    >
+      <Icon name={name} label={label} size="medium" color="black" />
+    </button>
+  );
+};
 
 export default IconButton;

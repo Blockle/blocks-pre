@@ -9,8 +9,6 @@ interface Props {
   onRequestClose: () => void;
   open?: boolean;
   render: () => JSX.Element | string;
-  // TODO Define 'sizes' for blockle ui
-  size: 's' | 'm' | 'l';
 }
 
 const Panel = ({ className, onRequestClose, open = false, render }: Props) => {
