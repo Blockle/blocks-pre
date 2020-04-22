@@ -14,7 +14,7 @@ interface Props extends PickStyleProps<'width'> {
 }
 
 const Button = ({ children, className, disabled, onClick, type = 'button', width }: Props) => {
-  const rippleRef = useRippleEffect();
+  const rippleRef = useRippleEffect<HTMLButtonElement>();
   const buttonStyles = useStyles({
     width,
     paddingX: 'large',

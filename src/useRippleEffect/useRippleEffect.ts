@@ -1,42 +1,11 @@
 import { useEffect, useRef } from 'react';
 
-// Create stylesheet for shared css?
-
-// function createRippleStyles() {
-//   // Create styles once
-//   if (document.getElementById('USE_RIPPLE_EFFECT')) {
-//     return;
-//   }
-
-//   const style = document.createElement('style');
-//   style.id = 'USE_RIPPLE_EFFECT';
-//   document.body.appendChild(style);
-
-//   const styleSheet = style.sheet as CSSStyleSheet;
-
-//   if (!styleSheet) {
-//     throw new Error('KEK');
-//   }
-
-//   styleSheet.insertRule(`
-//     @keyframes UseRippleEffectOut {
-//       0% {
-//         opacity: 0.3;
-//       }
-//       100% {
-//         opacity: 0;
-//       }
-//     }
-//   `);
-// }
-
 const isTouch = 'ontouchstart' in document;
 const startType = isTouch ? 'touchstart' : 'mousedown';
 const endType = isTouch ? 'touchend' : 'mouseup';
 
 function nextTick(cb: () => void) {
   requestAnimationFrame(() => requestAnimationFrame(cb));
-  // setTimeout(cb, 500);
 }
 
 const getPosition = (event: TouchEvent | MouseEvent): { x: number; y: number } => {
@@ -51,8 +20,6 @@ const getPosition = (event: TouchEvent | MouseEvent): { x: number; y: number } =
 };
 
 function createRipple(event: MouseEvent | TouchEvent) {
-  // createRippleStyles();
-
   const createdAt = Date.now();
   const { currentTarget } = event;
   const { x, y } = getPosition(event);
@@ -107,20 +74,21 @@ function createRipple(event: MouseEvent | TouchEvent) {
   document.addEventListener('touchcancel', cleanup);
 }
 
-export const useRippleEffect = () => {
-  const ref = useRef(null);
+export const useRippleEffect = <T extends HTMLElement>() => {
+  const ref = useRef<T>(null);
 
   useEffect(() => {
     if (!ref.current) {
       return console.warn('useRippleEffect - ref not found', ref);
     }
 
-    const element = (ref.current as unknown) as HTMLElement;
+    const element = ref.current;
 
-    // TMP?
+    // TODO Think of a better way to add styles
     element.style.position = 'relative';
     element.style.overflow = 'hidden';
     element.style.outline = '0';
+    element.style.userSelect = 'none';
 
     element.addEventListener(startType, createRipple);
 

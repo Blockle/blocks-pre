@@ -13,7 +13,7 @@ type Props = {
 };
 
 const IconButton = ({ disabled, label, name, onClick, secondary }: Props) => {
-  const ref = useRippleEffect();
+  const ref = useRippleEffect<HTMLButtonElement>();
 
   return (
     <button

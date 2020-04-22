@@ -22,7 +22,7 @@ const FlatButton = ({
   type = 'button',
   width,
 }: Props) => {
-  const ref = useRippleEffect();
+  const ref = useRippleEffect<HTMLButtonElement>();
   const buttonStyles = useStyles({
     width,
     paddingX: 'large',
