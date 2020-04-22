@@ -71,12 +71,6 @@ export const createTheme = ({
         'inline-flex': {
           display: 'inline-flex',
         },
-        grid: {
-          display: 'grid',
-        },
-        'inline-grid': {
-          display: 'inline-grid',
-        },
         none: {
           display: 'none',
         },
@@ -437,66 +431,6 @@ export const createTheme = ({
         },
         gray: {
           'background-color': colors.gray,
-        },
-      },
-      gap: {
-        gutter: {
-          gap: spacing.gutter,
-        },
-        xsmall: {
-          gap: spacing.xsmall,
-        },
-        small: {
-          gap: spacing.small,
-        },
-        medium: {
-          gap: spacing.medium,
-        },
-        large: {
-          gap: spacing.large,
-        },
-        xlarge: {
-          gap: spacing.xlarge,
-        },
-      },
-      gapX: {
-        gutter: {
-          gap: `0 ${spacing.gutter}`,
-        },
-        xsmall: {
-          gap: `0 ${spacing.xsmall}`,
-        },
-        small: {
-          gap: `0 ${spacing.small}`,
-        },
-        medium: {
-          gap: `0 ${spacing.medium}`,
-        },
-        large: {
-          gap: `0 ${spacing.large}`,
-        },
-        xlarge: {
-          gap: `0 ${spacing.xlarge}`,
-        },
-      },
-      gapY: {
-        gutter: {
-          gap: `${spacing.gutter} 0`,
-        },
-        xsmall: {
-          gap: `${spacing.xsmall} 0`,
-        },
-        small: {
-          gap: `${spacing.small} 0`,
-        },
-        medium: {
-          gap: `${spacing.medium} 0`,
-        },
-        large: {
-          gap: `${spacing.large} 0`,
-        },
-        xlarge: {
-          gap: `${spacing.xlarge} 0`,
         },
       },
     },

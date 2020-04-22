@@ -73,14 +73,6 @@
   display: inline-flex;
 }
 
-.bb-display-grid {
-  display: grid;
-}
-
-.bb-display-inline-grid {
-  display: inline-grid;
-}
-
 .bb-display-none {
   display: none;
 }
@@ -520,81 +512,6 @@
   background-color: var(--color-gray);
 }
 
-/* gap */
-.bb-gap-gutter {
-  gap: var(--space-gutter);
-}
-
-.bb-gap-xsmall {
-  gap: var(--space-xsmall);
-}
-
-.bb-gap-small {
-  gap: var(--space-small);
-}
-
-.bb-gap-medium {
-  gap: var(--space-medium);
-}
-
-.bb-gap-large {
-  gap: var(--space-large);
-}
-
-.bb-gap-xlarge {
-  gap: var(--space-xlarge);
-}
-
-/* gapX */
-.bb-gapX-gutter {
-  gap: 0 var(--space-gutter);
-}
-
-.bb-gapX-xsmall {
-  gap: 0 var(--space-xsmall);
-}
-
-.bb-gapX-small {
-  gap: 0 var(--space-small);
-}
-
-.bb-gapX-medium {
-  gap: 0 var(--space-medium);
-}
-
-.bb-gapX-large {
-  gap: 0 var(--space-large);
-}
-
-.bb-gapX-xlarge {
-  gap: 0 var(--space-xlarge);
-}
-
-/* gapY */
-.bb-gapY-gutter {
-  gap: var(--space-gutter) 0;
-}
-
-.bb-gapY-xsmall {
-  gap: var(--space-xsmall) 0;
-}
-
-.bb-gapY-small {
-  gap: var(--space-small) 0;
-}
-
-.bb-gapY-medium {
-  gap: var(--space-medium) 0;
-}
-
-.bb-gapY-large {
-  gap: var(--space-large) 0;
-}
-
-.bb-gapY-xlarge {
-  gap: var(--space-xlarge) 0;
-}
-
 @media (min-width: 500px) {
   .bb-alignItems-stretch-bp1 {
     align-items: stretch;
@@ -666,14 +583,6 @@
 
   .bb-display-inline-flex-bp1 {
     display: inline-flex;
-  }
-
-  .bb-display-grid-bp1 {
-    display: grid;
-  }
-
-  .bb-display-inline-grid-bp1 {
-    display: inline-grid;
   }
 
   .bb-display-none-bp1 {
@@ -1091,78 +1000,6 @@
   .bb-backgroundColor-gray-bp1 {
     background-color: var(--color-gray);
   }
-
-  .bb-gap-gutter-bp1 {
-    gap: var(--space-gutter);
-  }
-
-  .bb-gap-xsmall-bp1 {
-    gap: var(--space-xsmall);
-  }
-
-  .bb-gap-small-bp1 {
-    gap: var(--space-small);
-  }
-
-  .bb-gap-medium-bp1 {
-    gap: var(--space-medium);
-  }
-
-  .bb-gap-large-bp1 {
-    gap: var(--space-large);
-  }
-
-  .bb-gap-xlarge-bp1 {
-    gap: var(--space-xlarge);
-  }
-
-  .bb-gapX-gutter-bp1 {
-    gap: 0 var(--space-gutter);
-  }
-
-  .bb-gapX-xsmall-bp1 {
-    gap: 0 var(--space-xsmall);
-  }
-
-  .bb-gapX-small-bp1 {
-    gap: 0 var(--space-small);
-  }
-
-  .bb-gapX-medium-bp1 {
-    gap: 0 var(--space-medium);
-  }
-
-  .bb-gapX-large-bp1 {
-    gap: 0 var(--space-large);
-  }
-
-  .bb-gapX-xlarge-bp1 {
-    gap: 0 var(--space-xlarge);
-  }
-
-  .bb-gapY-gutter-bp1 {
-    gap: var(--space-gutter) 0;
-  }
-
-  .bb-gapY-xsmall-bp1 {
-    gap: var(--space-xsmall) 0;
-  }
-
-  .bb-gapY-small-bp1 {
-    gap: var(--space-small) 0;
-  }
-
-  .bb-gapY-medium-bp1 {
-    gap: var(--space-medium) 0;
-  }
-
-  .bb-gapY-large-bp1 {
-    gap: var(--space-large) 0;
-  }
-
-  .bb-gapY-xlarge-bp1 {
-    gap: var(--space-xlarge) 0;
-  }
 }
 
 @media (min-width: 800px) {
@@ -1236,14 +1073,6 @@
 
   .bb-display-inline-flex-bp2 {
     display: inline-flex;
-  }
-
-  .bb-display-grid-bp2 {
-    display: grid;
-  }
-
-  .bb-display-inline-grid-bp2 {
-    display: inline-grid;
   }
 
   .bb-display-none-bp2 {
@@ -1660,77 +1489,5 @@
 
   .bb-backgroundColor-gray-bp2 {
     background-color: var(--color-gray);
-  }
-
-  .bb-gap-gutter-bp2 {
-    gap: var(--space-gutter);
-  }
-
-  .bb-gap-xsmall-bp2 {
-    gap: var(--space-xsmall);
-  }
-
-  .bb-gap-small-bp2 {
-    gap: var(--space-small);
-  }
-
-  .bb-gap-medium-bp2 {
-    gap: var(--space-medium);
-  }
-
-  .bb-gap-large-bp2 {
-    gap: var(--space-large);
-  }
-
-  .bb-gap-xlarge-bp2 {
-    gap: var(--space-xlarge);
-  }
-
-  .bb-gapX-gutter-bp2 {
-    gap: 0 var(--space-gutter);
-  }
-
-  .bb-gapX-xsmall-bp2 {
-    gap: 0 var(--space-xsmall);
-  }
-
-  .bb-gapX-small-bp2 {
-    gap: 0 var(--space-small);
-  }
-
-  .bb-gapX-medium-bp2 {
-    gap: 0 var(--space-medium);
-  }
-
-  .bb-gapX-large-bp2 {
-    gap: 0 var(--space-large);
-  }
-
-  .bb-gapX-xlarge-bp2 {
-    gap: 0 var(--space-xlarge);
-  }
-
-  .bb-gapY-gutter-bp2 {
-    gap: var(--space-gutter) 0;
-  }
-
-  .bb-gapY-xsmall-bp2 {
-    gap: var(--space-xsmall) 0;
-  }
-
-  .bb-gapY-small-bp2 {
-    gap: var(--space-small) 0;
-  }
-
-  .bb-gapY-medium-bp2 {
-    gap: var(--space-medium) 0;
-  }
-
-  .bb-gapY-large-bp2 {
-    gap: var(--space-large) 0;
-  }
-
-  .bb-gapY-xlarge-bp2 {
-    gap: var(--space-xlarge) 0;
   }
 }
