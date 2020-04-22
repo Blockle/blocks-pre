@@ -1,18 +1,20 @@
-import React, { Children, ReactNode } from 'react';
-import { Box } from '../Box';
-import { PickStyleProps, StyleProps } from '../useStyles';
+import React, { Children, createElement, forwardRef, ReactNode } from 'react';
+import { PickStyleProps, StyleProps, useStyles } from '../useStyles';
 import './stack.css';
 
 interface Props extends PickStyleProps<'textAlign'> {
   children: ReactNode;
   component?: 'div' | 'ol' | 'ul';
-  gap?: StyleProps['padding'];
+  gap?: StyleProps['gapY'];
 }
 
-const Stack = ({ children, component = 'div', gap, textAlign }: Props) => {
+const Stack = forwardRef(({ children, component = 'div', gap }: Props, ref) => {
   const stackItems = Children.toArray(children);
   const length = stackItems.length;
-  const childComponent = component === 'div' ? 'div' : 'li';
+  const stackStyles = useStyles({
+    display: 'grid',
+    gapY: gap,
+  });
 
   if (!length) {
     return null;
@@ -22,15 +24,7 @@ const Stack = ({ children, component = 'div', gap, textAlign }: Props) => {
     return <>{children}</>;
   }
 
-  return (
-    <Box component={component} className="Stack" textAlign={textAlign}>
-      {stackItems.map((child, index) => (
-        <Box component={childComponent} key={index} paddingBottom={gap}>
-          {child}
-        </Box>
-      ))}
-    </Box>
-  );
-};
+  return createElement(component, { ref, className: stackStyles }, children);
+});
 
 export default Stack;

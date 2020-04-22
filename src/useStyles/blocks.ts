@@ -5,7 +5,9 @@ export interface StyleProps {
   background?: ResponsiveStyle<
     'card' | 'primary' | 'secondary' | 'success' | 'warning' | 'black' | 'white' | 'gray'
   >;
-  display?: ResponsiveStyle<'block' | 'inline' | 'inline-block' | 'flex' | 'inline-flex' | 'none'>;
+  display?: ResponsiveStyle<
+    'block' | 'inline' | 'inline-block' | 'flex' | 'inline-flex' | 'grid' | 'inline-grid' | 'none'
+  >;
   flexDirection?: ResponsiveStyle<'row' | 'row-reverse' | 'column' | 'column-reverse'>;
   flexGrow?: ResponsiveStyle<0 | 1>;
   flexShrink?: ResponsiveStyle<0>;
@@ -35,6 +37,9 @@ export interface StyleProps {
   backgroundColor?: ResponsiveStyle<
     'primary' | 'secondary' | 'success' | 'warning' | 'black' | 'white' | 'gray'
   >;
+  gap?: ResponsiveStyle<'gutter' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge'>;
+  gapX?: ResponsiveStyle<'gutter' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge'>;
+  gapY?: ResponsiveStyle<'gutter' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge'>;
 }
 
 export type PickStyleProps<T extends keyof StyleProps> = Partial<Pick<StyleProps, T>>;
