@@ -33,7 +33,7 @@ export type IconNames = keyof typeof ICON_MAP;
 export interface Props extends PickStyleProps<'color'> {
   label: string;
   name: IconNames;
-  size?: 'small' | 'medium' | 'large';
+  size?: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge';
 }
 
 const Icon = ({ label, name, size = 'medium', color = 'white' }: Props) => {

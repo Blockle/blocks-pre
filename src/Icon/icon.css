@@ -11,6 +11,12 @@
 
   &.size-small,
   &.size-small svg {
+    max-width: 14px;
+    max-height: 14px;
+  }
+
+  &.size-small,
+  &.size-small svg {
     max-width: 20px;
     max-height: 20px;
   }

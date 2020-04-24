@@ -19,39 +19,6 @@
   align-items: baseline;
 }
 
-/* background */
-.bb-background-card {
-  background-color: var(--background-card, #fff);
-}
-
-.bb-background-primary {
-  background-color: var(--color-primary);
-}
-
-.bb-background-secondary {
-  background-color: var(--color-secondary);
-}
-
-.bb-background-success {
-  background-color: var(--color-success);
-}
-
-.bb-background-warning {
-  background-color: var(--color-warning);
-}
-
-.bb-background-black {
-  background-color: var(--color-black);
-}
-
-.bb-background-white {
-  background-color: var(--color-white);
-}
-
-.bb-background-gray {
-  background-color: var(--color-gray);
-}
-
 /* display */
 .bb-display-block {
   display: block;
@@ -484,6 +451,10 @@
 }
 
 /* backgroundColor */
+.bb-backgroundColor-card {
+  background-color: var(--background-card, #fff);
+}
+
 .bb-backgroundColor-primary {
   background-color: var(--color-primary);
 }
@@ -531,38 +502,6 @@
 
   .bb-alignItems-baseline-bp1 {
     align-items: baseline;
-  }
-
-  .bb-background-card-bp1 {
-    background-color: var(--background-card, #fff);
-  }
-
-  .bb-background-primary-bp1 {
-    background-color: var(--color-primary);
-  }
-
-  .bb-background-secondary-bp1 {
-    background-color: var(--color-secondary);
-  }
-
-  .bb-background-success-bp1 {
-    background-color: var(--color-success);
-  }
-
-  .bb-background-warning-bp1 {
-    background-color: var(--color-warning);
-  }
-
-  .bb-background-black-bp1 {
-    background-color: var(--color-black);
-  }
-
-  .bb-background-white-bp1 {
-    background-color: var(--color-white);
-  }
-
-  .bb-background-gray-bp1 {
-    background-color: var(--color-gray);
   }
 
   .bb-display-block-bp1 {
@@ -973,6 +912,10 @@
     color: var(--color-gray);
   }
 
+  .bb-backgroundColor-card-bp1 {
+    background-color: var(--background-card, #fff);
+  }
+
   .bb-backgroundColor-primary-bp1 {
     background-color: var(--color-primary);
   }
@@ -1021,38 +964,6 @@
 
   .bb-alignItems-baseline-bp2 {
     align-items: baseline;
-  }
-
-  .bb-background-card-bp2 {
-    background-color: var(--background-card, #fff);
-  }
-
-  .bb-background-primary-bp2 {
-    background-color: var(--color-primary);
-  }
-
-  .bb-background-secondary-bp2 {
-    background-color: var(--color-secondary);
-  }
-
-  .bb-background-success-bp2 {
-    background-color: var(--color-success);
-  }
-
-  .bb-background-warning-bp2 {
-    background-color: var(--color-warning);
-  }
-
-  .bb-background-black-bp2 {
-    background-color: var(--color-black);
-  }
-
-  .bb-background-white-bp2 {
-    background-color: var(--color-white);
-  }
-
-  .bb-background-gray-bp2 {
-    background-color: var(--color-gray);
   }
 
   .bb-display-block-bp2 {
@@ -1461,6 +1372,10 @@
 
   .bb-color-gray-bp2 {
     color: var(--color-gray);
+  }
+
+  .bb-backgroundColor-card-bp2 {
+    background-color: var(--background-card, #fff);
   }
 
   .bb-backgroundColor-primary-bp2 {

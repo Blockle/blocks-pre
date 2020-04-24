@@ -15,7 +15,6 @@ const Box = forwardRef(
   (
     {
       alignItems,
-      background,
       backgroundColor,
       children,
       className,
@@ -49,7 +48,6 @@ const Box = forwardRef(
   ) => {
     const boxStyles = useStyles({
       alignItems,
-      background,
       backgroundColor,
       color,
       display,

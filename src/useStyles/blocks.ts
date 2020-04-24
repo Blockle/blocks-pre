@@ -2,9 +2,6 @@ type ResponsiveStyle<T extends string | number> = T | T[];
 
 export interface StyleProps {
   alignItems?: ResponsiveStyle<'stretch' | 'center' | 'flex-start' | 'flex-end' | 'baseline'>;
-  background?: ResponsiveStyle<
-    'card' | 'primary' | 'secondary' | 'success' | 'warning' | 'black' | 'white' | 'gray'
-  >;
   display?: ResponsiveStyle<'block' | 'inline' | 'inline-block' | 'flex' | 'inline-flex' | 'none'>;
   flexDirection?: ResponsiveStyle<'row' | 'row-reverse' | 'column' | 'column-reverse'>;
   flexGrow?: ResponsiveStyle<0 | 1>;
@@ -33,7 +30,7 @@ export interface StyleProps {
     'primary' | 'secondary' | 'success' | 'warning' | 'black' | 'white' | 'gray'
   >;
   backgroundColor?: ResponsiveStyle<
-    'primary' | 'secondary' | 'success' | 'warning' | 'black' | 'white' | 'gray'
+    'card' | 'primary' | 'secondary' | 'success' | 'warning' | 'black' | 'white' | 'gray'
   >;
 }
 

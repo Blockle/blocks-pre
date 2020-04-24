@@ -7,7 +7,7 @@ import './card.css';
 
 interface Props
   extends PickStyleProps<
-    | 'background'
+    | 'backgroundColor'
     | 'color'
     | 'padding'
     | 'display'
@@ -22,7 +22,7 @@ interface Props
 }
 
 const Card = ({
-  background = 'card',
+  backgroundColor = 'card',
   children,
   className,
   onClick,
@@ -39,7 +39,7 @@ const Card = ({
     return (
       <Box
         ref={onClick ? ref : undefined}
-        background={background}
+        backgroundColor={backgroundColor}
         tabIndex={0}
         role="button"
         onClick={onClick}
@@ -56,7 +56,7 @@ const Card = ({
   }
 
   return (
-    <Box background={background} {...props}>
+    <Box backgroundColor={backgroundColor} {...props}>
       {children}
     </Box>
   );
