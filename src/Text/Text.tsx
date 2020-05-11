@@ -4,7 +4,7 @@ import { PickStyleProps } from '../useStyles';
 import './text.css';
 
 interface Props extends PickStyleProps<'textAlign' | 'fontSize' | 'fontWeight' | 'color'> {
-  component?: 'span' | 'p' | 'strong';
+  component?: 'span' | 'p' | 'strong' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   children: React.ReactNode;
 }
 

@@ -7,7 +7,6 @@ export * from './Dialog';
 export * from './Divider';
 export * from './Drawer';
 export * from './FlatButton';
-export * from './Heading';
 export * from './hooks';
 export * from './Icon';
 export * from './IconButton';
