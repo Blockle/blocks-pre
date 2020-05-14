@@ -86,7 +86,7 @@ export const useFlip = () => {
           },
           {
             property: 'transform',
-            to: 'scale(0.8',
+            to: 'scale(0.8)',
           },
         ],
       });
