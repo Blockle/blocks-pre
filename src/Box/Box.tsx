@@ -78,7 +78,7 @@ const Box = forwardRef(
       component,
       {
         ref,
-        className: cx(boxStyles, className),
+        className: cx(className, boxStyles),
         ...restProps,
       },
       children,
