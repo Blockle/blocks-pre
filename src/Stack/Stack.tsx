@@ -27,8 +27,8 @@ const Stack = ({ children, component = 'div', spacing, horizontal = false }: Pro
     <Box
       component={component}
       className={cx('Stack', horizontal && 'horizontal')}
-      display={horizontal ? 'flex' : undefined}
-      flexDirection={horizontal ? 'row' : undefined}
+      display="flex"
+      flexDirection={horizontal ? 'row' : 'column'}
       stackGap={spacing}
     >
       {children}
