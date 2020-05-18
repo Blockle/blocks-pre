@@ -9,8 +9,8 @@
     fill: currentColor;
   }
 
-  &.size-small,
-  &.size-small svg {
+  &.size-xsmall,
+  &.size-xsmall svg {
     max-width: 14px;
     max-height: 14px;
   }

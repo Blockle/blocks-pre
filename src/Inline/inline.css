@@ -1,0 +1,6 @@
+.Inline {
+  & > :not(:last-child) {
+    margin-right: var(--stack-gap);
+    margin-bottom: var(--stack-gap);
+  }
+}
