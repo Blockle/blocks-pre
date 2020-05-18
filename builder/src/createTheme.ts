@@ -410,6 +410,26 @@ export const createTheme = ({
           'background-color': colors.gray,
         },
       },
+      stackGap: {
+        gutter: {
+          '--stack-gap': spacing.gutter,
+        },
+        xsmall: {
+          '--stack-gap': spacing.xsmall,
+        },
+        small: {
+          '--stack-gap': spacing.small,
+        },
+        medium: {
+          '--stack-gap': spacing.medium,
+        },
+        large: {
+          '--stack-gap': spacing.large,
+        },
+        xlarge: {
+          '--stack-gap': spacing.xlarge,
+        },
+      },
     },
   };
 };

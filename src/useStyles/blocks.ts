@@ -32,6 +32,7 @@ export interface StyleProps {
   backgroundColor?: ResponsiveStyle<
     'card' | 'primary' | 'secondary' | 'success' | 'warning' | 'black' | 'white' | 'gray'
   >;
+  stackGap?: ResponsiveStyle<'gutter' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge'>;
 }
 
 export type PickStyleProps<T extends keyof StyleProps> = Partial<Pick<StyleProps, T>>;

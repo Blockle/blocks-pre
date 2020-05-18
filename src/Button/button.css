@@ -4,7 +4,7 @@
   cursor: pointer;
   transition: background-color 0.2s, color 0.2s;
   text-transform: uppercase;
-  border: 1px solid transparent;
+  border: none;
   font-weight: 700;
 
   &:focus {

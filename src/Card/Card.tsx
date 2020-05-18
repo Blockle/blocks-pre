@@ -38,7 +38,7 @@ const Card = ({
   if (onClick) {
     return (
       <Box
-        ref={onClick ? ref : undefined}
+        ref={ref}
         backgroundColor={backgroundColor}
         tabIndex={0}
         role="button"

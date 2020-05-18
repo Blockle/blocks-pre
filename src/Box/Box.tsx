@@ -40,6 +40,7 @@ const Box = forwardRef(
       paddingX,
       paddingY,
       position,
+      stackGap,
       textAlign,
       width,
       ...restProps
@@ -70,6 +71,7 @@ const Box = forwardRef(
       paddingX,
       paddingY,
       position,
+      stackGap,
       textAlign,
       width,
     });
