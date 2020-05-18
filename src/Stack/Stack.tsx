@@ -1,4 +1,5 @@
 import { Box } from 'Box';
+import { cx } from 'cx';
 import React, { Children, ReactNode } from 'react';
 import { PickStyleProps, StyleProps } from '../useStyles';
 import './stack.css';
@@ -13,9 +14,6 @@ interface Props extends PickStyleProps<'textAlign'> {
 const Stack = ({ children, component = 'div', spacing, direction }: Props) => {
   const stackItems = Children.toArray(children);
   const length = stackItems.length;
-  const childComponent = component === 'div' ? 'div' : 'li';
-  const paddingBottom = !direction || direction === 'column' ? spacing : undefined;
-  const paddingRight = direction === 'row' ? spacing : undefined;
 
   if (!length) {
     return null;
@@ -28,20 +26,11 @@ const Stack = ({ children, component = 'div', spacing, direction }: Props) => {
   return (
     <Box
       component={component}
-      className="Stack"
+      className={cx('Stack', `spacing-${spacing}`, direction && `direction-${direction}`)}
       display={direction ? 'flex' : undefined}
       flexDirection={direction}
     >
-      {stackItems.map((child, index) => (
-        <Box
-          component={childComponent}
-          key={index}
-          paddingBottom={paddingBottom}
-          paddingRight={paddingRight}
-        >
-          {child}
-        </Box>
-      ))}
+      {children}
     </Box>
   );
 };

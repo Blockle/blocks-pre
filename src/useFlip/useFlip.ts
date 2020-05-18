@@ -29,9 +29,10 @@ export const useFlip = () => {
 
       const prevPosition = positions.get(id);
 
+      // TODO This is causing issues when useLayoutEffect is called multiple times..
       // Cancel current animation, if any and reset transform
-      element.style.transition = '';
-      element.style.transform = '';
+      // element.style.transition = '';
+      // element.style.transform = '';
 
       const position = getPosition(element);
 

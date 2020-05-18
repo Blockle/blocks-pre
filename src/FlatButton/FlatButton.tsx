@@ -11,6 +11,8 @@ interface Props extends PickStyleProps<'width'> {
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   secondary?: boolean;
   type?: 'button' | 'submit';
+  id?: string;
+  role?: string;
 }
 
 const FlatButton = ({
@@ -21,6 +23,7 @@ const FlatButton = ({
   secondary,
   type = 'button',
   width,
+  ...props
 }: Props) => {
   const ref = useRippleEffect<HTMLButtonElement>();
   const buttonStyles = useStyles({
@@ -28,7 +31,7 @@ const FlatButton = ({
     paddingX: 'large',
     paddingY: 'small',
     fontSize: 'small',
-    color: disabled ? 'gray' : secondary ? 'primary' : 'secondary',
+    color: disabled ? 'gray' : secondary ? 'secondary' : 'primary',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -41,6 +44,7 @@ const FlatButton = ({
       disabled={disabled}
       onClick={onClick}
       className={cx('FlatButton', disabled && 'is-disabled', buttonStyles, className)}
+      {...props}
     >
       {children}
     </button>

@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
+import { Box } from '../Box';
 import { cx } from '../cx';
 import { useAnimationState, useLayer } from '../hooks';
 import { IconButton } from '../IconButton';
+import { Stack } from '../Stack';
 import './dialog.css';
 
 type Props = {
@@ -12,6 +14,7 @@ type Props = {
   open?: boolean;
   render: () => JSX.Element | string;
   title?: React.ReactNode;
+  minHeight?: number;
 };
 
 export const Dialog = ({
@@ -21,9 +24,28 @@ export const Dialog = ({
   open = false,
   render,
   title = null,
+  minHeight,
 }: Props) => {
   const [state, close] = useAnimationState(open);
   const layer = useLayer();
+
+  useEffect(() => {
+    if (!state.open) {
+      return;
+    }
+
+    const onKeyPress = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        onRequestClose();
+      }
+    };
+
+    document.addEventListener('keydown', onKeyPress);
+
+    return () => {
+      document.removeEventListener('keydown', onKeyPress);
+    };
+  }, [state.open]);
 
   if (!state.open) {
     return null;
@@ -42,25 +64,36 @@ export const Dialog = ({
         onClick={onRequestClose}
         onAnimationEnd={onAnimationEnd}
       />
-      <div
-        className={cx(
-          'Dialog',
-          state.leave && 'is-leave',
-          full && 'is-full',
-          (!!title || full) && 'has-title',
-        )}
+      <Box
+        className={cx('Dialog', state.leave && 'is-leave')}
+        width={full ? 'full' : undefined}
+        display="flex"
+        flexDirection="column"
+        position="relative"
+        paddingY="small"
+        style={{
+          minHeight: `min(96%, ${minHeight}px)`,
+        }}
       >
-        {(title || full) && (
-          <div className="DialogTopBar">
-            <div className="DialogTitle">{title}</div>
-            <IconButton name="cross" label="Close" onClick={onRequestClose} />
-          </div>
-        )}
+        <Stack spacing="medium">
+          {(title || full) && (
+            <Box display="flex" alignItems="center" paddingLeft="gutter">
+              <Box flexGrow={1}>{title}</Box>
+              <IconButton name="cross" label="Close" onClick={onRequestClose} />
+            </Box>
+          )}
 
-        <div className="DialogContent">{render()}</div>
+          <Box flexGrow={1} overflow="auto" paddingX="gutter">
+            {render()}
+          </Box>
 
-        {actions && <div className="DialogActions">{actions}</div>}
-      </div>
+          {actions && (
+            <Box display="flex" justifyContent="flex-end" alignItems="center" paddingX="gutter">
+              {actions}
+            </Box>
+          )}
+        </Stack>
+      </Box>
     </div>
   );
 

@@ -1,66 +1,41 @@
 :root {
-  /* Text */
-  --text-color-heading: #000;
-  --text-color-primary: #000;
-  --text-color-secondary: #000;
-  --text-color-tertiary: #000;
-  --text-color-disabled: #ccc;
+  --outline: inset 0 0 0 2px rgba(77, 161, 255, 0.2);
 
-  /* State */
-  --state-error: red;
-  --state-warning: orange;
-  --state-focus: blue;
-  --state-success: green;
-
-  /* Accent */
-  --accent-primary: #000;
-  --accent-secondary: #fff;
+  /* Blockle Blocks */
 
   /* Spacing */
-  --spacing-small: 6px;
-  --spacing-medium: 12px;
-  --spacing-large: 20px;
+  --space-gutter: 12px;
+  --space-xsmall: 4px;
+  --space-small: 8px;
+  --space-medium: 12px;
+  --space-large: 20px;
+  --space-xlarge: 26px;
 
-  /* Shadow */
+  /* Font famlily */
+  --font-family: 'Lato', sans-serif;
+
+  /* Font size */
+  --font-xsmall: 12px;
+  --font-small: 14px;
+  --font-medium: 16px;
+  --font-large: 18px;
+  --font-xlarge: 22px;
+
+  /* Font weight */
+  --weight-normal: 400;
+  --weight-bold: 700;
+
+  /* Colors */
+  --color-primary: #4da1ff;
+  --color-secondary: #081661;
+  --color-success: #7ed321;
+  --color-warning: #f5a623;
+  --color-black: #323c47;
+  --color-white: #fff;
+  --color-gray: #939eab;
+
+  /* Shadows */
   --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   --shadow-2: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   --shadow-3: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-
-  /* Outline */
-  /* --outline: 0 0 0 1px rgba(37, 38, 94, 0.2); */
-  /* --outline: 0 0 0 2px rgba(0, 0, 0, 0.1); */
-  --outline: 0 0 0 2px rgba(77, 161, 255, 0.2);
-
-  /* -------------------------------------------------------------------- */
-
-  /* Colors */
-  --background-primary: #f8f9fa;
-  --accent-primary: #4da1ff;
-  --accent-primary-dark: #2c8dfc;
-  --accent-secondary: #7ed321;
-  --accent-tertiary: #f5a623;
-  --divider-color: #dfe3e8;
-  --disabled: #d1dbe2;
-  --warn: #fc8650;
-  --shadow-color: rgba(37, 38, 94, 0.1);
-
-  /* #969BA1 */
-
-  /* Spacing */
-  --gutter-small: 8px;
-  --gutter-medium: 14px;
-  --gutter-large: 24px;
-
-  /* Text */
-  --text-primary-color: #323c47;
-  --text-secondary-color: #939eab;
-  --font-family: 'Lato', sans-serif;
-  --text-size-small: 12px;
-  --text-size: 14px;
-  --text-heading-small: 12px;
-  --text-heading-medium: 19px;
-  --text-heading-large: 23px;
-  --text-heading-xlarge: 42px;
-  --text-semi-bold: 500;
-  --text-bold: 700;
 }

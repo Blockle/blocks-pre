@@ -21,7 +21,7 @@
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 0;
   animation-name: DialogBack-Enter;
-  animation-duration: 280ms;
+  animation-duration: 200ms;
   animation-fill-mode: both;
 
   &.is-leave {
@@ -50,41 +50,34 @@
 }
 
 .Dialog {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  max-width: 600px;
-  margin: var(--gutter-small);
-  min-height: 40px;
-  min-width: 320px;
   background-color: #ffff;
   overflow: hidden;
   border: 1px solid #f0f3f4;
   border-radius: 4px;
   opacity: 0;
   transform: translateY(20%);
-  padding-top: var(--gutter-small);
+  min-height: 40px;
   max-height: 94%;
+  min-width: 94%;
+  max-width: 94%;
   animation-name: Dialog-Enter;
-  animation-duration: 280ms;
+  animation-duration: 200ms;
   animation-fill-mode: both;
 
   &.is-leave {
     animation-name: Dialog-Leave;
   }
 
-  &.has-title {
-    padding: 0;
-  }
-
-  &.is-full {
-    max-height: 96%;
-    height: 100%;
-    width: 100%;
-  }
-
   @media (max-height: 400px) {
     max-height: 96%;
+  }
+
+  @media (min-width: 340px) {
+    min-width: 320px;
+  }
+
+  @media (min-width: 620px) {
+    max-width: 600px;
   }
 }
 
@@ -110,34 +103,4 @@
     opacity: 0;
     transform: translateY(20%);
   }
-}
-
-.DialogTopBar {
-  display: flex;
-  height: 34px;
-  min-height: 34px;
-}
-
-.DialogTitle {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--text-primary-color);
-  font-weight: normal;
-  font-size: var(--text-heading-small);
-  text-transform: uppercase;
-}
-
-.DialogContent {
-  flex: 1;
-  overflow: auto;
-  padding: var(--gutter-small) var(--gutter-medium);
-}
-
-.DialogActions {
-  display: flex;
-  justify-content: flex-end;
-  min-height: 48px;
-  padding: 0 4px;
 }

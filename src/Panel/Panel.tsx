@@ -8,6 +8,9 @@ interface Props {
   className?: string;
   onRequestClose: () => void;
   open?: boolean;
+  // render vs children
+  // render -> more performant (when using a lot of panels..)
+  // children -> keeps local state
   render: () => JSX.Element | string;
 }
 
