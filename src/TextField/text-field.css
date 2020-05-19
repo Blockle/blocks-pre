@@ -56,7 +56,7 @@
 
 .TextField-Bottom {
   position: absolute;
-  bottom: 0;
+  top: 42px;
   left: 0;
   font-size: var(--text-size-small);
   padding-top: 0;

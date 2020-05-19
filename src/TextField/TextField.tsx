@@ -8,21 +8,36 @@ type Props = FieldProps<string> & {
   label: string;
   placeholder?: string;
   onChange?: (value: string) => void;
-  type?: 'text' | 'password' | 'email';
+  type?: 'text' | 'password' | 'email' | 'tel';
+  errorMessages?: { [key in ErrorCodes]?: React.ReactNode };
 } & ValidationOptions;
+
+type ErrorCodes = 'required' | 'patternMismatch' | 'minLength' | 'maxLength';
 
 type ValidationOptions = {
   required?: boolean;
   pattern?: RegExp;
+  minLength?: number;
+  maxLength?: number;
 };
 
-const validate = ({ required, pattern }: ValidationOptions) => (value: string) => {
+const validate = ({ required, pattern, minLength, maxLength }: ValidationOptions) => (
+  value: string,
+) => {
   if (required && !value) {
     return 'required';
   }
 
   if (pattern && !pattern.test(value)) {
-    return 'pattern_mismatch';
+    return 'pattern';
+  }
+
+  if (minLength && value.length < minLength) {
+    return 'minLength';
+  }
+
+  if (maxLength && value.length > maxLength) {
+    return 'maxLength';
   }
 
   return null;
@@ -37,16 +52,25 @@ const TextField = ({
   required,
   type = 'text',
   value = '',
+  errorMessages = {},
+  minLength,
+  maxLength,
 }: Props) => {
   const [focus, setFocus] = useState(false);
   const field = useField(name, {
     value,
-    validate: validate({ required, pattern }),
+    validate: validate({ required, pattern, minLength, maxLength }),
     onChange,
   });
 
+  const invalid = field.invalid && (field.dirty || field.touched);
+
   return (
-    <Box className="TextField" position="relative" color={focus ? 'primary' : 'white'}>
+    <Box
+      className="TextField"
+      position="relative"
+      color={invalid ? 'warning' : focus ? 'primary' : 'white'}
+    >
       <Box
         component="label"
         display="block"
@@ -61,11 +85,13 @@ const TextField = ({
         className="TextField-Input"
         id={`Input-${name}`}
         name={name}
-        onBlur={() => setFocus(false)}
+        onBlur={() => {
+          setFocus(false);
+          field.setTouched();
+        }}
         onChange={(event) => field.setValue(event.target.value)}
         onFocus={() => {
           setFocus(true);
-          field.setTouched();
         }}
         placeholder={placeholder || label}
         type={type}
@@ -73,9 +99,10 @@ const TextField = ({
       />
       <div className="TextField-Bar" />
 
-      {field.invalid && field.touched && (
+      {invalid && (
         <Box color="warning" className="TextField-Bottom">
-          * {field.validationMessage}
+          {(field.validationMessage && errorMessages[field.validationMessage as ErrorCodes]) ||
+            field.validationMessage}
         </Box>
       )}
     </Box>
