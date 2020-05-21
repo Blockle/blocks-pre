@@ -1,6 +1,11 @@
 .Inline {
+  margin-bottom: calc(var(--stack-gap) * -1);
+
+  & > * {
+    margin-bottom: var(--stack-gap);
+  }
+
   & > :not(:last-child) {
     margin-right: var(--stack-gap);
-    margin-bottom: var(--stack-gap);
   }
 }
