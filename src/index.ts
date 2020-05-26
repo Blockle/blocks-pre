@@ -6,6 +6,7 @@ export * from './cx';
 export * from './Dialog';
 export * from './Divider';
 export * from './Drawer';
+export * from './Dropdown';
 export * from './FlatButton';
 export * from './Grid';
 export * from './hooks';

@@ -12,6 +12,7 @@ import Clipboard from './icons/sm-clipboard.svg';
 import Cog from './icons/sm-cog.svg';
 import Exclamation from './icons/sm-exclamation.svg';
 import Plus from './icons/sm-plus.svg';
+import Selector from './icons/sm-selector.svg';
 import Cross from './icons/sm-x.svg';
 
 const ICON_MAP = {
@@ -24,19 +25,21 @@ const ICON_MAP = {
   clipboard: Clipboard,
   cog: Cog,
   cross: Cross,
-  plus: Plus,
   exclamation: Exclamation,
+  plus: Plus,
+  selector: Selector,
 };
 
 export type IconNames = keyof typeof ICON_MAP;
 
 export interface Props extends PickStyleProps<'color'> {
+  className?: string;
   label: string;
   name: IconNames;
   size?: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge';
 }
 
-const Icon = ({ label, name, size = 'medium', color = 'white' }: Props) => {
+const Icon = ({ className, label, name, size = 'medium', color = 'white' }: Props) => {
   const iconStyles = useStyles({
     color,
   });
@@ -47,7 +50,7 @@ const Icon = ({ label, name, size = 'medium', color = 'white' }: Props) => {
   }
 
   return (
-    <span className={cx('Icon', `size-${size}`, iconStyles)} title={label}>
+    <span className={cx('Icon', `size-${size}`, className, iconStyles)} title={label}>
       {React.createElement(ICON_MAP[name], {
         className: 'icon-svg',
         'data-testid': 'icon-svg',
