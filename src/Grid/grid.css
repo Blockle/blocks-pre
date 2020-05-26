@@ -1,4 +1,3 @@
 .Grid {
   display: grid;
-  grid-gap: var(--stack-gap);
 }

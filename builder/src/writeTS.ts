@@ -8,7 +8,7 @@ export function writeTS(filename: string, theme: BlockleTheme) {
   const buffer: string[] = [];
   const styles = Object.keys(theme.styles);
 
-  buffer.push('type ResponsiveStyle<T extends string | number> = T | T[];');
+  buffer.push('export type ResponsiveStyleProp<T extends string | number> = T | T[];');
   buffer.push('');
   buffer.push('export interface StyleProps {');
 
@@ -16,7 +16,7 @@ export function writeTS(filename: string, theme: BlockleTheme) {
     const style = theme.styles[name];
     const values = Object.keys(style).map((value) => (isNaN(value as any) ? `'${value}'` : value));
 
-    buffer.push(`  ${name}?: ResponsiveStyle<${values.join(' | ')}>;`);
+    buffer.push(`  ${name}?: ResponsiveStyleProp<${values.join(' | ')}>;`);
   });
 
   buffer.push('}');

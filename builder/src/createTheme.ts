@@ -410,24 +410,64 @@ export const createTheme = ({
           'background-color': colors.gray,
         },
       },
-      stackGap: {
+      gridGap: {
         gutter: {
-          '--stack-gap': spacing.gutter,
+          'grid-gap': spacing.gutter,
         },
         xsmall: {
-          '--stack-gap': spacing.xsmall,
+          'grid-gap': spacing.xsmall,
         },
         small: {
-          '--stack-gap': spacing.small,
+          'grid-gap': spacing.small,
         },
         medium: {
-          '--stack-gap': spacing.medium,
+          'grid-gap': spacing.medium,
         },
         large: {
-          '--stack-gap': spacing.large,
+          'grid-gap': spacing.large,
         },
         xlarge: {
-          '--stack-gap': spacing.xlarge,
+          'grid-gap': spacing.xlarge,
+        },
+      },
+      negativeMarginTop: {
+        gutter: {
+          'margin-top': `calc(${spacing.gutter} * -1)`,
+        },
+        xsmall: {
+          'margin-top': `calc(${spacing.xsmall} * -1)`,
+        },
+        small: {
+          'margin-top': `calc(${spacing.small} * -1)`,
+        },
+        medium: {
+          'margin-top': `calc(${spacing.medium} * -1)`,
+        },
+        large: {
+          'margin-top': `calc(${spacing.large} * -1)`,
+        },
+        xlarge: {
+          'margin-top': `calc(${spacing.xlarge} * -1)`,
+        },
+      },
+      negativeMarginLeft: {
+        gutter: {
+          'margin-left': `calc(${spacing.gutter} * -1)`,
+        },
+        xsmall: {
+          'margin-left': `calc(${spacing.xsmall} * -1)`,
+        },
+        small: {
+          'margin-left': `calc(${spacing.small} * -1)`,
+        },
+        medium: {
+          'margin-left': `calc(${spacing.medium} * -1)`,
+        },
+        large: {
+          'margin-left': `calc(${spacing.large} * -1)`,
+        },
+        xlarge: {
+          'margin-left': `calc(${spacing.xlarge} * -1)`,
         },
       },
     },

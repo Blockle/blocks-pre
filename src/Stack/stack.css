@@ -1,9 +1,7 @@
 .Stack {
-  &:not(.horizontal) > :not(:last-child) {
-    margin-bottom: var(--stack-gap);
-  }
-
-  &.horizontal > :not(:last-child) {
-    margin-right: var(--stack-gap);
+  & > :empty,
+  & > :last-child {
+    padding-bottom: 0;
+    padding-right: 0;
   }
 }

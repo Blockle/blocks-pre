@@ -4,7 +4,7 @@ import { StyleProps, useStyles } from '../useStyles';
 
 interface Props
   extends StyleProps,
-    Omit<AllHTMLAttributes<HTMLElement>, 'color' | 'width' | 'height'> {
+    Omit<AllHTMLAttributes<HTMLElement>, 'color' | 'width' | 'height' | 'gridGap'> {
   className?: string;
   children?: ReactNode;
   component?: ElementType;
@@ -29,6 +29,8 @@ const Box = forwardRef(
       fontWeight,
       height,
       justifyContent,
+      negativeMarginLeft,
+      negativeMarginTop,
       overflow,
       overflowX,
       overflowY,
@@ -40,7 +42,6 @@ const Box = forwardRef(
       paddingX,
       paddingY,
       position,
-      stackGap,
       textAlign,
       width,
       ...restProps
@@ -60,6 +61,8 @@ const Box = forwardRef(
       fontWeight,
       height,
       justifyContent,
+      negativeMarginLeft,
+      negativeMarginTop,
       overflow,
       overflowX,
       overflowY,
@@ -71,7 +74,6 @@ const Box = forwardRef(
       paddingX,
       paddingY,
       position,
-      stackGap,
       textAlign,
       width,
     });

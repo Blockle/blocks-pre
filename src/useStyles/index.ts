@@ -1,2 +1,2 @@
-export { PickStyleProps, StyleProps } from './blocks';
+export { PickStyleProps, ResponsiveStyleProp, StyleProps } from './blocks';
 export { useStyles } from './useStyles';
