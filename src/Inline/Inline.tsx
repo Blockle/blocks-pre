@@ -1,7 +1,6 @@
 import React, { Children } from 'react';
 import { Box } from '../Box';
 import { StyleProps } from '../useStyles';
-import './inline.css';
 
 interface Props {
   children: React.ReactNode;
