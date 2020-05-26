@@ -49,7 +49,7 @@ const Dropdown = ({
     if (ref.current) {
       const { value } = ref.current;
 
-      if (value !== field.value) {
+      if (value && value !== field.value) {
         field.setValue(value);
       }
     }
@@ -66,6 +66,7 @@ const Dropdown = ({
         component="select"
         className={cx('Dropdown-select', invalid && 'is-invalid')}
         color="black"
+        fontSize="medium"
         paddingY="xsmall"
         paddingLeft="small"
         paddingRight="large"
