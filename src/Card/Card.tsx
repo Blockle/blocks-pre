@@ -29,16 +29,16 @@ const Card = ({
   shadow,
   ...boxProps
 }: Props) => {
+  const ref = useRippleEffect<HTMLDivElement>();
   const props = {
     ...boxProps,
+    ref,
     className: cx('Card', shadow && `shadow-${shadow}`, onClick && 'is-clickable', className),
   };
-  const ref = useRippleEffect<HTMLDivElement>();
 
   if (onClick) {
     return (
       <Box
-        ref={ref}
         backgroundColor={backgroundColor}
         tabIndex={0}
         role="button"
