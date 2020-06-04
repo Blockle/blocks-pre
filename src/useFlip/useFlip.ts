@@ -7,9 +7,14 @@ interface Position {
 }
 
 const getPosition = (element: HTMLElement): Position => {
+  const { x, y } = element.getBoundingClientRect();
+
+  const scrollLeft = document.documentElement.scrollLeft;
+  const scrollTop = document.documentElement.scrollTop;
+
   return {
-    x: element.offsetLeft,
-    y: element.offsetTop,
+    x: x + scrollLeft,
+    y: y + scrollTop,
   };
 };
 
@@ -28,12 +33,6 @@ export const useFlip = () => {
       }
 
       const prevPosition = positions.get(id);
-
-      // TODO This is causing issues when useLayoutEffect is called multiple times..
-      // Cancel current animation, if any and reset transform
-      // element.style.transition = '';
-      // element.style.transform = '';
-
       const position = getPosition(element);
 
       // Enter animation
