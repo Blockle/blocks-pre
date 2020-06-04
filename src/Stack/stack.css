@@ -1,7 +1,0 @@
-.Stack {
-  & > :empty,
-  & > :last-child {
-    padding-bottom: 0;
-    padding-right: 0;
-  }
-}

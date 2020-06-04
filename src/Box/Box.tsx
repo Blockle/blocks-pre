@@ -4,7 +4,7 @@ import { StyleProps, useStyles } from '../useStyles';
 
 interface Props
   extends StyleProps,
-    Omit<AllHTMLAttributes<HTMLElement>, 'color' | 'width' | 'height' | 'gridGap'> {
+    Omit<AllHTMLAttributes<HTMLElement>, 'color' | 'width' | 'height'> {
   className?: string;
   children?: ReactNode;
   component?: ElementType;
