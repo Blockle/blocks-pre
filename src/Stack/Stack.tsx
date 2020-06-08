@@ -23,17 +23,15 @@ const Stack = ({ align, children, component = 'div', spacing, horizontal = false
       negativeMarginTop={horizontal ? undefined : spacing}
       negativeMarginLeft={horizontal ? spacing : undefined}
     >
-      {items.map((item, key) => {
-        return (
-          <Box
-            key={key}
-            paddingTop={horizontal ? undefined : spacing}
-            paddingLeft={horizontal ? spacing : undefined}
-          >
-            {item}
-          </Box>
-        );
-      })}
+      {items.map((item, key) => (
+        <Box
+          key={key}
+          paddingTop={horizontal ? undefined : spacing}
+          paddingLeft={horizontal ? spacing : undefined}
+        >
+          {item}
+        </Box>
+      ))}
     </Box>
   );
 };

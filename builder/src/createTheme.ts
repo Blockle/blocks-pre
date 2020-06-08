@@ -45,6 +45,12 @@ export const createTheme = ({
         'inline-flex': {
           display: 'inline-flex',
         },
+        grid: {
+          display: 'grid',
+        },
+        'inline-grid': {
+          display: 'inline-grid',
+        },
         none: {
           display: 'none',
         },

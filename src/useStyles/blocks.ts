@@ -3,7 +3,7 @@ export type ResponsiveStyleProp<T extends string | number> = T | T[];
 export interface StyleProps {
   alignItems?: ResponsiveStyleProp<'stretch' | 'center' | 'flex-start' | 'flex-end' | 'baseline'>;
   display?: ResponsiveStyleProp<
-    'block' | 'inline' | 'inline-block' | 'flex' | 'inline-flex' | 'none'
+    'block' | 'inline' | 'inline-block' | 'flex' | 'inline-flex' | 'grid' | 'inline-grid' | 'none'
   >;
   flexDirection?: ResponsiveStyleProp<'row' | 'row-reverse' | 'column' | 'column-reverse'>;
   flexGrow?: ResponsiveStyleProp<0 | 1>;
