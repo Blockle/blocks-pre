@@ -18,7 +18,22 @@ const getPosition = (element: HTMLElement): Position => {
   };
 };
 
-export const useFlip = () => {
+function getTransformValue(axis: 'x' | 'y' | 'both', x: number, y: number) {
+  switch (axis) {
+    case 'x':
+      return `translateX(${x}px)`;
+    case 'y':
+      return `translateY(${y}px)`;
+    case 'both':
+      return `translate(${x}px, ${y}px)`;
+  }
+}
+
+interface Props {
+  axis?: 'x' | 'y' | 'both';
+}
+
+export const useFlip = ({ axis = 'both' }: Props = {}) => {
   const refs = useMemo(() => new Map<string, HTMLElement | null>(), []);
   const positions = useMemo(() => new Map<string, Position>(), []);
 
@@ -53,7 +68,7 @@ export const useFlip = () => {
 
         animations.push({
           element,
-          transforms: [{ property: 'transform', from: `translate(${x}px, ${y}px)` }],
+          transforms: [{ property: 'transform', from: getTransformValue(axis, x, y) }],
         });
       }
 
