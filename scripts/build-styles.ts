@@ -1,4 +1,4 @@
-const { createTheme, writeCSS, writeTS } = require('../builder');
+import { createTheme, writeCSS, writeTS } from '@blockle/blocks-builder';
 
 const theme = createTheme({
   breakpoints: [0, 500, 800],
@@ -18,13 +18,17 @@ const theme = createTheme({
     xlarge: 'var(--font-xlarge)',
   },
   colors: {
+    black: 'var(--color-black)',
+    danger: 'var(--color-danger)',
+    dark: 'var(--color-dark)',
+    gray: 'var(--color-gray)',
+    info: 'var(--color-info)',
+    light: 'var(--color-light)',
     primary: 'var(--color-primary)',
     secondary: 'var(--color-secondary)',
     success: 'var(--color-success)',
     warning: 'var(--color-warning)',
-    black: 'var(--color-black)',
     white: 'var(--color-white)',
-    gray: 'var(--color-gray)',
   },
 });
 
