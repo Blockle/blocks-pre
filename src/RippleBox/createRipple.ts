@@ -1,14 +1,12 @@
-import { useEffect, useRef } from 'react';
-
+/* eslint-disable @typescript-eslint/ban-ts-ignore */
 const isTouch = 'ontouchstart' in document;
-const startType = isTouch ? 'touchstart' : 'mousedown';
 const endType = isTouch ? 'touchend' : 'mouseup';
 
 function nextTick(cb: () => void) {
   requestAnimationFrame(() => requestAnimationFrame(cb));
 }
 
-const getPosition = (event: TouchEvent | MouseEvent): { x: number; y: number } => {
+function getPosition(event: React.MouseEvent | React.TouchEvent): { x: number; y: number } {
   if ('touches' in event) {
     return {
       x: event.touches[0].pageX,
@@ -17,17 +15,28 @@ const getPosition = (event: TouchEvent | MouseEvent): { x: number; y: number } =
   }
 
   return { x: event.pageX, y: event.pageY };
-};
+}
 
-function createRipple(event: MouseEvent | TouchEvent) {
+export function createRipple(event: React.MouseEvent | React.TouchEvent) {
+  // Remove event from pool so we can hijack and set `__rippled` property
+  event.persist();
+
+  // Prevent "other" ripples to be created higher up in the dom tree
+  // @ts-ignore
+  if (event.__rippled) {
+    return;
+  }
+
+  // @ts-ignore
+  event.__rippled = true;
+
   const createdAt = Date.now();
   const { currentTarget } = event;
   const { x, y } = getPosition(event);
   const target = currentTarget as HTMLElement;
   const rect = target.getBoundingClientRect();
-  // Calc biggest point between click location and furterst side
   const size = Math.ceil(Math.max(rect.width, rect.height)) * 4;
-  const duration = size < 600 ? 400 : 800;
+  const duration = size < 600 ? 400 : 700;
 
   // Ripple element
   const ripple = document.createElement('div');
@@ -56,7 +65,8 @@ function createRipple(event: MouseEvent | TouchEvent) {
     document.removeEventListener(endType, cleanup);
     document.removeEventListener('touchcancel', cleanup);
 
-    if (diff < 200) {
+    if (diff < duration) {
+      ripple.style.opacity = '0';
       setTimeout(cleanup, duration - diff);
       return;
     }
@@ -67,29 +77,3 @@ function createRipple(event: MouseEvent | TouchEvent) {
   document.addEventListener(endType, cleanup);
   document.addEventListener('touchcancel', cleanup);
 }
-
-export const useRippleEffect = <T extends HTMLElement>() => {
-  const ref = useRef<T>(null);
-
-  useEffect(() => {
-    if (!ref.current) {
-      return console.warn('useRippleEffect - ref not found', ref);
-    }
-
-    const element = ref.current;
-
-    // TODO Think of a better way to add styles
-    element.style.position = 'relative';
-    element.style.overflow = 'hidden';
-    element.style.outline = '0';
-    element.style.userSelect = 'none';
-
-    element.addEventListener(startType, createRipple);
-
-    return () => {
-      element.removeEventListener(startType, createRipple);
-    };
-  }, [ref]);
-
-  return ref;
-};

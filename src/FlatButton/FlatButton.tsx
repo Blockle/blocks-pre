@@ -1,7 +1,7 @@
 import React from 'react';
 import { cx } from '../cx';
-import { useRippleEffect } from '../useRippleEffect';
-import { PickStyleProps, useStyles } from '../useStyles';
+import { RippleBox } from '../RippleBox';
+import { PickStyleProps } from '../useStyles';
 import './flat-button.css';
 
 interface Props extends PickStyleProps<'width'> {
@@ -25,29 +25,26 @@ const FlatButton = ({
   width,
   ...props
 }: Props) => {
-  const ref = useRippleEffect<HTMLButtonElement>();
-  const buttonStyles = useStyles({
-    width,
-    paddingX: 'large',
-    paddingY: 'small',
-    fontSize: 'small',
-    color: disabled ? 'gray' : secondary ? 'secondary' : 'primary',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  });
-
   return (
-    <button
-      ref={ref}
+    <RippleBox
+      component="button"
       type={type}
       disabled={disabled}
       onClick={onClick}
-      className={cx('FlatButton', disabled && 'is-disabled', buttonStyles, className)}
+      className={cx('FlatButton', disabled && 'is-disabled', className)}
+      width={width}
+      paddingX="large"
+      paddingY="small"
+      fontSize="small"
+      color={disabled ? 'gray' : secondary ? 'secondary' : 'primary'}
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      fontWeight="bold"
       {...props}
     >
       {children}
-    </button>
+    </RippleBox>
   );
 };
 

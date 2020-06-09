@@ -1,7 +1,7 @@
 import React from 'react';
-import { useRippleEffect } from 'useRippleEffect';
 import { Box } from '../Box';
 import { cx } from '../cx';
+import { RippleBox } from '../RippleBox';
 import { PickStyleProps } from '../useStyles';
 import './card.css';
 
@@ -29,16 +29,14 @@ const Card = ({
   shadow,
   ...boxProps
 }: Props) => {
-  const ref = useRippleEffect<HTMLDivElement>();
   const props = {
     ...boxProps,
-    ref,
     className: cx('Card', shadow && `shadow-${shadow}`, onClick && 'is-clickable', className),
   };
 
   if (onClick) {
     return (
-      <Box
+      <RippleBox
         backgroundColor={backgroundColor}
         tabIndex={0}
         role="button"
@@ -51,7 +49,7 @@ const Card = ({
         {...props}
       >
         {children}
-      </Box>
+      </RippleBox>
     );
   }
 
