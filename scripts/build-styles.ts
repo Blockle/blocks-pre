@@ -1,4 +1,4 @@
-const { createTheme, writeCSS, writeTS } = require('../builder');
+const { createTheme, writeCSS, writeTS } = require('@blockle/blocks-builder');
 
 const theme = createTheme({
   breakpoints: [0, 500, 800],

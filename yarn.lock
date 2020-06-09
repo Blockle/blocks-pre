@@ -922,6 +922,11 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+"@blockle/blocks-builder@^0.0.2-alpha.0":
+  version "0.0.2-alpha.0"
+  resolved "https://registry.yarnpkg.com/@blockle/blocks-builder/-/blocks-builder-0.0.2-alpha.0.tgz#af376e26f431c77e558a22e688317ba110c65e73"
+  integrity sha512-5c3gJ1+/ZdXHkt+pxvaFvVt/7ZOPDqfYYn5Hm+diNn+CVDFPQ4mOZ7t8pxqkoAhNxXiQWVQIal18GSvLhPy+ng==
+
 "@blockle/form@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@blockle/form/-/form-1.0.0.tgz#cb05d7d717f31d33209c10bca41f06f05c9b6942"

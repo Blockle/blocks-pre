@@ -4,7 +4,7 @@
   "description": "Blockle Blocks",
   "scripts": {
     "start": "npm run build:ts -- -w | npm run build:types -- -w",
-    "build": "npm run build:builder && npm run blocks && rm -rf ./dist/ && npm run build:ts && npm run build:types",
+    "build": "npm run blocks && rm -rf ./dist/ && npm run build:ts && npm run build:types",
     "build:ts": "rollup -c",
     "build:types": "tsc -d --emitDeclarationOnly",
     "test": "jest",
@@ -12,8 +12,7 @@
     "format": "prettier --write \"**/*\"",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "blocks": "ts-node ./scripts/build-styles.ts",
-    "build:builder": "cd ./builder; npm run build; cd .."
+    "blocks": "ts-node ./scripts/build-styles.ts"
   },
   "husky": {
     "hooks": {
@@ -25,9 +24,6 @@
   "types": "dist/index.d.ts",
   "files": [
     "dist",
-    "builder/package.json",
-    "builder/README.md",
-    "builder/dist",
     "README.md"
   ],
   "repository": "git@github.com:Blockle/blockle-blocks.git",
@@ -35,6 +31,7 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.7.5",
+    "@blockle/blocks-builder": "^0.0.2-alpha.0",
     "@blockle/form": "^1.0.0",
     "@storybook/addon-actions": "^5.2.8",
     "@storybook/addon-info": "^5.2.8",
