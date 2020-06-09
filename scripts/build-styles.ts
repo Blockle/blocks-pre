@@ -29,6 +29,7 @@ const theme = createTheme({
     success: 'var(--color-success)',
     warning: 'var(--color-warning)',
     white: 'var(--color-white)',
+    card: 'var(--color-card)',
   },
 });
 

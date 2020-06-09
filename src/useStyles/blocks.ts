@@ -31,10 +31,32 @@ export interface StyleProps {
   fontSize?: ResponsiveStyleProp<'xsmall' | 'small' | 'medium' | 'large' | 'xlarge'>;
   fontWeight?: ResponsiveStyleProp<'regular' | 'bold'>;
   color?: ResponsiveStyleProp<
-    'primary' | 'secondary' | 'success' | 'warning' | 'black' | 'white' | 'gray'
+    | 'black'
+    | 'danger'
+    | 'dark'
+    | 'gray'
+    | 'info'
+    | 'light'
+    | 'primary'
+    | 'secondary'
+    | 'success'
+    | 'warning'
+    | 'white'
+    | 'card'
   >;
   backgroundColor?: ResponsiveStyleProp<
-    'card' | 'primary' | 'secondary' | 'success' | 'warning' | 'black' | 'white' | 'gray'
+    | 'black'
+    | 'danger'
+    | 'dark'
+    | 'gray'
+    | 'info'
+    | 'light'
+    | 'primary'
+    | 'secondary'
+    | 'success'
+    | 'warning'
+    | 'white'
+    | 'card'
   >;
   gridGap?: ResponsiveStyleProp<'gutter' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge'>;
   negativeMarginTop?: ResponsiveStyleProp<
