@@ -1,7 +1,7 @@
 import React from 'react';
 import { cx } from '../cx';
-import { useRippleEffect } from '../useRippleEffect';
-import { PickStyleProps, useStyles } from '../useStyles';
+import { RippleBox } from '../RippleBox';
+import { PickStyleProps } from '../useStyles';
 import './button.css';
 
 interface Props extends PickStyleProps<'width'> {
@@ -14,29 +14,26 @@ interface Props extends PickStyleProps<'width'> {
 }
 
 const Button = ({ children, className, disabled, onClick, type = 'button', width }: Props) => {
-  const rippleRef = useRippleEffect<HTMLButtonElement>();
-  const buttonStyles = useStyles({
-    width,
-    paddingX: 'large',
-    paddingY: 'small',
-    backgroundColor: disabled ? 'gray' : 'primary',
-    fontSize: 'small',
-    color: 'white',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  });
-
   return (
-    <button
-      ref={rippleRef}
-      type={type}
+    <RippleBox
+      component="button"
+      alignItems="center"
+      backgroundColor={disabled ? 'gray' : 'primary'}
+      className={cx('Button', disabled && 'is-disabled', className)}
+      color="white"
       disabled={disabled}
+      display="flex"
+      fontSize="small"
+      fontWeight="bold"
+      justifyContent="center"
       onClick={onClick}
-      className={cx('Button', disabled && 'is-disabled', buttonStyles, className)}
+      paddingX="large"
+      paddingY="small"
+      type={type}
+      width={width}
     >
       {children}
-    </button>
+    </RippleBox>
   );
 };
 

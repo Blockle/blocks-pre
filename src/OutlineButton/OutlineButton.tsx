@@ -1,7 +1,7 @@
 import React from 'react';
 import { cx } from '../cx';
-import { useRippleEffect } from '../useRippleEffect';
-import { PickStyleProps, useStyles } from '../useStyles';
+import { RippleBox } from '../RippleBox';
+import { PickStyleProps } from '../useStyles';
 import './outline-button.css';
 
 interface Props extends PickStyleProps<'width'> {
@@ -20,28 +20,24 @@ const OutlineButton = ({
   type = 'button',
   width,
 }: Props) => {
-  const ref = useRippleEffect<HTMLButtonElement>();
-  const buttonStyles = useStyles({
-    width,
-    paddingX: 'large',
-    paddingY: 'small',
-    fontSize: 'small',
-    color: disabled ? 'gray' : 'primary',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  });
-
   return (
-    <button
-      ref={ref}
+    <RippleBox
       type={type}
       disabled={disabled}
       onClick={onClick}
-      className={cx('OutlineButton', disabled && 'is-disabled', buttonStyles, className)}
+      className={cx('OutlineButton', disabled && 'is-disabled', className)}
+      fontWeight="bold"
+      width={width}
+      paddingX="large"
+      paddingY="small"
+      fontSize="small"
+      color={disabled ? 'gray' : 'primary'}
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
     >
       {children}
-    </button>
+    </RippleBox>
   );
 };
 
