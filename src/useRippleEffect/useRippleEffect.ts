@@ -26,8 +26,8 @@ function createRipple(event: MouseEvent | TouchEvent) {
   const target = currentTarget as HTMLElement;
   const rect = target.getBoundingClientRect();
   // Calc biggest point between click location and furterst side
-  const size = Math.ceil(Math.max(rect.width, rect.height)) * 2;
-  const duration = Math.min(800, Math.max(400, size));
+  const size = Math.ceil(Math.max(rect.width, rect.height)) * 4;
+  const duration = size < 600 ? 400 : 800;
 
   // Ripple element
   const ripple = document.createElement('div');
@@ -37,17 +37,17 @@ function createRipple(event: MouseEvent | TouchEvent) {
   ripple.style.backgroundColor = 'currentColor';
   ripple.style.width = `${size}px`;
   ripple.style.height = `${size}px`;
-  ripple.style.opacity = '0';
+  ripple.style.opacity = '0.2';
   ripple.style.transform = 'scale(0.01)';
   ripple.style.left = `${x - rect.left - size / 2}px`;
   ripple.style.top = `${y - rect.top - size / 2}px`;
   ripple.style.transitionProperty = 'transform, opacity';
   ripple.style.transitionDuration = `${duration}ms`;
-  ripple.style.transitionTimingFunction = 'cubic-bezier(.22,.29,.7,.95)';
+  ripple.style.transitionTimingFunction = 'cubic-bezier(.51,.26,.84,.84)';
   target.appendChild(ripple);
 
   nextTick(() => {
-    ripple.style.opacity = '0.3';
+    ripple.style.opacity = '0.1';
     ripple.style.transform = 'scale(1)';
   });
 
@@ -56,18 +56,12 @@ function createRipple(event: MouseEvent | TouchEvent) {
     document.removeEventListener(endType, cleanup);
     document.removeEventListener('touchcancel', cleanup);
 
-    if (diff < 300) {
-      setTimeout(cleanup, 300 - diff);
+    if (diff < 200) {
+      setTimeout(cleanup, duration - diff);
       return;
     }
 
-    nextTick(() => {
-      ripple.style.transitionDuration = `${duration / 2}ms`;
-      ripple.style.transitionTimingFunction = 'ease-out';
-      ripple.style.opacity = '0';
-    });
-
-    setTimeout(() => target.removeChild(ripple), 500);
+    target.removeChild(ripple);
   };
 
   document.addEventListener(endType, cleanup);
