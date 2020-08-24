@@ -394,6 +394,23 @@
   text-align: justify;
 }
 
+/* textTransform */
+.bb-textTransform-capitalise {
+  text-transform: capitalize;
+}
+
+.bb-textTransform-none {
+  text-transform: none;
+}
+
+.bb-textTransform-uppercase {
+  text-transform: uppercase;
+}
+
+.bb-textTransform-lowercase {
+  text-transform: lowercase;
+}
+
 /* width */
 .bb-width-full {
   width: 100%;
@@ -422,11 +439,11 @@
 
 /* fontWeight */
 .bb-fontWeight-regular {
-  font-weight: var(--weight-normal, 400);
+  font-weight: 400;
 }
 
 .bb-fontWeight-bold {
-  font-weight: var(--weight-bold, 700);
+  font-weight: 700;
 }
 
 /* color */
@@ -979,6 +996,22 @@
     text-align: justify;
   }
 
+  .bb-textTransform-capitalise-bp1 {
+    text-transform: capitalize;
+  }
+
+  .bb-textTransform-none-bp1 {
+    text-transform: none;
+  }
+
+  .bb-textTransform-uppercase-bp1 {
+    text-transform: uppercase;
+  }
+
+  .bb-textTransform-lowercase-bp1 {
+    text-transform: lowercase;
+  }
+
   .bb-width-full-bp1 {
     width: 100%;
   }
@@ -1004,11 +1037,11 @@
   }
 
   .bb-fontWeight-regular-bp1 {
-    font-weight: var(--weight-normal, 400);
+    font-weight: 400;
   }
 
   .bb-fontWeight-bold-bp1 {
-    font-weight: var(--weight-bold, 700);
+    font-weight: 700;
   }
 
   .bb-color-black-bp1 {
@@ -1557,6 +1590,22 @@
     text-align: justify;
   }
 
+  .bb-textTransform-capitalise-bp2 {
+    text-transform: capitalize;
+  }
+
+  .bb-textTransform-none-bp2 {
+    text-transform: none;
+  }
+
+  .bb-textTransform-uppercase-bp2 {
+    text-transform: uppercase;
+  }
+
+  .bb-textTransform-lowercase-bp2 {
+    text-transform: lowercase;
+  }
+
   .bb-width-full-bp2 {
     width: 100%;
   }
@@ -1582,11 +1631,11 @@
   }
 
   .bb-fontWeight-regular-bp2 {
-    font-weight: var(--weight-normal, 400);
+    font-weight: 400;
   }
 
   .bb-fontWeight-bold-bp2 {
-    font-weight: var(--weight-bold, 700);
+    font-weight: 700;
   }
 
   .bb-color-black-bp2 {

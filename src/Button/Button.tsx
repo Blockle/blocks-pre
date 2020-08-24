@@ -28,7 +28,7 @@ const Button = ({ children, className, disabled, onClick, type = 'button', width
       justifyContent="center"
       onClick={onClick}
       paddingX="large"
-      paddingY="small"
+      paddingY="xsmall"
       type={type}
       width={width}
     >

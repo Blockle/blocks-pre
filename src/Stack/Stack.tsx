@@ -1,8 +1,17 @@
 import { Box } from 'Box';
 import React, { Children, ReactNode } from 'react';
-import { ResponsiveStyleProp, StyleProps } from '../useStyles';
+import { PickStyleProps, ResponsiveStyleProp, StyleProps } from '../useStyles';
 
-interface Props {
+interface Props
+  extends PickStyleProps<
+    | 'padding'
+    | 'paddingX'
+    | 'paddingY'
+    | 'paddingTop'
+    | 'paddingRight'
+    | 'paddingBottom'
+    | 'paddingLeft'
+  > {
   align?: ResponsiveStyleProp<'flex-start' | 'center' | 'flex-end'>;
   children: ReactNode;
   component?: 'div' | 'ol' | 'ul';

@@ -27,6 +27,7 @@ export interface StyleProps {
   paddingY?: ResponsiveStyleProp<'gutter' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge'>;
   position?: ResponsiveStyleProp<'relative' | 'fixed' | 'absolute' | 'sticky'>;
   textAlign?: ResponsiveStyleProp<'left' | 'right' | 'center' | 'justify'>;
+  textTransform?: ResponsiveStyleProp<'capitalise' | 'none' | 'uppercase' | 'lowercase'>;
   width?: ResponsiveStyleProp<'full'>;
   fontSize?: ResponsiveStyleProp<'xsmall' | 'small' | 'medium' | 'large' | 'xlarge'>;
   fontWeight?: ResponsiveStyleProp<'regular' | 'bold'>;
