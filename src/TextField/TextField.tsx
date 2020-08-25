@@ -67,22 +67,25 @@ const TextField = ({
 
   return (
     <Box
-      className="TextField"
       position="relative"
       color={invalid ? 'warning' : focus ? 'primary' : 'white'}
+      paddingBottom="large"
     >
       <Box
         component="label"
         display="block"
         htmlFor={`Input-${name}`}
-        color={focus ? 'primary' : 'gray'}
-        className={cx('TextField-Label', field.value && 'is-floating')}
+        color="gray"
+        className={cx('TextField-Label', field.value && 'is-visible')}
+        paddingX="medium"
+        fontSize="xsmall"
+        paddingTop="small"
       >
         {label}
       </Box>
       <input
         autoComplete="off"
-        className="TextField-Input"
+        className={cx('TextField-Input', field.value && 'is-filled')}
         id={`Input-${name}`}
         name={name}
         onBlur={() => {
@@ -97,10 +100,9 @@ const TextField = ({
         type={type}
         value={field.value}
       />
-      <div className="TextField-Bar" />
 
       {invalid && (
-        <Box color="warning" className="TextField-Bottom">
+        <Box color="warning" className="TextField-Bottom" fontSize="small">
           {(field.validationMessage && errorMessages[field.validationMessage as ErrorCodes]) ||
             field.validationMessage}
         </Box>

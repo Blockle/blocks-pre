@@ -1,32 +1,15 @@
-.TextField {
-  padding-bottom: 20px;
-}
-
 .TextField-Label {
+  position: absolute;
   transition: transform 200ms cubic-bezier(0, 0, 0.4, 1), opacity 200ms cubic-bezier(0, 0, 0.4, 1),
-    color 200ms cubic-bezier(0, 0, 0.4, 1), visibility 200ms;
-  transform: translateY(30%);
+    color 80ms cubic-bezier(0, 0, 0.4, 1), visibility 200ms;
+  transform: scale(1.2) translateY(30%);
+  transform-origin: left center;
   opacity: 0;
-  text-transform: uppercase;
 
-  &.is-floating {
-    transform: translateY(0);
+  &.is-visible {
+    transform: scale(1) translateY(0);
     opacity: 1;
   }
-}
-
-.TextField-Bar {
-  position: absolute;
-  display: block;
-  content: '';
-  bottom: 20px;
-  left: 0;
-  height: 2px;
-  width: 100%;
-  background-color: currentColor;
-  opacity: 0;
-  transition: transform 200ms cubic-bezier(0, 0, 0.4, 1), opacity 200ms cubic-bezier(0, 0, 0.4, 1);
-  transform: scaleX(0);
 }
 
 .TextField-Input {
@@ -34,33 +17,39 @@
   position: relative;
   width: 100%;
   background-color: transparent;
-  border-width: 0;
-  border-bottom: 1px solid var(--color-gray);
-  padding-bottom: 2px;
+  border: 1px solid var(--color-gray);
   outline: 0;
   font-family: inherit;
   font-size: var(--font-medium);
   margin: 0;
-  -webkit-text-fill-color: var(--color-black);
-  color: var(--color-black);
+  padding: var(--space-medium);
+  padding-top: var(--space-large);
+  padding-bottom: var(--space-small);
+  border-radius: 4px;
+  color: var(--color-gray);
+  -webkit-text-fill-color: var(--color-gray);
+  transition: border-color 160ms cubic-bezier(0, 0, 0.4, 1);
 
   &:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 30px rgba(255, 255, 255, 1) inset;
   }
 
-  &:focus + .TextField-Bar {
-    opacity: 1;
-    transform: scaleX(1);
+  &:focus {
+    box-shadow: var(--outline);
+    border: 1px solid var(--color-primary);
+  }
+
+  &:focus,
+  &.is-filled {
+    color: var(--color-black);
+    -webkit-text-fill-color: var(--color-black);
   }
 }
 
 .TextField-Bottom {
   position: absolute;
-  top: 42px;
+  bottom: 0;
   left: 0;
-  font-size: var(--text-size-small);
-  padding-top: 0;
-  padding-left: var(--gutter-small);
 }
 
 /* https://stackoverflow.com/questions/29580704/change-input-background-to-transparent-on-autocomplete-form */
