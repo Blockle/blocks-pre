@@ -22,6 +22,7 @@ const OutlineButton = ({
 }: Props) => {
   return (
     <RippleBox
+      component="button"
       type={type}
       disabled={disabled}
       onClick={onClick}
@@ -31,7 +32,7 @@ const OutlineButton = ({
       paddingX="large"
       paddingY="small"
       fontSize="small"
-      color={disabled ? 'gray' : 'primary'}
+      color={disabled ? 'lightGray' : 'primary'}
       display="flex"
       justifyContent="center"
       alignItems="center"

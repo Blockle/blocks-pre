@@ -41,6 +41,7 @@ const Card = ({
         tabIndex={0}
         role="button"
         onClick={onClick}
+        color="primary"
         onKeyPress={(event) => {
           if (onClick && (event.key === 'Enter' || event.key === ' ')) {
             onClick();

@@ -463,12 +463,12 @@
   color: var(--color-gray);
 }
 
-.bb-color-info {
-  color: var(--color-info);
+.bb-color-lightGray {
+  color: var(--color-light-gray);
 }
 
-.bb-color-light {
-  color: var(--color-light);
+.bb-color-info {
+  color: var(--color-info);
 }
 
 .bb-color-primary {
@@ -512,12 +512,12 @@
   background-color: var(--color-gray);
 }
 
-.bb-backgroundColor-info {
-  background-color: var(--color-info);
+.bb-backgroundColor-lightGray {
+  background-color: var(--color-light-gray);
 }
 
-.bb-backgroundColor-light {
-  background-color: var(--color-light);
+.bb-backgroundColor-info {
+  background-color: var(--color-info);
 }
 
 .bb-backgroundColor-primary {
@@ -1060,12 +1060,12 @@
     color: var(--color-gray);
   }
 
-  .bb-color-info-bp1 {
-    color: var(--color-info);
+  .bb-color-lightGray-bp1 {
+    color: var(--color-light-gray);
   }
 
-  .bb-color-light-bp1 {
-    color: var(--color-light);
+  .bb-color-info-bp1 {
+    color: var(--color-info);
   }
 
   .bb-color-primary-bp1 {
@@ -1108,12 +1108,12 @@
     background-color: var(--color-gray);
   }
 
-  .bb-backgroundColor-info-bp1 {
-    background-color: var(--color-info);
+  .bb-backgroundColor-lightGray-bp1 {
+    background-color: var(--color-light-gray);
   }
 
-  .bb-backgroundColor-light-bp1 {
-    background-color: var(--color-light);
+  .bb-backgroundColor-info-bp1 {
+    background-color: var(--color-info);
   }
 
   .bb-backgroundColor-primary-bp1 {
@@ -1654,12 +1654,12 @@
     color: var(--color-gray);
   }
 
-  .bb-color-info-bp2 {
-    color: var(--color-info);
+  .bb-color-lightGray-bp2 {
+    color: var(--color-light-gray);
   }
 
-  .bb-color-light-bp2 {
-    color: var(--color-light);
+  .bb-color-info-bp2 {
+    color: var(--color-info);
   }
 
   .bb-color-primary-bp2 {
@@ -1702,12 +1702,12 @@
     background-color: var(--color-gray);
   }
 
-  .bb-backgroundColor-info-bp2 {
-    background-color: var(--color-info);
+  .bb-backgroundColor-lightGray-bp2 {
+    background-color: var(--color-light-gray);
   }
 
-  .bb-backgroundColor-light-bp2 {
-    background-color: var(--color-light);
+  .bb-backgroundColor-info-bp2 {
+    background-color: var(--color-info);
   }
 
   .bb-backgroundColor-primary-bp2 {

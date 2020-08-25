@@ -1,6 +1,8 @@
 import { Box } from 'Box';
+import { cx } from 'cx';
 import React, { Children, ReactNode } from 'react';
 import { PickStyleProps, ResponsiveStyleProp, StyleProps } from '../useStyles';
+import './Stack.css';
 
 interface Props
   extends PickStyleProps<
@@ -17,13 +19,22 @@ interface Props
   component?: 'div' | 'ol' | 'ul';
   horizontal?: boolean;
   spacing: StyleProps['padding'];
+  className?: string;
 }
 
-const Stack = ({ align, children, component = 'div', spacing, horizontal = false }: Props) => {
+const Stack = ({
+  align,
+  children,
+  component = 'div',
+  spacing,
+  horizontal = false,
+  className,
+}: Props) => {
   const items = Children.toArray(children);
 
   return (
     <Box
+      className={cx('Stack', className)}
       component={component}
       display="flex"
       flexDirection={horizontal ? 'row' : 'column'}

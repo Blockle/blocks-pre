@@ -13,18 +13,25 @@ interface Props extends PickStyleProps<'width'> {
   secondary?: boolean;
 }
 
-const Button = ({ children, className, disabled, onClick, type = 'button', width }: Props) => {
+const Button = ({
+  children,
+  className,
+  disabled,
+  onClick,
+  type = 'button',
+  width,
+  secondary,
+}: Props) => {
   return (
     <RippleBox
       component="button"
       alignItems="center"
-      backgroundColor={disabled ? 'gray' : 'primary'}
+      backgroundColor={disabled ? 'lightGray' : secondary ? 'secondary' : 'primary'}
       className={cx('Button', disabled && 'is-disabled', className)}
       color="white"
       disabled={disabled}
       display="flex"
       fontSize="small"
-      fontWeight="bold"
       justifyContent="center"
       onClick={onClick}
       paddingX="large"

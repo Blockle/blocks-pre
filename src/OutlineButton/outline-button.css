@@ -1,12 +1,12 @@
 .OutlineButton {
   appearance: none;
-  border-radius: 4px;
+  border-radius: 100px;
   cursor: pointer;
-  text-transform: uppercase;
   background-color: transparent;
   border: 1px solid var(--color-primary);
   outline: 0;
   user-select: none;
+  transition: border-color 160ms, color 160ms;
 
   &:focus {
     box-shadow: var(--outline);
@@ -14,5 +14,11 @@
 
   &.is-disabled {
     pointer-events: none;
+    border: 1px solid var(--color-light-gray);
   }
+}
+
+.OutlineButton > * + .Icon,
+.OutlineButton > .Icon + * {
+  margin-left: var(--space-small);
 }

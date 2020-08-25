@@ -36,7 +36,7 @@ export default [
       typescript(),
       commonjs(),
       postcss({
-        extract: './dist/blocks.css',
+        extract: 'blocks.css',
         sourceMap: true,
       }),
     ],

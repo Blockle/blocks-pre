@@ -13,15 +13,24 @@ interface Props
 const isTouch = 'ontouchstart' in document;
 const startType = isTouch ? 'onTouchStart' : 'onMouseDown';
 
-const RippleBox = forwardRef(({ children, component = 'div', ...props }: Props, ref) => {
-  props[startType] = createRipple;
+const RippleBox = forwardRef(
+  ({ children, component = 'div', color = 'primary', ...props }: Props, ref) => {
+    props[startType] = createRipple;
 
-  return (
-    <Box ref={ref} component={component} overflow="hidden" position="relative" {...props}>
-      {children}
-    </Box>
-  );
-});
+    return (
+      <Box
+        ref={ref}
+        component={component}
+        overflow="hidden"
+        position="relative"
+        color={color}
+        {...props}
+      >
+        {children}
+      </Box>
+    );
+  },
+);
 
 RippleBox.displayName = 'RippleBox';
 

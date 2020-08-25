@@ -1,0 +1,7 @@
+/* .Stack > * + * {
+  margin-top: 10px;
+} */
+
+.Stack > :empty {
+  display: none;
+}
