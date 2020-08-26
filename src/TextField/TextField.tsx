@@ -63,7 +63,7 @@ const TextField = ({
     onChange,
   });
 
-  const invalid = field.invalid && (field.dirty || field.touched);
+  const invalid = field.invalid && field.touched;
 
   return (
     <Box
@@ -71,21 +71,9 @@ const TextField = ({
       color={invalid ? 'warning' : focus ? 'primary' : 'white'}
       paddingBottom="large"
     >
-      <Box
-        component="label"
-        display="block"
-        htmlFor={`Input-${name}`}
-        color="gray"
-        className={cx('TextField-Label', field.value && 'is-visible')}
-        paddingX="medium"
-        fontSize="xsmall"
-        paddingTop="small"
-      >
-        {label}
-      </Box>
       <input
         autoComplete="off"
-        className={cx('TextField-Input', field.value && 'is-filled')}
+        className={cx('TextField-Input', field.value && 'is-filled', invalid && 'is-invalid')}
         id={`Input-${name}`}
         name={name}
         onBlur={() => {
@@ -100,6 +88,19 @@ const TextField = ({
         type={type}
         value={field.value}
       />
+      <Box
+        component="label"
+        display="block"
+        htmlFor={`Input-${name}`}
+        color={invalid ? 'warning' : 'gray'}
+        className={cx('TextField-Label', field.value && 'is-visible')}
+        paddingX="xsmall"
+        fontSize="xsmall"
+        paddingTop="xsmall"
+        backgroundColor="white"
+      >
+        {label}
+      </Box>
 
       {invalid && (
         <Box color="warning" className="TextField-Bottom" fontSize="small">
