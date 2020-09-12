@@ -619,6 +619,15 @@
   margin-left: calc(var(--space-xlarge) * -1);
 }
 
+/* fontStyle */
+.bb-fontStyle-normal {
+  font-style: normal;
+}
+
+.bb-fontStyle-italic {
+  font-style: italic;
+}
+
 @media (min-width: 500px) {
   .bb-alignItems-stretch-bp1 {
     align-items: stretch;
@@ -1210,6 +1219,14 @@
 
   .bb-negativeMarginLeft-xlarge-bp1 {
     margin-left: calc(var(--space-xlarge) * -1);
+  }
+
+  .bb-fontStyle-normal-bp1 {
+    font-style: normal;
+  }
+
+  .bb-fontStyle-italic-bp1 {
+    font-style: italic;
   }
 }
 
@@ -1804,5 +1821,13 @@
 
   .bb-negativeMarginLeft-xlarge-bp2 {
     margin-left: calc(var(--space-xlarge) * -1);
+  }
+
+  .bb-fontStyle-normal-bp2 {
+    font-style: normal;
+  }
+
+  .bb-fontStyle-italic-bp2 {
+    font-style: italic;
   }
 }

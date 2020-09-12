@@ -31,7 +31,7 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.7.5",
-    "@blockle/blocks-builder": "^0.0.2-alpha.0",
+    "@blockle/blocks-builder": "^1.1.0",
     "@blockle/form": "^1.0.0",
     "@storybook/addon-actions": "^5.2.8",
     "@storybook/addon-info": "^5.2.8",

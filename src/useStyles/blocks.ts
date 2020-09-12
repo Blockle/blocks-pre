@@ -66,6 +66,7 @@ export interface StyleProps {
   negativeMarginLeft?: ResponsiveStyleProp<
     'gutter' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge'
   >;
+  fontStyle?: ResponsiveStyleProp<'normal' | 'italic'>;
 }
 
 export type PickStyleProps<T extends keyof StyleProps> = Partial<Pick<StyleProps, T>>;
