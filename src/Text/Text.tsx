@@ -4,7 +4,8 @@ import React from 'react';
 import { PickStyleProps } from '../useStyles';
 import './text.css';
 
-interface Props extends PickStyleProps<'textAlign' | 'fontSize' | 'fontWeight' | 'color'> {
+interface Props
+  extends PickStyleProps<'textAlign' | 'fontSize' | 'fontWeight' | 'color' | 'fontStyle'> {
   component?: 'span' | 'p' | 'strong' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   children: React.ReactNode;
   className?: string;
@@ -17,6 +18,7 @@ const Text = ({
   fontSize = 'medium',
   fontWeight,
   color,
+  fontStyle,
   className,
 }: Props) => {
   return (
@@ -25,6 +27,7 @@ const Text = ({
       textAlign={textAlign}
       fontSize={fontSize}
       fontWeight={fontWeight}
+      fontStyle={fontStyle}
       display="block"
       className={cx('Text', className)}
       color={color}
