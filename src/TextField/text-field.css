@@ -1,3 +1,9 @@
+.TextField {
+  &.is-disabled {
+    opacity: 0.4;
+  }
+}
+
 .TextField-Label {
   display: block;
   position: absolute;

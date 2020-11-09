@@ -10,6 +10,7 @@ type Props = FieldProps<string> & {
   onChange?: (value: string) => void;
   type?: 'text' | 'password' | 'email' | 'tel';
   errorMessages?: { [key in ErrorCodes]?: React.ReactNode };
+  disabled?: boolean;
 } & ValidationOptions;
 
 type ErrorCodes = 'required' | 'patternMismatch' | 'minLength' | 'maxLength';
@@ -55,6 +56,7 @@ const TextField = ({
   errorMessages = {},
   minLength,
   maxLength,
+  disabled,
 }: Props) => {
   const [focus, setFocus] = useState(false);
   const field = useField(name, {
@@ -70,6 +72,7 @@ const TextField = ({
       position="relative"
       color={invalid ? 'warning' : focus ? 'primary' : 'white'}
       paddingBottom="large"
+      className={cx('TextField', disabled && 'is-disabled')}
     >
       <input
         autoComplete="off"
@@ -87,6 +90,7 @@ const TextField = ({
         placeholder={placeholder || label}
         type={type}
         value={field.value}
+        disabled={disabled}
       />
       <Box
         component="label"
