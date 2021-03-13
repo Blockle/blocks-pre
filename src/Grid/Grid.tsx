@@ -1,5 +1,5 @@
 import { cx } from 'cx';
-import React from 'react';
+import { FC } from 'react';
 import { StyleProps, useStyles } from '../useStyles';
 
 interface Props {
@@ -9,7 +9,7 @@ interface Props {
   spacing: StyleProps['gridGap'];
 }
 
-const Grid = ({ children, className, spacing, columns }: Props) => {
+const Grid: FC<Props> = ({ children, className, spacing, columns }) => {
   const gridStyles = useStyles({
     display: 'grid',
     gridGap: spacing,

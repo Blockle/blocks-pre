@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import { cx } from '../cx';
 import { useAnimationState } from '../hooks';
 import './paper.css';
@@ -17,7 +17,7 @@ type Props = {
 
 const animationLeaveExpression = /^Paper-.*?Leave$/;
 
-const Paper = ({
+const Paper: FC<Props> = ({
   open = false,
   effect = 'fade',
   className,
@@ -25,7 +25,7 @@ const Paper = ({
   shadow,
   render,
   fit,
-}: Props) => {
+}) => {
   const [state, close] = useAnimationState(open);
 
   const onAnimationEnd = (event: React.AnimationEvent<HTMLDivElement>) => {

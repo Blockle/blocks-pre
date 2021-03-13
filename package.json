@@ -41,21 +41,20 @@
     "@storybook/react": "^5.2.8",
     "@svgr/rollup": "^5.1.0",
     "@testing-library/jest-dom": "^5.3.0",
-    "@testing-library/react": "^10.0.2",
+    "@testing-library/react": "^11.2.5",
     "@types/history": "^4.7.3",
-    "@types/jest": "^25.1.4",
-    "@types/react": "^16.9.16",
-    "@types/react-dom": "^16.9.4",
-    "@typescript-eslint/eslint-plugin": "^2.19.2",
-    "@typescript-eslint/parser": "^2.19.2",
+    "@types/jest": "^26.0.20",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.2",
+    "@typescript-eslint/eslint-plugin": "^4.17.0",
+    "@typescript-eslint/parser": "^4.17.0",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.6",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.10.0",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.18.3",
-    "eslint-plugin-react-hooks": "^3.0.0",
-    "history": "^4.10.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^4.2.3",
     "jest": "^25.2.4",
     "postcss-import": "^12.0.1",
@@ -63,9 +62,9 @@
     "postcss-reporter": "^6.0.1",
     "prettier": "^2.0.2",
     "pretty-quick": "^2.0.1",
-    "react": "^16.12.0",
+    "react": "^17.0.1",
     "react-docgen-typescript-loader": "^3.6.0",
-    "react-dom": "^16.12.0",
+    "react-dom": "^17.0.1",
     "react-svg-loader": "^3.0.3",
     "rollup": "^2.3.2",
     "rollup-plugin-commonjs": "^10.1.0",
@@ -75,14 +74,16 @@
     "stylelint": "^13.2.1",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.13.0",
-    "ts-jest": "^25.3.0",
-    "ts-node": "^8.10.2",
-    "typescript": "^3.7.3"
+    "ts-jest": "^26.5.1",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.4"
   },
   "peerDependencies": {
     "@blockle/form": "^1.0.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "core-js": "3.8.1"
+  }
 }

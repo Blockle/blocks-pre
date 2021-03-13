@@ -1,4 +1,4 @@
-import React from 'react';
+import { createElement, FC } from 'react';
 import { cx } from '../cx';
 import { PickStyleProps, useStyles } from '../useStyles';
 import './icon.css';
@@ -39,7 +39,7 @@ export interface Props extends PickStyleProps<'color'> {
   size?: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge';
 }
 
-const Icon = ({ className, label, name, size = 'medium', color = 'white' }: Props) => {
+const Icon: FC<Props> = ({ className, label, name, size = 'medium', color = 'white' }) => {
   const iconStyles = useStyles({
     color,
   });
@@ -51,7 +51,7 @@ const Icon = ({ className, label, name, size = 'medium', color = 'white' }: Prop
 
   return (
     <span className={cx('Icon', `size-${size}`, className, iconStyles)} title={label}>
-      {React.createElement(ICON_MAP[name], {
+      {createElement(ICON_MAP[name], {
         className: 'icon-svg',
         'data-testid': 'icon-svg',
       })}

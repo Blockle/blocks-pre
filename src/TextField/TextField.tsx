@@ -1,5 +1,5 @@
 import { FieldProps, useField } from '@blockle/form';
-import React, { useState } from 'react';
+import { FC, useState } from 'react';
 import { Box } from '../Box';
 import { cx } from '../cx';
 import './text-field.css';
@@ -44,7 +44,7 @@ const validate = ({ required, pattern, minLength, maxLength }: ValidationOptions
   return null;
 };
 
-const TextField = ({
+const TextField: FC<Props> = ({
   label,
   name,
   onChange,
@@ -57,7 +57,7 @@ const TextField = ({
   minLength,
   maxLength,
   disabled,
-}: Props) => {
+}) => {
   const [focus, setFocus] = useState(false);
   const field = useField(name, {
     value,

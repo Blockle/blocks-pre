@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { FC, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { Box } from '../Box';
 import { cx } from '../cx';
@@ -7,7 +7,7 @@ import { IconButton } from '../IconButton';
 import { Stack } from '../Stack';
 import './dialog.css';
 
-type Props = {
+interface Props {
   actions?: React.ReactNode;
   full?: boolean;
   onRequestClose: () => void;
@@ -15,9 +15,9 @@ type Props = {
   render: () => JSX.Element | string;
   title?: React.ReactNode;
   minHeight?: number;
-};
+}
 
-export const Dialog = ({
+export const Dialog: FC<Props> = ({
   actions,
   full = false,
   onRequestClose,
@@ -25,7 +25,7 @@ export const Dialog = ({
   render,
   title = null,
   minHeight,
-}: Props) => {
+}) => {
   const [state, close] = useAnimationState(open);
   const layer = useLayer();
 

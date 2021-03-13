@@ -1,18 +1,18 @@
-import React from 'react';
+import { FC } from 'react';
 import { cx } from '../cx';
 import { Icon, IconNames } from '../Icon';
 import { RippleBox } from '../RippleBox';
 import './icon-button.css';
 
-type Props = {
+interface Props {
   disabled?: boolean;
   label: string;
   name: IconNames;
   onClick?(): void;
   secondary?: boolean;
-};
+}
 
-const IconButton = ({ disabled, label, name, onClick, secondary }: Props) => {
+const IconButton: FC<Props> = ({ disabled, label, name, onClick, secondary }) => {
   return (
     <RippleBox
       disabled={disabled}

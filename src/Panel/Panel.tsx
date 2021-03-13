@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import { createPortal } from 'react-dom';
 import { cx } from '../cx';
 import { useAnimationState, useLayer } from '../hooks';
@@ -14,7 +14,7 @@ interface Props {
   render: () => JSX.Element | string;
 }
 
-const Panel = ({ className, onRequestClose, open = false, render }: Props) => {
+const Panel: FC<Props> = ({ className, onRequestClose, open = false, render }) => {
   const [state, close] = useAnimationState(open);
   const layer = useLayer();
 

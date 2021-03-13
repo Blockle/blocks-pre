@@ -1,6 +1,6 @@
 import { Box } from 'Box';
 import { cx } from 'cx';
-import React, { Children, ReactNode } from 'react';
+import { Children, FC, ReactNode } from 'react';
 import { PickStyleProps, ResponsiveStyleProp, StyleProps } from '../useStyles';
 import './Stack.css';
 
@@ -22,14 +22,14 @@ interface Props
   className?: string;
 }
 
-const Stack = ({
+const Stack: FC<Props> = ({
   align,
   children,
   component = 'div',
   spacing,
   horizontal = false,
   className,
-}: Props) => {
+}) => {
   const items = Children.toArray(children);
 
   return (

@@ -11,7 +11,7 @@ interface Props
   htmlFor?: string;
 }
 
-const Box = forwardRef(
+const Box = forwardRef<HTMLElement, Props>(
   (
     {
       alignItems,
@@ -46,7 +46,7 @@ const Box = forwardRef(
       textAlign,
       width,
       ...restProps
-    }: Props,
+    },
     ref,
   ) => {
     const boxStyles = useStyles({
@@ -91,5 +91,7 @@ const Box = forwardRef(
     );
   },
 );
+
+Box.displayName = 'Box';
 
 export default Box;
