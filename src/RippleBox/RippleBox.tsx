@@ -1,4 +1,4 @@
-import React, { AllHTMLAttributes, ElementType, forwardRef } from 'react';
+import { AllHTMLAttributes, ElementType, forwardRef } from 'react';
 import { StyleProps } from '..';
 import { Box } from '../Box';
 import { createRipple } from './createRipple';
@@ -13,8 +13,8 @@ interface Props
 const isTouch = 'ontouchstart' in document;
 const startType = isTouch ? 'onTouchStart' : 'onMouseDown';
 
-const RippleBox = forwardRef(
-  ({ children, component = 'div', color = 'primary', ...props }: Props, ref) => {
+const RippleBox = forwardRef<HTMLElement, Props>(
+  ({ children, component = 'div', color = 'primary', ...props }, ref) => {
     props[startType] = createRipple;
 
     return (

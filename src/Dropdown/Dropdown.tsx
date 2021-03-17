@@ -1,12 +1,12 @@
 import { FieldProps, useField } from '@blockle/form';
 import { cx } from 'cx';
 import { Icon } from 'Icon';
-import React, { useEffect, useRef, useState } from 'react';
+import { FC, ReactNode, useEffect, useRef, useState } from 'react';
 import { Box } from '../Box';
 import './dropdown.css';
 
 type Props = FieldProps<string> & {
-  children: React.ReactNode;
+  children: ReactNode;
   placeholder?: string;
   onChange?: (value: string) => void;
   errorMessages?: { [key in ErrorCodes]?: React.ReactNode };
@@ -26,15 +26,15 @@ const validate = ({ required }: ValidationOptions) => (value: string) => {
   return null;
 };
 
-const Dropdown = ({
+const Dropdown: FC<Props> = ({
   name,
   onChange,
   placeholder,
   required,
   value,
-  errorMessages = {},
+  // errorMessages = {},
   children,
-}: Props) => {
+}) => {
   const ref = useRef<HTMLSelectElement>(null);
   const [focus, setFocus] = useState(false);
   const field = useField(name, {

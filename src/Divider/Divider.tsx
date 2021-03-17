@@ -1,7 +1,6 @@
-import React from 'react';
-
+import { FC } from 'react';
 import './divider.css';
 
-const Divider = () => <hr className="Divider" />;
+const Divider: FC = () => <hr className="Divider" />;
 
 export default Divider;

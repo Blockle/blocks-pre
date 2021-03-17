@@ -1,13 +1,13 @@
-import React, { Children } from 'react';
+import { Children, FC, ReactNode } from 'react';
 import { Box } from '../Box';
 import { StyleProps } from '../useStyles';
 
 interface Props {
-  children: React.ReactNode;
+  children: ReactNode;
   spacing: StyleProps['padding'];
 }
 
-const Inline = ({ children, spacing }: Props) => {
+const Inline: FC<Props> = ({ children, spacing }) => {
   const items = Children.toArray(children);
 
   return (

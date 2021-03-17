@@ -1,19 +1,19 @@
-import React from 'react';
+import { FC, MouseEvent, ReactNode } from 'react';
 import { cx } from '../cx';
 import { RippleBox } from '../RippleBox';
 import { PickStyleProps } from '../useStyles';
 import './button.css';
 
 interface Props extends PickStyleProps<'width'> {
-  children: React.ReactNode;
+  children: ReactNode;
   disabled?: boolean;
-  onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
   type?: 'button' | 'submit';
   className?: string;
   secondary?: boolean;
 }
 
-const Button = ({
+const Button: FC<Props> = ({
   children,
   className,
   disabled,
@@ -21,7 +21,7 @@ const Button = ({
   type = 'button',
   width,
   secondary,
-}: Props) => {
+}) => {
   return (
     <RippleBox
       component="button"

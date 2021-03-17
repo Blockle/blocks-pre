@@ -1,25 +1,25 @@
-import React from 'react';
+import { FC, ReactNode } from 'react';
 import { cx } from '../cx';
 import { RippleBox } from '../RippleBox';
 import { PickStyleProps } from '../useStyles';
 import './outline-button.css';
 
 interface Props extends PickStyleProps<'width'> {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
   disabled?: boolean;
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   type?: 'button' | 'submit';
 }
 
-const OutlineButton = ({
+const OutlineButton: FC<Props> = ({
   children,
   className,
   disabled,
   onClick,
   type = 'button',
   width,
-}: Props) => {
+}) => {
   return (
     <RippleBox
       component="button"

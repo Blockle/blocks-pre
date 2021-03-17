@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import { cx } from '../cx';
 import { RippleBox } from '../RippleBox';
 import { PickStyleProps } from '../useStyles';
@@ -15,7 +15,7 @@ interface Props extends PickStyleProps<'width'> {
   role?: string;
 }
 
-const FlatButton = ({
+const FlatButton: FC<Props> = ({
   children,
   className,
   disabled,
@@ -24,7 +24,7 @@ const FlatButton = ({
   type = 'button',
   width,
   ...props
-}: Props) => {
+}) => {
   return (
     <RippleBox
       component="button"

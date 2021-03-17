@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box } from '../Box';
 import { cx } from '../cx';
 import { RippleBox } from '../RippleBox';
@@ -21,14 +20,14 @@ interface Props
   shadow?: 1 | 2 | 3;
 }
 
-const Card = ({
+const Card: React.FC<Props> = ({
   backgroundColor = 'card',
   children,
   className,
   onClick,
   shadow,
   ...boxProps
-}: Props) => {
+}) => {
   const props = {
     ...boxProps,
     className: cx('Card', shadow && `shadow-${shadow}`, onClick && 'is-clickable', className),

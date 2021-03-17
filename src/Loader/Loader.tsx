@@ -1,8 +1,8 @@
-import React from 'react';
+import { FC } from 'react';
 import { Icon } from '../Icon';
 import './loader.css';
 
-const Loader = () => {
+const Loader: FC = () => {
   return (
     <div className="Loader">
       <Icon name="briefcase" label="Loading" color="secondary" />

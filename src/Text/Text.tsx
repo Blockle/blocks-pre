@@ -1,17 +1,17 @@
 import { Box } from 'Box';
 import { cx } from 'cx';
-import React from 'react';
+import { FC, ReactNode } from 'react';
 import { PickStyleProps } from '../useStyles';
 import './text.css';
 
 interface Props
   extends PickStyleProps<'textAlign' | 'fontSize' | 'fontWeight' | 'color' | 'fontStyle'> {
   component?: 'span' | 'p' | 'strong' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
 }
 
-const Text = ({
+const Text: FC<Props> = ({
   component = 'span',
   children,
   textAlign,
@@ -20,7 +20,7 @@ const Text = ({
   color,
   fontStyle,
   className,
-}: Props) => {
+}) => {
   return (
     <Box
       component={component}
