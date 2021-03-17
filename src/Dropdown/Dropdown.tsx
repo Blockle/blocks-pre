@@ -5,18 +5,18 @@ import { FC, ReactNode, useEffect, useRef, useState } from 'react';
 import { Box } from '../Box';
 import './dropdown.css';
 
-type Props = FieldProps<string> & {
+interface Props extends FieldProps<string>, ValidationOptions {
   children: ReactNode;
   placeholder?: string;
   onChange?: (value: string) => void;
   errorMessages?: { [key in ErrorCodes]?: React.ReactNode };
-} & ValidationOptions;
+}
 
 type ErrorCodes = 'required' | 'patternMismatch' | 'minLength' | 'maxLength';
 
-type ValidationOptions = {
+interface ValidationOptions {
   required?: boolean;
-};
+}
 
 const validate = ({ required }: ValidationOptions) => (value: string) => {
   if (required && !value) {

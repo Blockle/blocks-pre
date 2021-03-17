@@ -4,14 +4,14 @@ import { Box } from '../Box';
 import { cx } from '../cx';
 import './text-field.css';
 
-type Props = FieldProps<string> & {
+interface Props extends FieldProps<string>, ValidationOptions {
   label: string;
   placeholder?: string;
   onChange?: (value: string) => void;
   type?: 'text' | 'password' | 'email' | 'tel';
   errorMessages?: { [key in ErrorCodes]?: React.ReactNode };
   disabled?: boolean;
-} & ValidationOptions;
+}
 
 type ErrorCodes = 'required' | 'patternMismatch' | 'minLength' | 'maxLength';
 

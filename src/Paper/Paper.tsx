@@ -5,7 +5,7 @@ import './paper.css';
 
 export type Effects = 'fade' | 'slideUp';
 
-type Props = {
+interface Props {
   className?: string;
   effect?: Effects;
   fit?: boolean;
@@ -13,7 +13,7 @@ type Props = {
   render: () => JSX.Element | string;
   shadow?: boolean;
   transparent?: boolean;
-};
+}
 
 const animationLeaveExpression = /^Paper-.*?Leave$/;
 
