@@ -1,4 +1,4 @@
-import { useCallback, useLayoutEffect, useMemo } from 'react';
+import { useCallback, useLayoutEffect, useRef } from 'react';
 import { animate, Animate } from './animate';
 
 interface Position {
@@ -29,13 +29,19 @@ function getTransformValue(axis: 'x' | 'y' | 'both', x: number, y: number) {
   }
 }
 
+function useRefValue<T>(initialValue: T): T {
+  const ref = useRef<T>(initialValue);
+
+  return ref.current;
+}
+
 interface Props {
   axis?: 'x' | 'y' | 'both';
 }
 
 export const useFlip = ({ axis = 'both' }: Props = {}) => {
-  const refs = useMemo(() => new Map<string, HTMLElement>(), []);
-  const positions = useMemo(() => new Map<string, Position>(), []);
+  const refs = useRefValue(new Map<string, HTMLElement>());
+  const positions = useRefValue(new Map<string, Position>());
 
   useLayoutEffect(() => {
     const animations: Animate[] = [];
@@ -80,8 +86,6 @@ export const useFlip = ({ axis = 'both' }: Props = {}) => {
 
   const setRef = useCallback(
     (id: string) => (ref: HTMLElement | null) => {
-      // TODO Preact setRef is not to be trusted, could set and unset an element, which does exists in the dom..
-      // Create bug report for preact? Add console.log with id and and ref, and observe when shuffling a list
       if (ref) {
         refs.set(id, ref);
       }
