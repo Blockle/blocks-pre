@@ -6,17 +6,28 @@ interface Position {
   y: number;
 }
 
-const getPosition = (element: HTMLElement): Position => {
-  const { x, y } = element.getBoundingClientRect();
+function getScrollPosition(element: HTMLElement): Position {
+  let node: HTMLElement | null = element;
+  let x = 0;
+  let y = 0;
 
-  const scrollLeft = document.documentElement.scrollLeft;
-  const scrollTop = document.documentElement.scrollTop;
+  while ((node = node.parentElement)) {
+    x += node.scrollLeft;
+    y += node.scrollTop;
+  }
+
+  return { x, y };
+}
+
+function getPosition(element: HTMLElement): Position {
+  const rect = element.getBoundingClientRect();
+  const scroll = getScrollPosition(element);
 
   return {
-    x: x + scrollLeft,
-    y: y + scrollTop,
+    x: rect.x + scroll.x,
+    y: rect.y + scroll.y,
   };
-};
+}
 
 function getTransformValue(axis: 'x' | 'y' | 'both', x: number, y: number) {
   switch (axis) {
