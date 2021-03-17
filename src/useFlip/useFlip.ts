@@ -34,14 +34,14 @@ interface Props {
 }
 
 export const useFlip = ({ axis = 'both' }: Props = {}) => {
-  const refs = useMemo(() => new Map<string, HTMLElement | null>(), []);
+  const refs = useMemo(() => new Map<string, HTMLElement>(), []);
   const positions = useMemo(() => new Map<string, Position>(), []);
 
   useLayoutEffect(() => {
     const animations: Animate[] = [];
 
     Array.from(refs.entries()).forEach(([id, element]) => {
-      if (!element) {
+      if (!element.isConnected) {
         refs.delete(id);
         positions.delete(id);
         return;
@@ -80,7 +80,11 @@ export const useFlip = ({ axis = 'both' }: Props = {}) => {
 
   const setRef = useCallback(
     (id: string) => (ref: HTMLElement | null) => {
-      refs.set(id, ref);
+      // TODO Preact setRef is not to be trusted, could set and unset an element, which does exists in the dom..
+      // Create bug report for preact? Add console.log with id and and ref, and observe when shuffling a list
+      if (ref) {
+        refs.set(id, ref);
+      }
     },
     [],
   );
