@@ -46,11 +46,11 @@ function useRefValue<T>(initialValue: T): T {
   return ref.current;
 }
 
-interface Props {
+interface FlipOptions {
   axis?: 'x' | 'y' | 'both';
 }
 
-export const useFlip = ({ axis = 'both' }: Props = {}) => {
+export const useFlip = ({ axis = 'both' }: FlipOptions = {}) => {
   const refs = useRefValue(new Map<string, HTMLElement>());
   const positions = useRefValue(new Map<string, Position>());
 
