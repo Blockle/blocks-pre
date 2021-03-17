@@ -1,7 +1,8 @@
 import { FC } from 'react';
 import { createPortal } from 'react-dom';
 import { cx } from '../cx';
-import { useAnimationState, useLayer } from '../hooks';
+import { useAnimationState } from '../useAnimationState';
+import { useLayer } from '../useLayer';
 import './panel.css';
 
 interface Props {

@@ -2,9 +2,10 @@ import { FC, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { Box } from '../Box';
 import { cx } from '../cx';
-import { useAnimationState, useLayer } from '../hooks';
 import { IconButton } from '../IconButton';
 import { Stack } from '../Stack';
+import { useAnimationState } from '../useAnimationState';
+import { useLayer } from '../useLayer';
 import './dialog.css';
 
 interface Props {

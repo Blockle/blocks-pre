@@ -14,7 +14,7 @@ const banner = `/**
 export default [
   {
     input: 'src/index.ts',
-    external: [...Object.keys(pkg.peerDependencies || {})],
+    external: [...Object.keys(pkg.peerDependencies || {}), 'react/jsx-runtime'],
     output: [
       {
         banner,
