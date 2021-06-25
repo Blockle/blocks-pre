@@ -1,4 +1,4 @@
-import { useCallback, useLayoutEffect, useRef } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useRef } from 'react';
 import { animate, Animate } from './animate';
 
 interface Position {
@@ -40,10 +40,31 @@ function getTransformValue(axis: 'x' | 'y' | 'both', x: number, y: number) {
   }
 }
 
-function useRefValue<T>(initialValue: T): T {
-  const ref = useRef<T>(initialValue);
+function shallowEqual(a: unknown[], b: unknown[]): boolean {
+  const length = a.length;
 
-  return ref.current;
+  if (length !== b.length) {
+    return false;
+  }
+
+  for (let i = 0; i < length; i++) {
+    if (a[i] !== b[i]) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+function useMemoForced<T>(valueCreator: () => T, deps: unknown[] = []): T {
+  const ref = useRef<{ value: T | null; deps: unknown[] }>({ value: null, deps });
+
+  if (!ref.current.value || !shallowEqual(deps, ref.current.deps)) {
+    console.log('CHNAGE');
+    ref.current.value = valueCreator();
+  }
+
+  return ref.current.value;
 }
 
 interface FlipOptions {
@@ -51,54 +72,83 @@ interface FlipOptions {
 }
 
 export const useFlip = ({ axis = 'both' }: FlipOptions = {}) => {
-  const refs = useRefValue(new Map<string, HTMLElement>());
-  const positions = useRefValue(new Map<string, Position>());
+  const refs = useMemoForced(() => new Map<string, HTMLElement>());
+  const positions = useMemoForced(() => new Map<string, Position>());
+  const forceUpdate = useMemoForced(
+    () =>
+      function () {
+        const animations: Animate[] = [];
 
-  useLayoutEffect(() => {
-    const animations: Animate[] = [];
+        Array.from(refs.entries()).forEach(([id, element]) => {
+          if (!element.isConnected) {
+            refs.delete(id);
+            positions.delete(id);
+            return;
+          }
 
-    Array.from(refs.entries()).forEach(([id, element]) => {
-      if (!element.isConnected) {
-        refs.delete(id);
-        positions.delete(id);
-        return;
-      }
+          const prevPosition = positions.get(id);
+          const position = getPosition(element);
 
-      const prevPosition = positions.get(id);
-      const position = getPosition(element);
+          // Enter animation
+          if (!prevPosition) {
+            animations.push({
+              element,
+              transforms: [
+                { property: 'transform', from: 'scale(0.8)' },
+                { property: 'opacity', from: '0' },
+              ],
+            });
+          }
 
-      // Enter animation
-      if (!prevPosition) {
-        animations.push({
-          element,
-          transforms: [
-            { property: 'transform', from: 'scale(0.8)' },
-            { property: 'opacity', from: '0' },
-          ],
+          // Move animation
+          if (prevPosition && (prevPosition.x !== position.x || prevPosition.y !== position.y)) {
+            const x = prevPosition.x - position.x;
+            const y = prevPosition.y - position.y;
+
+            animations.push({
+              element,
+              transforms: [{ property: 'transform', from: getTransformValue(axis, x, y) }],
+            });
+          }
+
+          positions.set(id, position);
         });
-      }
 
-      // Move animation
-      if (prevPosition && (prevPosition.x !== position.x || prevPosition.y !== position.y)) {
-        const x = prevPosition.x - position.x;
-        const y = prevPosition.y - position.y;
+        animations.forEach(animate);
+      },
+  );
 
-        animations.push({
-          element,
-          transforms: [{ property: 'transform', from: getTransformValue(axis, x, y) }],
-        });
-      }
+  const mutationObserver = useMemoForced(
+    () =>
+      new MutationObserver(() => {
+        forceUpdate();
+      }),
+    [forceUpdate],
+  );
 
-      positions.set(id, position);
-    });
+  useLayoutEffect(forceUpdate);
 
-    animations.forEach(animate);
-  });
+  // Disconnect mutation observer
+  useEffect(
+    function () {
+      return function () {
+        mutationObserver.disconnect();
+      };
+    },
+    [mutationObserver],
+  );
 
   const setRef = useCallback(
     (id: string) => (ref: HTMLElement | null) => {
       if (ref) {
         refs.set(id, ref);
+
+        mutationObserver.observe(ref, {
+          attributes: true,
+          // childList: true,
+          // subtree: true,
+          attributeFilter: ['class'],
+        });
       }
     },
     [],
@@ -127,5 +177,5 @@ export const useFlip = ({ axis = 'both' }: FlipOptions = {}) => {
     }
   }, []);
 
-  return { setRef, remove };
+  return { setRef, remove, forceUpdate };
 };

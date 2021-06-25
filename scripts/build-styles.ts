@@ -1,6 +1,6 @@
-import { createTheme, writeCSS, writeTS } from '@blockle/blocks-builder';
+import { createStyles, writeCoreTS, writeCSS } from '@blockle/blocks-builder';
 
-const theme = createTheme({
+const theme = createStyles({
   breakpoints: [0, 500, 800],
   spacing: {
     gutter: 'var(--space-gutter)',
@@ -10,14 +10,14 @@ const theme = createTheme({
     large: 'var(--space-large)',
     xlarge: 'var(--space-xlarge)',
   },
-  typography: {
+  fontSize: {
     xsmall: 'var(--font-xsmall)',
     small: 'var(--font-small)',
     medium: 'var(--font-medium)',
     large: 'var(--font-large)',
     xlarge: 'var(--font-xlarge)',
   },
-  colors: {
+  color: {
     black: 'var(--color-black)',
     danger: 'var(--color-danger)',
     dark: 'var(--color-dark)',
@@ -31,7 +31,15 @@ const theme = createTheme({
     white: 'var(--color-white)',
     card: 'var(--color-card)',
   },
+  fontWeight: {
+    regular: 'var(--font-weight-regular)',
+    semibold: 'var(--font-weight-semi-bold)',
+    bold: 'var(--font-weight-bold)',
+  },
 });
 
+console.log(JSON.stringify(theme, null, '  '));
+
 writeCSS('./src/useStyles/blockle-blocks.css', theme);
-writeTS('./src/useStyles/blocks.ts', theme);
+writeCoreTS('./src/useStyles/blocks.ts', theme);
+// writeTS('./src/useStyles/blocks.ts', theme);

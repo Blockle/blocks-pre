@@ -1,7 +1,7 @@
-export type ResponsiveStyleProp<T extends string | number> = T | T[];
+export declare type ResponsiveStyleProp<T extends string | number> = T | T[];
 
 export interface BlocksStyles {
-  color:
+  colors:
     | 'black'
     | 'danger'
     | 'dark'
@@ -14,9 +14,9 @@ export interface BlocksStyles {
     | 'warning'
     | 'white'
     | 'card';
-  fontSize: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge';
-  fontWeight: 'regular' | 'semibold' | 'bold';
   spacing: 'gutter' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge';
+  fontWeight: 'regular' | 'bold';
+  fontSize: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge';
 }
 
 type ExtendedStyles = 'BlocksStyles' extends keyof Window ? Window['BlocksStyles'] : BlocksStyles;
@@ -24,6 +24,13 @@ type ExtendedStyles = 'BlocksStyles' extends keyof Window ? Window['BlocksStyles
 type GetStyleValue<K extends keyof BlocksStyles> = ExtendedStyles[K] extends string
   ? ExtendedStyles[K]
   : BlocksStyles[K];
+
+export interface FinalBlocksTheming {
+  colors: GetStyleValue<'colors'>;
+  spacing: GetStyleValue<'spacing'>;
+  fontWeight: GetStyleValue<'fontWeight'>;
+  fontSize: GetStyleValue<'fontSize'>;
+}
 
 export interface StyleProps {
   display?: ResponsiveStyleProp<
@@ -44,28 +51,27 @@ export interface StyleProps {
   overflow?: ResponsiveStyleProp<'auto' | 'scroll' | 'hidden' | 'visible'>;
   overflowX?: ResponsiveStyleProp<'auto' | 'scroll' | 'hidden' | 'visible'>;
   overflowY?: ResponsiveStyleProp<'auto' | 'scroll' | 'hidden' | 'visible'>;
+  padding?: ResponsiveStyleProp<FinalBlocksTheming['spacing']>;
+  paddingBottom?: ResponsiveStyleProp<FinalBlocksTheming['spacing']>;
+  paddingLeft?: ResponsiveStyleProp<FinalBlocksTheming['spacing']>;
+  paddingRight?: ResponsiveStyleProp<FinalBlocksTheming['spacing']>;
+  paddingTop?: ResponsiveStyleProp<FinalBlocksTheming['spacing']>;
+  paddingX?: ResponsiveStyleProp<FinalBlocksTheming['spacing']>;
+  paddingY?: ResponsiveStyleProp<FinalBlocksTheming['spacing']>;
   position?: ResponsiveStyleProp<'relative' | 'fixed' | 'absolute' | 'sticky'>;
   textAlign?: ResponsiveStyleProp<'left' | 'right' | 'center' | 'justify'>;
   textTransform?: ResponsiveStyleProp<'capitalise' | 'none' | 'uppercase' | 'lowercase'>;
   width?: ResponsiveStyleProp<'full'>;
+  fontSize?: ResponsiveStyleProp<FinalBlocksTheming['fontSize']>;
+  fontWeight?: ResponsiveStyleProp<'regular' | 'bold'>;
+  color?: ResponsiveStyleProp<FinalBlocksTheming['colors']>;
+  backgroundColor?: ResponsiveStyleProp<FinalBlocksTheming['colors']>;
+  gridGap?: ResponsiveStyleProp<FinalBlocksTheming['spacing']>;
+  columnGap?: ResponsiveStyleProp<FinalBlocksTheming['spacing']>;
+  rowGap?: ResponsiveStyleProp<FinalBlocksTheming['spacing']>;
+  negativeMarginTop?: ResponsiveStyleProp<FinalBlocksTheming['spacing']>;
+  negativeMarginLeft?: ResponsiveStyleProp<FinalBlocksTheming['spacing']>;
   fontStyle?: ResponsiveStyleProp<'normal' | 'italic'>;
   gridAutoFlow?: ResponsiveStyleProp<'row' | 'column'>;
-  fontSize?: ResponsiveStyleProp<GetStyleValue<'fontSize'>>;
-  fontWeight?: ResponsiveStyleProp<GetStyleValue<'fontWeight'>>;
-  color?: ResponsiveStyleProp<GetStyleValue<'color'>>;
-  backgroundColor?: ResponsiveStyleProp<GetStyleValue<'color'>>;
-  padding?: ResponsiveStyleProp<GetStyleValue<'spacing'>>;
-  paddingBottom?: ResponsiveStyleProp<GetStyleValue<'spacing'>>;
-  paddingLeft?: ResponsiveStyleProp<GetStyleValue<'spacing'>>;
-  paddingRight?: ResponsiveStyleProp<GetStyleValue<'spacing'>>;
-  paddingTop?: ResponsiveStyleProp<GetStyleValue<'spacing'>>;
-  paddingX?: ResponsiveStyleProp<GetStyleValue<'spacing'>>;
-  paddingY?: ResponsiveStyleProp<GetStyleValue<'spacing'>>;
-  gridGap?: ResponsiveStyleProp<GetStyleValue<'spacing'>>;
-  columnGap?: ResponsiveStyleProp<GetStyleValue<'spacing'>>;
-  rowGap?: ResponsiveStyleProp<GetStyleValue<'spacing'>>;
-  negativeMarginTop?: ResponsiveStyleProp<GetStyleValue<'spacing'>>;
-  negativeMarginLeft?: ResponsiveStyleProp<GetStyleValue<'spacing'>>;
 }
-
-export type PickStyleProps<T extends keyof StyleProps> = Partial<Pick<StyleProps, T>>;
+export declare type PickStyleProps<T extends keyof StyleProps> = Partial<Pick<StyleProps, T>>;

@@ -1,57 +1,47 @@
 import { Box } from 'Box';
 import { cx } from 'cx';
-import { Children, FC, ReactNode } from 'react';
-import { PickStyleProps, ResponsiveStyleProp, StyleProps } from '../useStyles';
+import { FC, ReactNode } from 'react';
+import { ResponsiveStyleProp, StyleProps } from '../useStyles';
 import './Stack.css';
 
-interface Props
-  extends PickStyleProps<
-    | 'padding'
-    | 'paddingX'
-    | 'paddingY'
-    | 'paddingTop'
-    | 'paddingRight'
-    | 'paddingBottom'
-    | 'paddingLeft'
-  > {
-  align?: ResponsiveStyleProp<'flex-start' | 'center' | 'flex-end'>;
+interface Props {
+  align?: ResponsiveStyleProp<'stretch' | 'start' | 'center' | 'end'>;
   children: ReactNode;
+  className?: string;
   component?: 'div' | 'ol' | 'ul';
   horizontal?: boolean;
+  // inline?: boolean;
   spacing: StyleProps['padding'];
-  className?: string;
+  width?: 'auto' | 'full';
+  direction?: 'row' | 'column';
 }
+
+// <Stack direction="row|column" spacing="" inline>...</Stack>
 
 const Stack: FC<Props> = ({
   align,
   children,
-  component = 'div',
-  spacing,
-  horizontal = false,
   className,
+  component = 'div',
+  horizontal = false,
+  // inline = false,
+  width = 'full',
+  spacing,
 }) => {
-  const items = Children.toArray(children);
-
   return (
     <Box
-      className={cx('Stack', className)}
+      className={cx('Stack', width === 'auto' && 'is-auto', className)}
       component={component}
-      display="flex"
-      flexDirection={horizontal ? 'row' : 'column'}
-      justifyContent={horizontal ? undefined : align}
-      alignItems={align}
-      negativeMarginTop={horizontal ? undefined : spacing}
-      negativeMarginLeft={horizontal ? spacing : undefined}
+      // display="grid"
+      display={width === 'full' ? 'grid' : 'inline-grid'}
+      gridAutoFlow={horizontal ? 'column' : 'row'}
+      justifyItems={horizontal ? undefined : align}
+      alignItems={horizontal ? align : undefined}
+      rowGap={horizontal ? undefined : spacing}
+      columnGap={horizontal ? spacing : undefined}
+      style={{ gridAutoColumns: width === 'auto' ? 'max-content' : undefined }}
     >
-      {items.map((item, key) => (
-        <Box
-          key={key}
-          paddingTop={horizontal ? undefined : spacing}
-          paddingLeft={horizontal ? spacing : undefined}
-        >
-          {item}
-        </Box>
-      ))}
+      {children}
     </Box>
   );
 };

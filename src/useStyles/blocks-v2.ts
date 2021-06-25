@@ -30,8 +30,8 @@ export interface StyleProps {
     'block' | 'inline' | 'inline-block' | 'flex' | 'inline-flex' | 'grid' | 'inline-grid' | 'none'
   >;
   flexDirection?: ResponsiveStyleProp<'row' | 'row-reverse' | 'column' | 'column-reverse'>;
-  flexGrow?: ResponsiveStyleProp<0 | 1>;
-  flexShrink?: ResponsiveStyleProp<0>;
+  flexGrow?: ResponsiveStyleProp<'0' | '1'>;
+  flexShrink?: ResponsiveStyleProp<'0'>;
   flexWrap?: ResponsiveStyleProp<'nowrap' | 'wrap' | 'wrap-reverse'>;
   height?: ResponsiveStyleProp<'full'>;
   alignItems?: ResponsiveStyleProp<

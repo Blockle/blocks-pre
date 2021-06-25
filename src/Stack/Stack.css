@@ -5,3 +5,7 @@
 .Stack > :empty {
   display: none;
 }
+
+.Stack.is-auto > * {
+  max-width: fit-content;
+}

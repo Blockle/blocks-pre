@@ -1,24 +1,3 @@
-/* alignItems */
-.bb-alignItems-stretch {
-  align-items: stretch;
-}
-
-.bb-alignItems-center {
-  align-items: center;
-}
-
-.bb-alignItems-flex-start {
-  align-items: flex-start;
-}
-
-.bb-alignItems-flex-end {
-  align-items: flex-end;
-}
-
-.bb-alignItems-baseline {
-  align-items: baseline;
-}
-
 /* display */
 .bb-display-block {
   display: block;
@@ -101,6 +80,52 @@
   height: 100%;
 }
 
+/* alignItems */
+.bb-alignItems-stretch {
+  align-items: stretch;
+}
+
+.bb-alignItems-center {
+  align-items: center;
+}
+
+.bb-alignItems-flex-start {
+  align-items: flex-start;
+}
+
+.bb-alignItems-flex-end {
+  align-items: flex-end;
+}
+
+.bb-alignItems-baseline {
+  align-items: baseline;
+}
+
+.bb-alignItems-start {
+  align-items: start;
+}
+
+.bb-alignItems-end {
+  align-items: end;
+}
+
+/* justifyItems */
+.bb-justifyItems-stretch {
+  justify-items: stretch;
+}
+
+.bb-justifyItems-center {
+  justify-items: center;
+}
+
+.bb-justifyItems-start {
+  justify-items: start;
+}
+
+.bb-justifyItems-end {
+  justify-items: end;
+}
+
 /* justifyContent */
 .bb-justifyContent-flex-start {
   justify-content: flex-start;
@@ -171,6 +196,212 @@
 
 .bb-overflowY-visible {
   overflow-y: visible;
+}
+
+/* position */
+.bb-position-relative {
+  position: relative;
+}
+
+.bb-position-fixed {
+  position: fixed;
+}
+
+.bb-position-absolute {
+  position: absolute;
+}
+
+.bb-position-sticky {
+  position: sticky;
+}
+
+/* textAlign */
+.bb-textAlign-left {
+  text-align: left;
+}
+
+.bb-textAlign-right {
+  text-align: right;
+}
+
+.bb-textAlign-center {
+  text-align: center;
+}
+
+.bb-textAlign-justify {
+  text-align: justify;
+}
+
+/* textTransform */
+.bb-textTransform-capitalise {
+  text-transform: capitalize;
+}
+
+.bb-textTransform-none {
+  text-transform: none;
+}
+
+.bb-textTransform-uppercase {
+  text-transform: uppercase;
+}
+
+.bb-textTransform-lowercase {
+  text-transform: lowercase;
+}
+
+/* width */
+.bb-width-full {
+  width: 100%;
+}
+
+/* fontStyle */
+.bb-fontStyle-normal {
+  font-style: normal;
+}
+
+.bb-fontStyle-italic {
+  font-style: italic;
+}
+
+/* gridAutoFlow */
+.bb-gridAutoFlow-row {
+  grid-auto-flow: row;
+}
+
+.bb-gridAutoFlow-column {
+  grid-auto-flow: column;
+}
+
+/* fontSize */
+.bb-fontSize-xsmall {
+  font-size: var(--font-xsmall);
+}
+
+.bb-fontSize-small {
+  font-size: var(--font-small);
+}
+
+.bb-fontSize-medium {
+  font-size: var(--font-medium);
+}
+
+.bb-fontSize-large {
+  font-size: var(--font-large);
+}
+
+.bb-fontSize-xlarge {
+  font-size: var(--font-xlarge);
+}
+
+/* fontWeight */
+.bb-fontWeight-regular {
+  font-weight: var(--font-weight-regular);
+}
+
+.bb-fontWeight-semibold {
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.bb-fontWeight-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+/* color */
+.bb-color-black {
+  color: var(--color-black);
+}
+
+.bb-color-danger {
+  color: var(--color-danger);
+}
+
+.bb-color-dark {
+  color: var(--color-dark);
+}
+
+.bb-color-gray {
+  color: var(--color-gray);
+}
+
+.bb-color-lightGray {
+  color: var(--color-light-gray);
+}
+
+.bb-color-info {
+  color: var(--color-info);
+}
+
+.bb-color-primary {
+  color: var(--color-primary);
+}
+
+.bb-color-secondary {
+  color: var(--color-secondary);
+}
+
+.bb-color-success {
+  color: var(--color-success);
+}
+
+.bb-color-warning {
+  color: var(--color-warning);
+}
+
+.bb-color-white {
+  color: var(--color-white);
+}
+
+.bb-color-card {
+  color: var(--color-card);
+}
+
+/* backgroundColor */
+.bb-backgroundColor-black {
+  background-color: var(--color-black);
+}
+
+.bb-backgroundColor-danger {
+  background-color: var(--color-danger);
+}
+
+.bb-backgroundColor-dark {
+  background-color: var(--color-dark);
+}
+
+.bb-backgroundColor-gray {
+  background-color: var(--color-gray);
+}
+
+.bb-backgroundColor-lightGray {
+  background-color: var(--color-light-gray);
+}
+
+.bb-backgroundColor-info {
+  background-color: var(--color-info);
+}
+
+.bb-backgroundColor-primary {
+  background-color: var(--color-primary);
+}
+
+.bb-backgroundColor-secondary {
+  background-color: var(--color-secondary);
+}
+
+.bb-backgroundColor-success {
+  background-color: var(--color-success);
+}
+
+.bb-backgroundColor-warning {
+  background-color: var(--color-warning);
+}
+
+.bb-backgroundColor-white {
+  background-color: var(--color-white);
+}
+
+.bb-backgroundColor-card {
+  background-color: var(--color-card);
 }
 
 /* padding */
@@ -360,190 +591,6 @@
   padding-bottom: var(--space-xlarge);
 }
 
-/* position */
-.bb-position-relative {
-  position: relative;
-}
-
-.bb-position-fixed {
-  position: fixed;
-}
-
-.bb-position-absolute {
-  position: absolute;
-}
-
-.bb-position-sticky {
-  position: sticky;
-}
-
-/* textAlign */
-.bb-textAlign-left {
-  text-align: left;
-}
-
-.bb-textAlign-right {
-  text-align: right;
-}
-
-.bb-textAlign-center {
-  text-align: center;
-}
-
-.bb-textAlign-justify {
-  text-align: justify;
-}
-
-/* textTransform */
-.bb-textTransform-capitalise {
-  text-transform: capitalize;
-}
-
-.bb-textTransform-none {
-  text-transform: none;
-}
-
-.bb-textTransform-uppercase {
-  text-transform: uppercase;
-}
-
-.bb-textTransform-lowercase {
-  text-transform: lowercase;
-}
-
-/* width */
-.bb-width-full {
-  width: 100%;
-}
-
-/* fontSize */
-.bb-fontSize-xsmall {
-  font-size: var(--font-xsmall);
-}
-
-.bb-fontSize-small {
-  font-size: var(--font-small);
-}
-
-.bb-fontSize-medium {
-  font-size: var(--font-medium);
-}
-
-.bb-fontSize-large {
-  font-size: var(--font-large);
-}
-
-.bb-fontSize-xlarge {
-  font-size: var(--font-xlarge);
-}
-
-/* fontWeight */
-.bb-fontWeight-regular {
-  font-weight: 400;
-}
-
-.bb-fontWeight-bold {
-  font-weight: 700;
-}
-
-/* color */
-.bb-color-black {
-  color: var(--color-black);
-}
-
-.bb-color-danger {
-  color: var(--color-danger);
-}
-
-.bb-color-dark {
-  color: var(--color-dark);
-}
-
-.bb-color-gray {
-  color: var(--color-gray);
-}
-
-.bb-color-lightGray {
-  color: var(--color-light-gray);
-}
-
-.bb-color-info {
-  color: var(--color-info);
-}
-
-.bb-color-primary {
-  color: var(--color-primary);
-}
-
-.bb-color-secondary {
-  color: var(--color-secondary);
-}
-
-.bb-color-success {
-  color: var(--color-success);
-}
-
-.bb-color-warning {
-  color: var(--color-warning);
-}
-
-.bb-color-white {
-  color: var(--color-white);
-}
-
-.bb-color-card {
-  color: var(--color-card);
-}
-
-/* backgroundColor */
-.bb-backgroundColor-black {
-  background-color: var(--color-black);
-}
-
-.bb-backgroundColor-danger {
-  background-color: var(--color-danger);
-}
-
-.bb-backgroundColor-dark {
-  background-color: var(--color-dark);
-}
-
-.bb-backgroundColor-gray {
-  background-color: var(--color-gray);
-}
-
-.bb-backgroundColor-lightGray {
-  background-color: var(--color-light-gray);
-}
-
-.bb-backgroundColor-info {
-  background-color: var(--color-info);
-}
-
-.bb-backgroundColor-primary {
-  background-color: var(--color-primary);
-}
-
-.bb-backgroundColor-secondary {
-  background-color: var(--color-secondary);
-}
-
-.bb-backgroundColor-success {
-  background-color: var(--color-success);
-}
-
-.bb-backgroundColor-warning {
-  background-color: var(--color-warning);
-}
-
-.bb-backgroundColor-white {
-  background-color: var(--color-white);
-}
-
-.bb-backgroundColor-card {
-  background-color: var(--color-card);
-}
-
 /* gridGap */
 .bb-gridGap-gutter {
   grid-gap: var(--space-gutter);
@@ -567,6 +614,56 @@
 
 .bb-gridGap-xlarge {
   grid-gap: var(--space-xlarge);
+}
+
+/* columnGap */
+.bb-columnGap-gutter {
+  column-gap: var(--space-gutter);
+}
+
+.bb-columnGap-xsmall {
+  column-gap: var(--space-xsmall);
+}
+
+.bb-columnGap-small {
+  column-gap: var(--space-small);
+}
+
+.bb-columnGap-medium {
+  column-gap: var(--space-medium);
+}
+
+.bb-columnGap-large {
+  column-gap: var(--space-large);
+}
+
+.bb-columnGap-xlarge {
+  column-gap: var(--space-xlarge);
+}
+
+/* rowGap */
+.bb-rowGap-gutter {
+  row-gap: var(--space-gutter);
+}
+
+.bb-rowGap-xsmall {
+  row-gap: var(--space-xsmall);
+}
+
+.bb-rowGap-small {
+  row-gap: var(--space-small);
+}
+
+.bb-rowGap-medium {
+  row-gap: var(--space-medium);
+}
+
+.bb-rowGap-large {
+  row-gap: var(--space-large);
+}
+
+.bb-rowGap-xlarge {
+  row-gap: var(--space-xlarge);
 }
 
 /* negativeMarginTop */
@@ -619,36 +716,7 @@
   margin-left: calc(var(--space-xlarge) * -1);
 }
 
-/* fontStyle */
-.bb-fontStyle-normal {
-  font-style: normal;
-}
-
-.bb-fontStyle-italic {
-  font-style: italic;
-}
-
 @media (min-width: 500px) {
-  .bb-alignItems-stretch-bp1 {
-    align-items: stretch;
-  }
-
-  .bb-alignItems-center-bp1 {
-    align-items: center;
-  }
-
-  .bb-alignItems-flex-start-bp1 {
-    align-items: flex-start;
-  }
-
-  .bb-alignItems-flex-end-bp1 {
-    align-items: flex-end;
-  }
-
-  .bb-alignItems-baseline-bp1 {
-    align-items: baseline;
-  }
-
   .bb-display-block-bp1 {
     display: block;
   }
@@ -725,6 +793,50 @@
     height: 100%;
   }
 
+  .bb-alignItems-stretch-bp1 {
+    align-items: stretch;
+  }
+
+  .bb-alignItems-center-bp1 {
+    align-items: center;
+  }
+
+  .bb-alignItems-flex-start-bp1 {
+    align-items: flex-start;
+  }
+
+  .bb-alignItems-flex-end-bp1 {
+    align-items: flex-end;
+  }
+
+  .bb-alignItems-baseline-bp1 {
+    align-items: baseline;
+  }
+
+  .bb-alignItems-start-bp1 {
+    align-items: start;
+  }
+
+  .bb-alignItems-end-bp1 {
+    align-items: end;
+  }
+
+  .bb-justifyItems-stretch-bp1 {
+    justify-items: stretch;
+  }
+
+  .bb-justifyItems-center-bp1 {
+    justify-items: center;
+  }
+
+  .bb-justifyItems-start-bp1 {
+    justify-items: start;
+  }
+
+  .bb-justifyItems-end-bp1 {
+    justify-items: end;
+  }
+
   .bb-justifyContent-flex-start-bp1 {
     justify-content: flex-start;
   }
@@ -791,6 +903,202 @@
 
   .bb-overflowY-visible-bp1 {
     overflow-y: visible;
+  }
+
+  .bb-position-relative-bp1 {
+    position: relative;
+  }
+
+  .bb-position-fixed-bp1 {
+    position: fixed;
+  }
+
+  .bb-position-absolute-bp1 {
+    position: absolute;
+  }
+
+  .bb-position-sticky-bp1 {
+    position: sticky;
+  }
+
+  .bb-textAlign-left-bp1 {
+    text-align: left;
+  }
+
+  .bb-textAlign-right-bp1 {
+    text-align: right;
+  }
+
+  .bb-textAlign-center-bp1 {
+    text-align: center;
+  }
+
+  .bb-textAlign-justify-bp1 {
+    text-align: justify;
+  }
+
+  .bb-textTransform-capitalise-bp1 {
+    text-transform: capitalize;
+  }
+
+  .bb-textTransform-none-bp1 {
+    text-transform: none;
+  }
+
+  .bb-textTransform-uppercase-bp1 {
+    text-transform: uppercase;
+  }
+
+  .bb-textTransform-lowercase-bp1 {
+    text-transform: lowercase;
+  }
+
+  .bb-width-full-bp1 {
+    width: 100%;
+  }
+
+  .bb-fontStyle-normal-bp1 {
+    font-style: normal;
+  }
+
+  .bb-fontStyle-italic-bp1 {
+    font-style: italic;
+  }
+
+  .bb-gridAutoFlow-row-bp1 {
+    grid-auto-flow: row;
+  }
+
+  .bb-gridAutoFlow-column-bp1 {
+    grid-auto-flow: column;
+  }
+
+  .bb-fontSize-xsmall-bp1 {
+    font-size: var(--font-xsmall);
+  }
+
+  .bb-fontSize-small-bp1 {
+    font-size: var(--font-small);
+  }
+
+  .bb-fontSize-medium-bp1 {
+    font-size: var(--font-medium);
+  }
+
+  .bb-fontSize-large-bp1 {
+    font-size: var(--font-large);
+  }
+
+  .bb-fontSize-xlarge-bp1 {
+    font-size: var(--font-xlarge);
+  }
+
+  .bb-fontWeight-regular-bp1 {
+    font-weight: var(--font-weight-regular);
+  }
+
+  .bb-fontWeight-semibold-bp1 {
+    font-weight: var(--font-weight-semi-bold);
+  }
+
+  .bb-fontWeight-bold-bp1 {
+    font-weight: var(--font-weight-bold);
+  }
+
+  .bb-color-black-bp1 {
+    color: var(--color-black);
+  }
+
+  .bb-color-danger-bp1 {
+    color: var(--color-danger);
+  }
+
+  .bb-color-dark-bp1 {
+    color: var(--color-dark);
+  }
+
+  .bb-color-gray-bp1 {
+    color: var(--color-gray);
+  }
+
+  .bb-color-lightGray-bp1 {
+    color: var(--color-light-gray);
+  }
+
+  .bb-color-info-bp1 {
+    color: var(--color-info);
+  }
+
+  .bb-color-primary-bp1 {
+    color: var(--color-primary);
+  }
+
+  .bb-color-secondary-bp1 {
+    color: var(--color-secondary);
+  }
+
+  .bb-color-success-bp1 {
+    color: var(--color-success);
+  }
+
+  .bb-color-warning-bp1 {
+    color: var(--color-warning);
+  }
+
+  .bb-color-white-bp1 {
+    color: var(--color-white);
+  }
+
+  .bb-color-card-bp1 {
+    color: var(--color-card);
+  }
+
+  .bb-backgroundColor-black-bp1 {
+    background-color: var(--color-black);
+  }
+
+  .bb-backgroundColor-danger-bp1 {
+    background-color: var(--color-danger);
+  }
+
+  .bb-backgroundColor-dark-bp1 {
+    background-color: var(--color-dark);
+  }
+
+  .bb-backgroundColor-gray-bp1 {
+    background-color: var(--color-gray);
+  }
+
+  .bb-backgroundColor-lightGray-bp1 {
+    background-color: var(--color-light-gray);
+  }
+
+  .bb-backgroundColor-info-bp1 {
+    background-color: var(--color-info);
+  }
+
+  .bb-backgroundColor-primary-bp1 {
+    background-color: var(--color-primary);
+  }
+
+  .bb-backgroundColor-secondary-bp1 {
+    background-color: var(--color-secondary);
+  }
+
+  .bb-backgroundColor-success-bp1 {
+    background-color: var(--color-success);
+  }
+
+  .bb-backgroundColor-warning-bp1 {
+    background-color: var(--color-warning);
+  }
+
+  .bb-backgroundColor-white-bp1 {
+    background-color: var(--color-white);
+  }
+
+  .bb-backgroundColor-card-bp1 {
+    background-color: var(--color-card);
   }
 
   .bb-padding-gutter-bp1 {
@@ -973,182 +1281,6 @@
     padding-bottom: var(--space-xlarge);
   }
 
-  .bb-position-relative-bp1 {
-    position: relative;
-  }
-
-  .bb-position-fixed-bp1 {
-    position: fixed;
-  }
-
-  .bb-position-absolute-bp1 {
-    position: absolute;
-  }
-
-  .bb-position-sticky-bp1 {
-    position: sticky;
-  }
-
-  .bb-textAlign-left-bp1 {
-    text-align: left;
-  }
-
-  .bb-textAlign-right-bp1 {
-    text-align: right;
-  }
-
-  .bb-textAlign-center-bp1 {
-    text-align: center;
-  }
-
-  .bb-textAlign-justify-bp1 {
-    text-align: justify;
-  }
-
-  .bb-textTransform-capitalise-bp1 {
-    text-transform: capitalize;
-  }
-
-  .bb-textTransform-none-bp1 {
-    text-transform: none;
-  }
-
-  .bb-textTransform-uppercase-bp1 {
-    text-transform: uppercase;
-  }
-
-  .bb-textTransform-lowercase-bp1 {
-    text-transform: lowercase;
-  }
-
-  .bb-width-full-bp1 {
-    width: 100%;
-  }
-
-  .bb-fontSize-xsmall-bp1 {
-    font-size: var(--font-xsmall);
-  }
-
-  .bb-fontSize-small-bp1 {
-    font-size: var(--font-small);
-  }
-
-  .bb-fontSize-medium-bp1 {
-    font-size: var(--font-medium);
-  }
-
-  .bb-fontSize-large-bp1 {
-    font-size: var(--font-large);
-  }
-
-  .bb-fontSize-xlarge-bp1 {
-    font-size: var(--font-xlarge);
-  }
-
-  .bb-fontWeight-regular-bp1 {
-    font-weight: 400;
-  }
-
-  .bb-fontWeight-bold-bp1 {
-    font-weight: 700;
-  }
-
-  .bb-color-black-bp1 {
-    color: var(--color-black);
-  }
-
-  .bb-color-danger-bp1 {
-    color: var(--color-danger);
-  }
-
-  .bb-color-dark-bp1 {
-    color: var(--color-dark);
-  }
-
-  .bb-color-gray-bp1 {
-    color: var(--color-gray);
-  }
-
-  .bb-color-lightGray-bp1 {
-    color: var(--color-light-gray);
-  }
-
-  .bb-color-info-bp1 {
-    color: var(--color-info);
-  }
-
-  .bb-color-primary-bp1 {
-    color: var(--color-primary);
-  }
-
-  .bb-color-secondary-bp1 {
-    color: var(--color-secondary);
-  }
-
-  .bb-color-success-bp1 {
-    color: var(--color-success);
-  }
-
-  .bb-color-warning-bp1 {
-    color: var(--color-warning);
-  }
-
-  .bb-color-white-bp1 {
-    color: var(--color-white);
-  }
-
-  .bb-color-card-bp1 {
-    color: var(--color-card);
-  }
-
-  .bb-backgroundColor-black-bp1 {
-    background-color: var(--color-black);
-  }
-
-  .bb-backgroundColor-danger-bp1 {
-    background-color: var(--color-danger);
-  }
-
-  .bb-backgroundColor-dark-bp1 {
-    background-color: var(--color-dark);
-  }
-
-  .bb-backgroundColor-gray-bp1 {
-    background-color: var(--color-gray);
-  }
-
-  .bb-backgroundColor-lightGray-bp1 {
-    background-color: var(--color-light-gray);
-  }
-
-  .bb-backgroundColor-info-bp1 {
-    background-color: var(--color-info);
-  }
-
-  .bb-backgroundColor-primary-bp1 {
-    background-color: var(--color-primary);
-  }
-
-  .bb-backgroundColor-secondary-bp1 {
-    background-color: var(--color-secondary);
-  }
-
-  .bb-backgroundColor-success-bp1 {
-    background-color: var(--color-success);
-  }
-
-  .bb-backgroundColor-warning-bp1 {
-    background-color: var(--color-warning);
-  }
-
-  .bb-backgroundColor-white-bp1 {
-    background-color: var(--color-white);
-  }
-
-  .bb-backgroundColor-card-bp1 {
-    background-color: var(--color-card);
-  }
-
   .bb-gridGap-gutter-bp1 {
     grid-gap: var(--space-gutter);
   }
@@ -1171,6 +1303,54 @@
 
   .bb-gridGap-xlarge-bp1 {
     grid-gap: var(--space-xlarge);
+  }
+
+  .bb-columnGap-gutter-bp1 {
+    column-gap: var(--space-gutter);
+  }
+
+  .bb-columnGap-xsmall-bp1 {
+    column-gap: var(--space-xsmall);
+  }
+
+  .bb-columnGap-small-bp1 {
+    column-gap: var(--space-small);
+  }
+
+  .bb-columnGap-medium-bp1 {
+    column-gap: var(--space-medium);
+  }
+
+  .bb-columnGap-large-bp1 {
+    column-gap: var(--space-large);
+  }
+
+  .bb-columnGap-xlarge-bp1 {
+    column-gap: var(--space-xlarge);
+  }
+
+  .bb-rowGap-gutter-bp1 {
+    row-gap: var(--space-gutter);
+  }
+
+  .bb-rowGap-xsmall-bp1 {
+    row-gap: var(--space-xsmall);
+  }
+
+  .bb-rowGap-small-bp1 {
+    row-gap: var(--space-small);
+  }
+
+  .bb-rowGap-medium-bp1 {
+    row-gap: var(--space-medium);
+  }
+
+  .bb-rowGap-large-bp1 {
+    row-gap: var(--space-large);
+  }
+
+  .bb-rowGap-xlarge-bp1 {
+    row-gap: var(--space-xlarge);
   }
 
   .bb-negativeMarginTop-gutter-bp1 {
@@ -1220,37 +1400,9 @@
   .bb-negativeMarginLeft-xlarge-bp1 {
     margin-left: calc(var(--space-xlarge) * -1);
   }
-
-  .bb-fontStyle-normal-bp1 {
-    font-style: normal;
-  }
-
-  .bb-fontStyle-italic-bp1 {
-    font-style: italic;
-  }
 }
 
 @media (min-width: 800px) {
-  .bb-alignItems-stretch-bp2 {
-    align-items: stretch;
-  }
-
-  .bb-alignItems-center-bp2 {
-    align-items: center;
-  }
-
-  .bb-alignItems-flex-start-bp2 {
-    align-items: flex-start;
-  }
-
-  .bb-alignItems-flex-end-bp2 {
-    align-items: flex-end;
-  }
-
-  .bb-alignItems-baseline-bp2 {
-    align-items: baseline;
-  }
-
   .bb-display-block-bp2 {
     display: block;
   }
@@ -1327,6 +1479,50 @@
     height: 100%;
   }
 
+  .bb-alignItems-stretch-bp2 {
+    align-items: stretch;
+  }
+
+  .bb-alignItems-center-bp2 {
+    align-items: center;
+  }
+
+  .bb-alignItems-flex-start-bp2 {
+    align-items: flex-start;
+  }
+
+  .bb-alignItems-flex-end-bp2 {
+    align-items: flex-end;
+  }
+
+  .bb-alignItems-baseline-bp2 {
+    align-items: baseline;
+  }
+
+  .bb-alignItems-start-bp2 {
+    align-items: start;
+  }
+
+  .bb-alignItems-end-bp2 {
+    align-items: end;
+  }
+
+  .bb-justifyItems-stretch-bp2 {
+    justify-items: stretch;
+  }
+
+  .bb-justifyItems-center-bp2 {
+    justify-items: center;
+  }
+
+  .bb-justifyItems-start-bp2 {
+    justify-items: start;
+  }
+
+  .bb-justifyItems-end-bp2 {
+    justify-items: end;
+  }
+
   .bb-justifyContent-flex-start-bp2 {
     justify-content: flex-start;
   }
@@ -1393,6 +1589,202 @@
 
   .bb-overflowY-visible-bp2 {
     overflow-y: visible;
+  }
+
+  .bb-position-relative-bp2 {
+    position: relative;
+  }
+
+  .bb-position-fixed-bp2 {
+    position: fixed;
+  }
+
+  .bb-position-absolute-bp2 {
+    position: absolute;
+  }
+
+  .bb-position-sticky-bp2 {
+    position: sticky;
+  }
+
+  .bb-textAlign-left-bp2 {
+    text-align: left;
+  }
+
+  .bb-textAlign-right-bp2 {
+    text-align: right;
+  }
+
+  .bb-textAlign-center-bp2 {
+    text-align: center;
+  }
+
+  .bb-textAlign-justify-bp2 {
+    text-align: justify;
+  }
+
+  .bb-textTransform-capitalise-bp2 {
+    text-transform: capitalize;
+  }
+
+  .bb-textTransform-none-bp2 {
+    text-transform: none;
+  }
+
+  .bb-textTransform-uppercase-bp2 {
+    text-transform: uppercase;
+  }
+
+  .bb-textTransform-lowercase-bp2 {
+    text-transform: lowercase;
+  }
+
+  .bb-width-full-bp2 {
+    width: 100%;
+  }
+
+  .bb-fontStyle-normal-bp2 {
+    font-style: normal;
+  }
+
+  .bb-fontStyle-italic-bp2 {
+    font-style: italic;
+  }
+
+  .bb-gridAutoFlow-row-bp2 {
+    grid-auto-flow: row;
+  }
+
+  .bb-gridAutoFlow-column-bp2 {
+    grid-auto-flow: column;
+  }
+
+  .bb-fontSize-xsmall-bp2 {
+    font-size: var(--font-xsmall);
+  }
+
+  .bb-fontSize-small-bp2 {
+    font-size: var(--font-small);
+  }
+
+  .bb-fontSize-medium-bp2 {
+    font-size: var(--font-medium);
+  }
+
+  .bb-fontSize-large-bp2 {
+    font-size: var(--font-large);
+  }
+
+  .bb-fontSize-xlarge-bp2 {
+    font-size: var(--font-xlarge);
+  }
+
+  .bb-fontWeight-regular-bp2 {
+    font-weight: var(--font-weight-regular);
+  }
+
+  .bb-fontWeight-semibold-bp2 {
+    font-weight: var(--font-weight-semi-bold);
+  }
+
+  .bb-fontWeight-bold-bp2 {
+    font-weight: var(--font-weight-bold);
+  }
+
+  .bb-color-black-bp2 {
+    color: var(--color-black);
+  }
+
+  .bb-color-danger-bp2 {
+    color: var(--color-danger);
+  }
+
+  .bb-color-dark-bp2 {
+    color: var(--color-dark);
+  }
+
+  .bb-color-gray-bp2 {
+    color: var(--color-gray);
+  }
+
+  .bb-color-lightGray-bp2 {
+    color: var(--color-light-gray);
+  }
+
+  .bb-color-info-bp2 {
+    color: var(--color-info);
+  }
+
+  .bb-color-primary-bp2 {
+    color: var(--color-primary);
+  }
+
+  .bb-color-secondary-bp2 {
+    color: var(--color-secondary);
+  }
+
+  .bb-color-success-bp2 {
+    color: var(--color-success);
+  }
+
+  .bb-color-warning-bp2 {
+    color: var(--color-warning);
+  }
+
+  .bb-color-white-bp2 {
+    color: var(--color-white);
+  }
+
+  .bb-color-card-bp2 {
+    color: var(--color-card);
+  }
+
+  .bb-backgroundColor-black-bp2 {
+    background-color: var(--color-black);
+  }
+
+  .bb-backgroundColor-danger-bp2 {
+    background-color: var(--color-danger);
+  }
+
+  .bb-backgroundColor-dark-bp2 {
+    background-color: var(--color-dark);
+  }
+
+  .bb-backgroundColor-gray-bp2 {
+    background-color: var(--color-gray);
+  }
+
+  .bb-backgroundColor-lightGray-bp2 {
+    background-color: var(--color-light-gray);
+  }
+
+  .bb-backgroundColor-info-bp2 {
+    background-color: var(--color-info);
+  }
+
+  .bb-backgroundColor-primary-bp2 {
+    background-color: var(--color-primary);
+  }
+
+  .bb-backgroundColor-secondary-bp2 {
+    background-color: var(--color-secondary);
+  }
+
+  .bb-backgroundColor-success-bp2 {
+    background-color: var(--color-success);
+  }
+
+  .bb-backgroundColor-warning-bp2 {
+    background-color: var(--color-warning);
+  }
+
+  .bb-backgroundColor-white-bp2 {
+    background-color: var(--color-white);
+  }
+
+  .bb-backgroundColor-card-bp2 {
+    background-color: var(--color-card);
   }
 
   .bb-padding-gutter-bp2 {
@@ -1575,182 +1967,6 @@
     padding-bottom: var(--space-xlarge);
   }
 
-  .bb-position-relative-bp2 {
-    position: relative;
-  }
-
-  .bb-position-fixed-bp2 {
-    position: fixed;
-  }
-
-  .bb-position-absolute-bp2 {
-    position: absolute;
-  }
-
-  .bb-position-sticky-bp2 {
-    position: sticky;
-  }
-
-  .bb-textAlign-left-bp2 {
-    text-align: left;
-  }
-
-  .bb-textAlign-right-bp2 {
-    text-align: right;
-  }
-
-  .bb-textAlign-center-bp2 {
-    text-align: center;
-  }
-
-  .bb-textAlign-justify-bp2 {
-    text-align: justify;
-  }
-
-  .bb-textTransform-capitalise-bp2 {
-    text-transform: capitalize;
-  }
-
-  .bb-textTransform-none-bp2 {
-    text-transform: none;
-  }
-
-  .bb-textTransform-uppercase-bp2 {
-    text-transform: uppercase;
-  }
-
-  .bb-textTransform-lowercase-bp2 {
-    text-transform: lowercase;
-  }
-
-  .bb-width-full-bp2 {
-    width: 100%;
-  }
-
-  .bb-fontSize-xsmall-bp2 {
-    font-size: var(--font-xsmall);
-  }
-
-  .bb-fontSize-small-bp2 {
-    font-size: var(--font-small);
-  }
-
-  .bb-fontSize-medium-bp2 {
-    font-size: var(--font-medium);
-  }
-
-  .bb-fontSize-large-bp2 {
-    font-size: var(--font-large);
-  }
-
-  .bb-fontSize-xlarge-bp2 {
-    font-size: var(--font-xlarge);
-  }
-
-  .bb-fontWeight-regular-bp2 {
-    font-weight: 400;
-  }
-
-  .bb-fontWeight-bold-bp2 {
-    font-weight: 700;
-  }
-
-  .bb-color-black-bp2 {
-    color: var(--color-black);
-  }
-
-  .bb-color-danger-bp2 {
-    color: var(--color-danger);
-  }
-
-  .bb-color-dark-bp2 {
-    color: var(--color-dark);
-  }
-
-  .bb-color-gray-bp2 {
-    color: var(--color-gray);
-  }
-
-  .bb-color-lightGray-bp2 {
-    color: var(--color-light-gray);
-  }
-
-  .bb-color-info-bp2 {
-    color: var(--color-info);
-  }
-
-  .bb-color-primary-bp2 {
-    color: var(--color-primary);
-  }
-
-  .bb-color-secondary-bp2 {
-    color: var(--color-secondary);
-  }
-
-  .bb-color-success-bp2 {
-    color: var(--color-success);
-  }
-
-  .bb-color-warning-bp2 {
-    color: var(--color-warning);
-  }
-
-  .bb-color-white-bp2 {
-    color: var(--color-white);
-  }
-
-  .bb-color-card-bp2 {
-    color: var(--color-card);
-  }
-
-  .bb-backgroundColor-black-bp2 {
-    background-color: var(--color-black);
-  }
-
-  .bb-backgroundColor-danger-bp2 {
-    background-color: var(--color-danger);
-  }
-
-  .bb-backgroundColor-dark-bp2 {
-    background-color: var(--color-dark);
-  }
-
-  .bb-backgroundColor-gray-bp2 {
-    background-color: var(--color-gray);
-  }
-
-  .bb-backgroundColor-lightGray-bp2 {
-    background-color: var(--color-light-gray);
-  }
-
-  .bb-backgroundColor-info-bp2 {
-    background-color: var(--color-info);
-  }
-
-  .bb-backgroundColor-primary-bp2 {
-    background-color: var(--color-primary);
-  }
-
-  .bb-backgroundColor-secondary-bp2 {
-    background-color: var(--color-secondary);
-  }
-
-  .bb-backgroundColor-success-bp2 {
-    background-color: var(--color-success);
-  }
-
-  .bb-backgroundColor-warning-bp2 {
-    background-color: var(--color-warning);
-  }
-
-  .bb-backgroundColor-white-bp2 {
-    background-color: var(--color-white);
-  }
-
-  .bb-backgroundColor-card-bp2 {
-    background-color: var(--color-card);
-  }
-
   .bb-gridGap-gutter-bp2 {
     grid-gap: var(--space-gutter);
   }
@@ -1773,6 +1989,54 @@
 
   .bb-gridGap-xlarge-bp2 {
     grid-gap: var(--space-xlarge);
+  }
+
+  .bb-columnGap-gutter-bp2 {
+    column-gap: var(--space-gutter);
+  }
+
+  .bb-columnGap-xsmall-bp2 {
+    column-gap: var(--space-xsmall);
+  }
+
+  .bb-columnGap-small-bp2 {
+    column-gap: var(--space-small);
+  }
+
+  .bb-columnGap-medium-bp2 {
+    column-gap: var(--space-medium);
+  }
+
+  .bb-columnGap-large-bp2 {
+    column-gap: var(--space-large);
+  }
+
+  .bb-columnGap-xlarge-bp2 {
+    column-gap: var(--space-xlarge);
+  }
+
+  .bb-rowGap-gutter-bp2 {
+    row-gap: var(--space-gutter);
+  }
+
+  .bb-rowGap-xsmall-bp2 {
+    row-gap: var(--space-xsmall);
+  }
+
+  .bb-rowGap-small-bp2 {
+    row-gap: var(--space-small);
+  }
+
+  .bb-rowGap-medium-bp2 {
+    row-gap: var(--space-medium);
+  }
+
+  .bb-rowGap-large-bp2 {
+    row-gap: var(--space-large);
+  }
+
+  .bb-rowGap-xlarge-bp2 {
+    row-gap: var(--space-xlarge);
   }
 
   .bb-negativeMarginTop-gutter-bp2 {
@@ -1821,13 +2085,5 @@
 
   .bb-negativeMarginLeft-xlarge-bp2 {
     margin-left: calc(var(--space-xlarge) * -1);
-  }
-
-  .bb-fontStyle-normal-bp2 {
-    font-style: normal;
-  }
-
-  .bb-fontStyle-italic-bp2 {
-    font-style: italic;
   }
 }

@@ -1,4 +1,11 @@
-import { AllHTMLAttributes, createElement, ElementType, forwardRef, ReactNode } from 'react';
+import {
+  AllHTMLAttributes,
+  createElement,
+  CSSProperties,
+  ElementType,
+  forwardRef,
+  ReactNode,
+} from 'react';
 import { cx } from '../cx';
 import { StyleProps, useStyles } from '../useStyles';
 
@@ -9,6 +16,7 @@ interface Props
   children?: ReactNode;
   component?: ElementType;
   htmlFor?: string;
+  style?: CSSProperties;
 }
 
 const Box = forwardRef<HTMLElement, Props>(
@@ -19,6 +27,7 @@ const Box = forwardRef<HTMLElement, Props>(
       children,
       className,
       color,
+      columnGap,
       component = 'div',
       display,
       flexDirection,
@@ -28,8 +37,10 @@ const Box = forwardRef<HTMLElement, Props>(
       fontSize,
       fontStyle,
       fontWeight,
+      gridAutoFlow,
       height,
       justifyContent,
+      justifyItems,
       negativeMarginLeft,
       negativeMarginTop,
       overflow,
@@ -43,7 +54,9 @@ const Box = forwardRef<HTMLElement, Props>(
       paddingX,
       paddingY,
       position,
+      rowGap,
       textAlign,
+      textTransform,
       width,
       ...restProps
     },
@@ -53,6 +66,7 @@ const Box = forwardRef<HTMLElement, Props>(
       alignItems,
       backgroundColor,
       color,
+      columnGap,
       display,
       flexDirection,
       flexGrow,
@@ -61,8 +75,10 @@ const Box = forwardRef<HTMLElement, Props>(
       fontSize,
       fontStyle,
       fontWeight,
+      gridAutoFlow,
       height,
       justifyContent,
+      justifyItems,
       negativeMarginLeft,
       negativeMarginTop,
       overflow,
@@ -76,7 +92,9 @@ const Box = forwardRef<HTMLElement, Props>(
       paddingX,
       paddingY,
       position,
+      rowGap,
       textAlign,
+      textTransform,
       width,
     });
 
